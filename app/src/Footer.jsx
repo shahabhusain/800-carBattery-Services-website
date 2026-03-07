@@ -22,7 +22,7 @@ const Footer = () => {
       <div className='w-full relative text-white'>
         {/* Background Image */}
         <Image 
-          className='w-full h-[1200px] sm:h-[700px] md:h-[800px] object-cover' 
+          className='w-full h-[1050px] sm:h-[700px] md:h-[800px] object-cover' 
           src={footer} 
           alt='footer'
           priority
