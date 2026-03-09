@@ -15,7 +15,7 @@ const Page = () => {
       <div className='sticky top-0 z-[-1]'>  {/* Added z-index */}
         <Hero />
       </div>
-        <div className=' bg-white pb-12'>
+        <div className=' bg-white pb-12 rounded-t-4xl'>
               <About />
         <Services />
         <Banners />

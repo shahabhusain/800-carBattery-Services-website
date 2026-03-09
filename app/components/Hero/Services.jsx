@@ -96,7 +96,7 @@ const Services = () => {
         {services.map((serviceItem, index) => (
           <div 
             key={index}
-            className='group transition-all duration-300 ease-in-out flex flex-col lg:flex-row hover:bg-gradient-to-r from-red-500 to-red-400  rounded-xl lg:rounded-2xl items-start lg:items-center gap-4 lg:gap-8 xl:gap-12 relative cursor-pointer border border-gray-100 hover:border-transparent'
+            className='group transition-all duration-300 hover:px-6 ease-in-out flex flex-col lg:flex-row hover:bg-gradient-to-r from-red-500 to-red-400 px-3 items-start lg:items-center gap-4 lg:gap-8 xl:gap-12 relative cursor-pointer border border-gray-100 hover:border-transparent'
           >
             {/* Title */}
             <h2 className={`text-[20px] sm:text-[22px] lg:text-[24px] xl:text-[26px] font-semibold group-hover:text-red-50 transition-colors w-full lg:w-auto ${isRTL ? 'lg:text-right' : ''}`}>
@@ -106,7 +106,7 @@ const Services = () => {
             {/* Image Container - Hidden on mobile, visible on larger screens */}
             {serviceItem.image && (
               <div className='hidden lg:block relative w-[100px] xl:w-[150px] h-[100px] xl:h-[150px] overflow-hidden flex-shrink-0'>
-                <div className={`absolute inset-y-0 ${isRTL ? 'right-0' : 'left-0'} w-0 group-hover:w-full transition-all duration-300 ease-in-out overflow-hidden`}>
+                <div className={`absolute inset-y-0 ${isRTL ? 'right-0' : 'left-0'} w-0 group-hover:w-full transition-all duration-500 ease-in-out overflow-hidden`}>
                   <div className='relative w-[100px] xl:w-[150px] h-[100px] xl:h-[150px]'>
                     <Image 
                       src={serviceItem.image}
@@ -126,7 +126,7 @@ const Services = () => {
             </p>
             
             {/* Arrow Button */}
-            <button className={`absolute ${isRTL ? 'left-4 sm:left-6' : 'right-4 sm:right-6'} lg:relative text-xl sm:text-2xl group-hover:text-white transition-colors ${isRTL ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'} transform duration-300`}>
+            <button className={`absolute ${isRTL ? 'left-4 sm:left-6' : 'right-4 sm:right-6'} lg:relative text-xl sm:text-2xl  transition-colors ${isRTL ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'} transform duration-500 group-hover:bg-[#fff] p-5 rounded-full group-hover:text-black`}>
               <GoArrowRight className={isRTL ? 'rotate-180' : 'rotate-320'} />
             </button>
           </div>

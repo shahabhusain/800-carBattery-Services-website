@@ -3,6 +3,8 @@
 
 body{
     font-family: "Unbounded", sans-serif;
+    max-width: 1555px;
+    margin: 0 auto;
 }
 
 /* Swiper Navigation Arrows */

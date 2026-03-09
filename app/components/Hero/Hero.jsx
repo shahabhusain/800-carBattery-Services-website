@@ -29,11 +29,11 @@ const Hero = () => {
   return (
     <div className=' text-white'>
         <div className='relative'>
-               <Image className=' w-full md:h-screen h-[500px] object-cover' src={herobg} alt='image'/>
+               <Image className=' w-full md:h-[800px] h-[500px] object-cover' src={herobg} alt='image'/>
       <div className=' bg-[#000000BD] absolute top-0 w-full md:h-screen h-[500px]'></div>
-       <div className={`absolute md:top-52 top-32  ${locale === "en" ? "md:left-36 md:right-0 left-6 right-6" : locale === "ar" ? "md:right-36 md:left-0 left-6 right-6" : null}  md:max-w-[645px] flex flex-col gap-y-6`}>
+       <div className={`absolute md:top-60 top-32  ${locale === "en" ? "md:left-36 md:right-0 left-6 right-6" : locale === "ar" ? "md:right-36 md:left-0 left-6 right-6" : null}  md:max-w-[645px] flex flex-col gap-y-6`}>
         <p className=' w-fit md:text-[12px] text-[7px] font-medium text-center bg-[#ffffff16] px-3 py-2 rounded-full'>{hero.desc}</p>
-        <h1 className=' lg:text-[50px] md:text-[43px] sm:text-[33px] text-[25px] font-bold text-white md:leading-[4rem]'>{hero.title.span1}<span className=' text-red-500'>{hero.title.span2}</span></h1>
+        <h1 className=' lg:text-[45px] md:text-[43px] sm:text-[33px] text-[25px] font-bold text-white md:leading-[4rem]'>{hero.title.span1}<span className=' text-red-500'>{hero.title.span2}</span></h1>
         <p className=' md:text-[14px] text-[12px] font-normal'>{hero.desc1}</p>
               <button className=' w-fit bg-red-600 py-3 px-5 uppercase rounded-full text-white flex items-center gap-x-2'>{hero.btn}<span className=' rotate-320'><GoArrowRight size={30} /></span></button>
        </div>
