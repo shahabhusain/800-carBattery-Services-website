@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import logo from "@/public/logo.svg";
 import logo1 from "@/public/logo1.svg";
 import Image from "next/image";
@@ -8,6 +8,8 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import TopBar from "./TopBar";
+import LanguageSwitcher from "./LaguageSwitcher";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,43 +19,44 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const scrollTimeout = useRef(null);
+  const headerRef = useRef(null);
+
+  // Smooth scroll handler with RAF
+  const handleScroll = useCallback(() => {
+    if (scrollTimeout.current) {
+      cancelAnimationFrame(scrollTimeout.current);
+    }
+
+    scrollTimeout.current = requestAnimationFrame(() => {
+      const currentScrollY = window.scrollY;
+      
+      // Determine if scrolled past threshold for background change
+      if (currentScrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+      
+      // Determine header visibility based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 600) {
+        // Scrolling down - hide header
+        setVisible(false);
+      } else {
+        // Scrolling up - show header
+        setVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    });
+  }, [lastScrollY]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Clear any pending timeout
-      if (scrollTimeout.current) {
-        cancelAnimationFrame(scrollTimeout.current);
-      }
-
-      // Use requestAnimationFrame for smooth scroll handling
-      scrollTimeout.current = requestAnimationFrame(() => {
-        const currentScrollY = window.scrollY;
-        
-        // Determine if scrolled past threshold for background change
-        if (currentScrollY > 50) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-        
-        // Determine header visibility based on scroll direction
-        if (currentScrollY > lastScrollY && currentScrollY > 100) {
-          // Scrolling down - hide header
-          setVisible(false);
-        } else {
-          // Scrolling up - show header
-          setVisible(true);
-        }
-        
-        setLastScrollY(currentScrollY);
-      });
-    };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Prevent body scroll when mobile menu is open
+    // Smooth body scroll lock for mobile menu
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '0px';
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -65,7 +68,7 @@ const Header = () => {
       }
       document.body.style.overflow = 'unset';
     };
-  }, [lastScrollY, mobileMenuOpen]);
+  }, [handleScroll, mobileMenuOpen]);
 
   const englishLinks = [
     { path: "/brands", name: "Brands" },
@@ -184,7 +187,7 @@ const Header = () => {
   const locale = useLocale();
   const links = locale === "en" ? englishLinks : locale === "ar" ? arabicLinks : null;
 
-  // Handle dropdown hover for desktop with faster delay
+  // Smooth dropdown handlers
   let hoverTimeout;
   const handleMouseEnter = (index) => {
     clearTimeout(hoverTimeout);
@@ -194,15 +197,15 @@ const Header = () => {
   const handleMouseLeave = () => {
     hoverTimeout = setTimeout(() => {
       setOpenDropdown(null);
-    }, 50);
+    }, 100);
   };
 
-  // Handle mobile dropdown toggle
+  // Smooth mobile dropdown toggle
   const toggleMobileDropdown = (index) => {
     setOpenMobileDropdown(openMobileDropdown === index ? null : index);
   };
 
-  // Render desktop menu
+  // Desktop menu with enhanced animations
   const renderDesktopMenu = () => (
     <ul className="hidden lg:flex items-center gap-x-6 xl:gap-x-10">
       {links.map((item, index) => (
@@ -213,15 +216,21 @@ const Header = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className="flex items-center gap-1 text-[14px] font-[400] cursor-pointer group">
-            <Link href={item.path || "#"} className={`relative transition-colors duration-150 ${
-              scrolled ? 'text-black hover:text-red-600' : 'text-white hover:text-red-600'
-            }`}>
+            <Link 
+              href={item.path || "#"} 
+              className={`relative transition-all duration-300 ease-out ${
+                scrolled 
+                  ? 'text-black hover:text-red-600' 
+                  : 'text-white hover:text-red-600'
+              }`}
+            >
               {item.name}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full" />
             </Link>
             {item.subpages && (
               <FaChevronDown 
                 size={10} 
-                className={`transition-all duration-150 ${
+                className={`transition-all duration-300 ease-out ${
                   scrolled ? 'text-black' : 'text-white'
                 } ${
                   openDropdown === index ? 'rotate-180 text-red-600' : 'group-hover:text-red-600'
@@ -230,13 +239,13 @@ const Header = () => {
             )}
           </div>
           
-          {/* Dropdown menu with faster animation */}
+          {/* Main dropdown with smooth animation */}
           {item.subpages && (
             <div 
-              className={`absolute top-[10px] left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50 transition-all duration-150 ${
+              className={`absolute top-[10px] left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50 transition-all duration-300 ease-out ${
                 openDropdown === index 
                   ? 'opacity-100 visible translate-y-0' 
-                  : 'opacity-0 invisible -translate-y-1 pointer-events-none'
+                  : 'opacity-0 invisible -translate-y-2 pointer-events-none'
               }`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
@@ -245,20 +254,26 @@ const Header = () => {
                 <div key={subIndex} className="relative group/sub">
                   {subItem.subPages ? (
                     <>
-                      <div className="px-4 py-2 hover:bg-gray-50 flex items-center justify-between transition-colors duration-150">
-                        <Link href={subItem.path} className="text-[16px] text-gray-800 hover:text-red-600 transition-colors duration-150">
+                      <div className="px-4 py-2 hover:bg-gray-50 flex items-center justify-between transition-all duration-300">
+                        <Link 
+                          href={subItem.path} 
+                          className="text-[16px] text-gray-800 hover:text-red-600 transition-colors duration-300"
+                        >
                           {subItem.name}
                         </Link>
-                        <FaChevronDown size={10} className="rotate-[-90deg] text-gray-400 group-hover/sub:text-red-600 transition-colors duration-150" />
+                        <FaChevronDown 
+                          size={10} 
+                          className="rotate-[-90deg] text-gray-400 transition-all duration-300 group-hover/sub:text-red-600 group-hover/sub:translate-x-0.5" 
+                        />
                       </div>
                       
-                      {/* Nested dropdown with faster animation */}
-                      <div className="absolute left-full top-0 w-64 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-150 translate-x-1 group-hover/sub:translate-x-0 pointer-events-none group-hover/sub:pointer-events-auto">
+                      {/* Nested dropdown with smooth slide animation */}
+                      <div className="absolute left-full top-0 w-64 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 ease-out translate-x-1 group-hover/sub:translate-x-0 pointer-events-none group-hover/sub:pointer-events-auto">
                         {subItem.subPages.map((nestedItem, nestedIndex) => (
                           <Link
                             key={nestedIndex}
                             href={nestedItem.path}
-                            className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-red-600 transition-colors duration-150"
+                            className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-red-600 transition-all duration-300 hover:pl-6"
                           >
                             {nestedItem.name}
                           </Link>
@@ -268,7 +283,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={subItem.path}
-                      className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-red-600 transition-colors duration-150"
+                      className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-red-600 transition-all duration-300 hover:pl-6"
                     >
                       {subItem.name}
                     </Link>
@@ -282,27 +297,27 @@ const Header = () => {
     </ul>
   );
 
-  // Render mobile menu with faster slide animation
+  // Mobile menu with enhanced animations
   const renderMobileMenu = () => (
     <>
-      {/* Backdrop with faster fade effect */}
+      {/* Backdrop with smooth fade */}
       <div 
-        className={`lg:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-200 ${
+        className={`lg:hidden fixed inset-0 bg-black/40 z-40 transition-all duration-300 ease-out backdrop-blur-sm ${
           mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setMobileMenuOpen(false)}
       />
       
-      {/* Menu panel with faster slide animation */}
+      {/* Menu panel with smooth slide */}
       <div 
-        className={`lg:hidden fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-xl transition-transform duration-200 ${
+        className={`lg:hidden fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl transition-all duration-300 ease-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex justify-end p-4 border-b border-gray-100">
           <button 
             onClick={() => setMobileMenuOpen(false)} 
-            className="text-gray-800 hover:text-red-600 transition-colors duration-150 p-2 hover:bg-gray-100 rounded-full"
+            className="text-gray-800 hover:text-red-600 transition-all duration-300 p-2 hover:bg-gray-100 rounded-full hover:rotate-90"
             aria-label="Close menu"
           >
             <HiOutlineX size={24} />
@@ -317,12 +332,17 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => toggleMobileDropdown(index)}
-                      className="flex items-center justify-between w-full text-left text-gray-800 font-medium py-4 hover:text-red-600 transition-colors duration-150 group"
+                      className="flex items-center justify-between w-full text-left text-gray-800 font-medium py-4 hover:text-red-600 transition-all duration-300 group"
                       aria-expanded={openMobileDropdown === index}
                     >
-                      <span>{item.name}</span>
+                      <span className="relative">
+                        {item.name}
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                          openMobileDropdown === index ? 'w-full' : 'w-0'
+                        }`} />
+                      </span>
                       <FaChevronDown 
-                        className={`transition-all duration-200 ${
+                        className={`transition-all duration-300 ${
                           openMobileDropdown === index ? 'rotate-180 text-red-600' : ''
                         }`} 
                         size={14}
@@ -330,8 +350,8 @@ const Header = () => {
                     </button>
                     
                     <div 
-                      className={`overflow-hidden transition-all duration-200 ${
-                        openMobileDropdown === index ? 'max-h-[1000px] mb-4' : 'max-h-0'
+                      className={`overflow-hidden transition-all duration-300 ease-out ${
+                        openMobileDropdown === index ? 'max-h-[1000px] opacity-100 mb-4' : 'max-h-0 opacity-0'
                       }`}
                     >
                       <ul className="ml-4 space-y-2 border-l-2 border-gray-100 pl-4">
@@ -345,7 +365,7 @@ const Header = () => {
                                     <li key={nestedIndex}>
                                       <Link
                                         href={nestedItem.path}
-                                        className="block text-sm text-gray-600 hover:text-red-600 py-1 transition-colors duration-150"
+                                        className="block text-sm text-gray-600 hover:text-red-600 py-1 transition-all duration-300 hover:translate-x-1"
                                         onClick={() => setMobileMenuOpen(false)}
                                       >
                                         {nestedItem.name}
@@ -357,7 +377,7 @@ const Header = () => {
                             ) : (
                               <Link
                                 href={subItem.path}
-                                className="block text-sm text-gray-600 hover:text-red-600 py-2 transition-colors duration-150"
+                                className="block text-sm text-gray-600 hover:text-red-600 py-2 transition-all duration-300 hover:translate-x-1"
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {subItem.name}
@@ -371,19 +391,20 @@ const Header = () => {
                 ) : (
                   <Link
                     href={item.path}
-                    className="block text-gray-800 font-medium py-4 hover:text-red-600 transition-colors duration-150"
+                    className="block text-gray-800 font-medium py-4 hover:text-red-600 transition-all duration-300 hover:translate-x-1 relative"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full" />
                   </Link>
                 )}
               </li>
             ))}
           </ul>
           
-          <button className="w-full mt-8 bg-red-600 text-[14px] font-[400] py-3 px-5 rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors duration-150 group">
+          <button className="w-full mt-8 bg-red-600 text-[14px] font-[400] py-3 px-5 rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-all duration-300 hover:scale-105 active:scale-95 group">
             {locale === "en" ? "Book an appointment" : locale === "ar" ? "حجز موعد" : null}
-            <span className="group-hover:translate-x-1 transition-transform duration-150">
+            <span className="group-hover:translate-x-2 transition-transform duration-300">
               <GoArrowRight size={20} />
             </span>
           </button>
@@ -393,33 +414,38 @@ const Header = () => {
   );
 
   return (
-    <header
-     className={`fixed z-[100] transition-all duration-200 w-full
-    ${visible ? 'top-0' : 'top-[-120px]'} 
-    ${ scrolled ? 'top-0' : 'top-20'}`}
+      <div className="fixed z-[100] w-full transition-all duration-300 ease-out">
+          {scrolled ? null :  <TopBar />}
+          <header
+      ref={headerRef}
+      className={`absolute w-full transition-all duration-300 ease-out
+        ${visible ? 'top-0' : '-top-24'} 
+        ${scrolled ? '-top-24' : ' top-20'}`}
     >
       <div
-        className={`py-3 px-4 mx-auto w-full transition-all duration-200
+        className={`py-3 px-4 mx-auto w-full transition-all duration-300 ease-out
           ${scrolled 
-            ? 'bg-white text-black w-full shadow-lg' 
-            : 'bg-[#ffffff29] backdrop-blur-md text-white lg:w-[90%] xl:w-[80%] rounded-none lg:rounded-full'
+            ? 'bg-white/95 backdrop-blur-md text-black w-full shadow-lg' 
+            : 'bg-[#ffffff15] backdrop-blur-md text-white lg:w-[90%] xl:w-[80%] rounded-none lg:rounded-full border border-white/20'
           }`}
         style={{
-          transform: 'translateZ(0)', // Force hardware acceleration
+          transform: 'translateZ(0)',
+          willChange: 'transform, background-color, box-shadow',
         }}
       >
-        <div className={`flex items-center justify-between ${
+        <div className={`flex items-center justify-between transition-all duration-300 ${
           scrolled ? 'lg:w-[90%] mx-auto' : ''
         }`}>
-          {/* Logo */}
-          <Link href="/" className="relative block">
-            <div className="relative w-[120px] md:w-auto h-[40px] md:h-[50px]">
+          {/* Logo with smooth transition */}
+          <Link href="/" className="relative block group">
+            <div className="relative w-[120px] md:w-auto h-[40px] md:h-[50px] transition-all duration-300">
               <Image 
                 src={scrolled ? logo1 : logo}
                 alt="logo"
                 width={140}
                 height={140}
-                style={{ objectFit: 'contain' }}
+                className="object-contain transition-all duration-300 group-hover:scale-105"
+                priority
               />
             </div>
           </Link>
@@ -427,27 +453,34 @@ const Header = () => {
           {/* Desktop Menu */}
           {renderDesktopMenu()}
 
+         
+
           {/* Desktop Book Button */}
-          <button className={`hidden lg:flex text-[12px] xl:text-[14px] font-[400] py-2 xl:py-3 px-3 xl:px-5 rounded-full items-center gap-x-2 whitespace-nowrap transition-all duration-150 hover:scale-105 active:scale-95 group ${
+           <div className=" flex items-center gap-4">
+              {
+            scrolled ? <LanguageSwitcher scrolled={scrolled} /> : null
+          }
+          <button className={`hidden lg:flex text-[12px] xl:text-[14px] font-[400] py-2 xl:py-3 px-3 xl:px-5 rounded-full items-center gap-x-2 whitespace-nowrap transition-all duration-300 hover:scale-105 active:scale-95 group ${
             scrolled 
-              ? 'bg-red-600 text-white hover:bg-red-700' 
-              : 'bg-red-600 text-white hover:bg-red-700'
+              ? 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl' 
+              : 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl'
           }`}>
             {locale === "en" ? "Book an appointment" : locale === "ar" ? "حجز موعد" : null}
-            <span className="group-hover:translate-x-1 transition-transform duration-150 hidden xl:inline">
+            <span className="group-hover:translate-x-2 transition-transform duration-300 hidden xl:inline">
               <GoArrowRight size={20} />
             </span>
           </button>
+           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button with smooth animation */}
           <button 
-            className="lg:hidden p-2 hover:bg-white/10 rounded-full transition-colors duration-150"
+            className="lg:hidden p-2 hover:bg-white/20 rounded-full transition-all duration-300 hover:rotate-90"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open menu"
           >
             <HiOutlineMenu 
               size={24} 
-              className={`transition-colors duration-150 ${
+              className={`transition-colors duration-300 ${
                 scrolled ? 'text-black' : 'text-white'
               }`} 
             />
@@ -458,6 +491,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {renderMobileMenu()}
     </header>
+      </div>
   );
 };
 

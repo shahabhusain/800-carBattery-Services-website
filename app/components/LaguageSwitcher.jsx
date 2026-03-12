@@ -3,7 +3,7 @@ import React from "react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({scrolled}) => {
   const locale = useLocale();
   const router = useRouter();
 
@@ -25,7 +25,7 @@ const LanguageSwitcher = () => {
     <div className="text-white">
       <button
         onClick={toggleLanguage}
-        className="bg-[#FFFFFF1A] px-4 py-2 text-[12px] rounded-full hover:bg-[#FFFFFF30] transition-colors flex items-center gap-2"
+        className={`${scrolled ? "bg-[#000000a9] py-3 px-5" : "bg-[#FFFFFF1A]  px-4 py-2 "} text-[12px] rounded-full hover:bg-[#FFFFFF30] transition-colors flex items-center gap-2`}
       >
         {locale === "en" ? (
           <>
