@@ -8,6 +8,7 @@ import BatteryBrands from '../components/Hero/BatteryBrands'
 import TrendingProducts from '../components/Hero/TrendingProducts'
 import RealExperience from '../components/Hero/RealExperience'
 import Trusted from '../components/Hero/Trusted'
+import Footer from '../components/Footer'
 
 const Page = () => {
   return (
@@ -26,6 +27,7 @@ const Page = () => {
         <RealExperience />
         <div className=' bg-white'>
            <Trusted />
+                   <Footer />
         </div>
     </div>
   )
