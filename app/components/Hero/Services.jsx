@@ -121,7 +121,7 @@ const Services = () => {
             )}
             
             {/* Description */}
-            <p className={`text-[13px] sm:text-[14px] font-normal text-[#00000099] group-hover:text-white transition-colors flex-1 ${isRTL ? 'text-right' : ''}`}>
+            <p className={`text-[13px] sm:text-[16px] font-normal text-[#00000099] group-hover:text-white transition-colors flex-1 ${isRTL ? 'text-right' : ''}`}>
               {serviceItem.description}
             </p>
             

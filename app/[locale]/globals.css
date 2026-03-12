@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Unbounded:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import "tailwindcss";
 
 body{
-    font-family: "Unbounded", sans-serif;
+   
     max-width: 1555px;
     margin: 0 auto;
+}
+
+h1{
+ font-family: "Unbounded", sans-serif;
+}
+
+button{
+  font-family: "Unbounded", sans-serif;
+}
+
+p{
+  font-family: "Outfit", sans-serif;
 }
 
 /* Swiper Navigation Arrows */

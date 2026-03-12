@@ -29,13 +29,14 @@ const LanguageSwitcher = () => {
       >
         {locale === "en" ? (
           <>
-             <span>English</span>
-            <span>🇬🇧</span>
+ 
+                <span>العربية</span>
+            <span>🇸🇦</span>
           </>
         ) : (
           <>
-                   <span>العربية</span>
-            <span>🇸🇦</span>
+                           <span>English</span>
+            <span>🇬🇧</span>
           </>
         )}
       </button>

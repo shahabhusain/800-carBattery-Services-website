@@ -43,9 +43,9 @@ const About = () => {
           <p className='uppercase md:text-[16px] text-[12px] font-bold'>
             {content.title}
           </p>
-          <h2 className='uppercase lg:text-[46px] md:text-[36px] text-[25px] font-semibold'>
+          <h1 className='uppercase lg:text-[40px] md:text-[36px] text-[25px] font-semibold'>
             <span className='text-red-500'>800</span> {content.heading}
-          </h2>
+          </h1>
           <p className='md:text-[16px] text-[12px] font-normal text-[#00000099]'>
             {content.description}
           </p>

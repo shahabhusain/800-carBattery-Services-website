@@ -68,57 +68,81 @@ const TrendingProducts = () => {
 
   return (
     <div
-      className={`w-[80%] mx-auto mt-20 ${
+      className={`w-[90%] sm:w-[85%] md:w-[80%] mx-auto mt-10 md:mt-20 ${
         locale === "ar" ? "text-right" : "text-left"
       }`}
     >
       {/* Header */}
       <div>
-        <h1 className="text-[14px] md:text-[16px] font-bold text-gray-600 uppercase tracking-wider">
+        <h1 className="text-[12px] sm:text-[14px] md:text-[16px] font-bold text-gray-600 uppercase tracking-wider">
           {text.shop}
         </h1>
 
-        <div className="flex flex-col md:flex-row items-center justify-between mt-4 md:mt-6 gap-6 md:gap-0">
-          <h1 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold max-w-full md:max-w-[544px] leading-tight">
-            <span>{text.title1}</span>{" "}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 md:mt-6 gap-4 sm:gap-6">
+          <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-semibold w-full sm:max-w-[544px] leading-tight">
+            <span className="text-gray-900">{text.title1}</span>{" "}
             <span className="text-[#C1121F]">{text.title2}</span>
           </h1>
 
-          <button className="w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base">
-            {text.viewAll}
+          <button className="w-full sm:w-fit bg-[#C1121F] py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-all duration-300 text-sm sm:text-base group">
+            <span>{text.viewAll}</span>
 
             <span
               className={`${
                 locale === "ar" ? "rotate-180" : ""
-              }`}
+              } group-hover:translate-x-1 transition-transform duration-300`}
             >
               <GoArrowRight
-                size={24}
-                className="sm:w-[30px] sm:h-[30px]"
+                size={20}
+                className="sm:w-[24px] sm:h-[24px]"
               />
             </span>
           </button>
         </div>
       </div>
 
-      {/* Products */}
-      <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
+      {/* Products - Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mt-6 sm:mt-8 md:mt-10">
         {product.map((item, index) => (
           <div
             key={index}
-            className="w-[400px] h-[400px] flex flex-col gap-y-4 items-center justify-center border-[#00000019] p-5 border-[1px]"
+            className="w-full aspect-square flex flex-col items-center justify-center border border-gray-200 p-4 sm:p-5 rounded-xl hover:shadow-lg hover:shadow-red-500/10 transition-all duration-300 group"
           >
-            <Image
-              className="w-[250px] h-[250px] object-contain"
-              src={item.img}
-              alt="product"
-            />
+            <div className="relative w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] mb-2 sm:mb-4">
+              <Image
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                src={item.img}
+                alt="product"
+                fill
+                sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, (max-width: 1024px) 220px, 250px"
+                priority={index < 2}
+              />
+            </div>
 
-            <p className="text-center">{item.desc}</p>
+            <p className="text-center text-sm sm:text-base text-gray-700 line-clamp-2 px-2">
+              {item.desc}
+            </p>
 
-            <h2 className="font-semibold">{item.price}</h2>
+            <h2 className="font-semibold text-lg sm:text-xl text-gray-900 mt-2">
+              {item.price}
+            </h2>
+
+            {/* Quick add button - optional for better UX on mobile */}
+            <button className="mt-3 w-full py-2 bg-gray-100 text-gray-900 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium hover:bg-red-500 hover:text-white">
+              Quick View
+            </button>
           </div>
         ))}
+      </div>
+
+      {/* Mobile View All Button - Only visible on mobile */}
+      <div className="flex sm:hidden mt-6">
+        <button className="w-full bg-[#C1121F] py-3 px-4 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-all duration-300 text-sm">
+          <span>{text.viewAll}</span>
+          <span className={locale === "ar" ? "rotate-180" : ""}>
+            <GoArrowRight size={20} />
+          </span>
+        </button>
       </div>
     </div>
   );
