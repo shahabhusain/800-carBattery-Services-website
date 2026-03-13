@@ -33,9 +33,9 @@ You Can Trust</h1>
          <div className=' flex items-center gap-2 justify-between mt-8'>
            {
             data.map((item, index) => (
-                <div className=' flex flex-col gap-y-5 items-start bg-white p-12' key={index}>
+                <div className=' flex flex-col gap-y-5 items-start bg-white p-12 h-[50ppx] w-[350px]' key={index}>
                     <span className=' text-[25px]'>{item.icons}</span>
-                    <h2 className=' text-[24px] font-semibold whitespace-nowrap'>{item.title}</h2>
+                    <h2 className=' text-[24px] font-semibold '>{item.title}</h2>
                     <p className=' text-[16px] font-normal text-[#4E4E4E]'>{item.desc}</p>
                 </div>
             ))

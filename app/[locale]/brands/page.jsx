@@ -11,10 +11,10 @@ import React from 'react'
 const Brands = () => {
   return (
     <div>
-      <div className='sticky top-0 z-[-1]'>  {/* Added z-index */}
+      <div className='sticky top-0 '>  {/* Added z-index */}
         <Hero />
       </div>
-        <div className=' bg-white rounded-t-4xl'>
+        <div className=' bg-white  rounded-t-4xl relative z-10'>
            <CarBrands />
            <Service />
            <BatteryBrands />
