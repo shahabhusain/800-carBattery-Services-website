@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import logo from "@/public/logo.svg";
 import logo1 from "@/public/logo1.svg";
@@ -17,7 +17,6 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const scrollTimeout = useRef(null);
   const headerRef = useRef(null);
 
@@ -187,7 +186,7 @@ const Header = () => {
   const locale = useLocale();
   const links = locale === "en" ? englishLinks : locale === "ar" ? arabicLinks : null;
 
-  // Smooth dropdown handlers
+  // Smooth dropdown handlers for desktop only
   let hoverTimeout;
   const handleMouseEnter = (index) => {
     clearTimeout(hoverTimeout);
@@ -198,11 +197,6 @@ const Header = () => {
     hoverTimeout = setTimeout(() => {
       setOpenDropdown(null);
     }, 100);
-  };
-
-  // Smooth mobile dropdown toggle
-  const toggleMobileDropdown = (index) => {
-    setOpenMobileDropdown(openMobileDropdown === index ? null : index);
   };
 
   // Desktop menu with enhanced animations
@@ -297,7 +291,7 @@ const Header = () => {
     </ul>
   );
 
-  // Mobile menu with enhanced animations
+  // Mobile menu with main pages only (no dropdowns)
   const renderMobileMenu = () => (
     <>
       {/* Backdrop with smooth fade */}
@@ -326,78 +320,17 @@ const Header = () => {
         
         <div className="px-6 py-4 overflow-y-auto h-[calc(100vh-80px)]">
           <ul className="space-y-1">
+            {/* Only render main pages - no dropdowns or subpages */}
             {links.map((item, index) => (
               <li key={index} className="border-b border-gray-100 last:border-0">
-                {item.subpages ? (
-                  <>
-                    <button
-                      onClick={() => toggleMobileDropdown(index)}
-                      className="flex items-center justify-between w-full text-left text-gray-800 font-medium py-4 hover:text-red-600 transition-all duration-300 group"
-                      aria-expanded={openMobileDropdown === index}
-                    >
-                      <span className="relative">
-                        {item.name}
-                        <span className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
-                          openMobileDropdown === index ? 'w-full' : 'w-0'
-                        }`} />
-                      </span>
-                      <FaChevronDown 
-                        className={`transition-all duration-300 ${
-                          openMobileDropdown === index ? 'rotate-180 text-red-600' : ''
-                        }`} 
-                        size={14}
-                      />
-                    </button>
-                    
-                    <div 
-                      className={`overflow-hidden transition-all duration-300 ease-out ${
-                        openMobileDropdown === index ? 'max-h-[1000px] opacity-100 mb-4' : 'max-h-0 opacity-0'
-                      }`}
-                    >
-                      <ul className="ml-4 space-y-2 border-l-2 border-gray-100 pl-4">
-                        {item.subpages.map((subItem, subIndex) => (
-                          <li key={subIndex}>
-                            {subItem.subPages ? (
-                              <>
-                                <div className="font-medium text-gray-700 py-2">{subItem.name}</div>
-                                <ul className="ml-4 space-y-2 pb-2">
-                                  {subItem.subPages.map((nestedItem, nestedIndex) => (
-                                    <li key={nestedIndex}>
-                                      <Link
-                                        href={nestedItem.path}
-                                        className="block text-sm text-gray-600 hover:text-red-600 py-1 transition-all duration-300 hover:translate-x-1"
-                                        onClick={() => setMobileMenuOpen(false)}
-                                      >
-                                        {nestedItem.name}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </>
-                            ) : (
-                              <Link
-                                href={subItem.path}
-                                className="block text-sm text-gray-600 hover:text-red-600 py-2 transition-all duration-300 hover:translate-x-1"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {subItem.name}
-                              </Link>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    href={item.path}
-                    className="block text-gray-800 font-medium py-4 hover:text-red-600 transition-all duration-300 hover:translate-x-1 relative"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full" />
-                  </Link>
-                )}
+                <Link
+                  href={item.path}
+                  className="block text-gray-800 font-medium py-4 hover:text-red-600 transition-all duration-300 hover:translate-x-1 relative group"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full" />
+                </Link>
               </li>
             ))}
           </ul>
@@ -420,7 +353,7 @@ const Header = () => {
       ref={headerRef}
       className={`absolute w-full transition-all duration-300 ease-out
         ${visible ? 'top-0' : '-top-24'} 
-        ${scrolled ? '-top-24' : ' top-20'}`}
+        ${scrolled ? '-top-24' : ' md:top-20'}`}
     >
       <div
         className={`py-3 px-4 mx-auto w-full transition-all duration-300 ease-out
@@ -453,12 +386,10 @@ const Header = () => {
           {/* Desktop Menu */}
           {renderDesktopMenu()}
 
-         
-
           {/* Desktop Book Button */}
            <div className=" flex items-center gap-4">
               {
-            scrolled ? <LanguageSwitcher scrolled={scrolled} /> : null
+            scrolled ?  <div className="md:block hidden"><LanguageSwitcher scrolled={scrolled} /></div> : null
           }
           <button className={`hidden lg:flex text-[12px] xl:text-[14px] font-[400] py-2 xl:py-3 px-3 xl:px-5 rounded-full items-center gap-x-2 whitespace-nowrap transition-all duration-300 hover:scale-105 active:scale-95 group ${
             scrolled 
@@ -473,6 +404,7 @@ const Header = () => {
            </div>
 
           {/* Mobile Menu Button with smooth animation */}
+             <div className=" md:hidden "> <LanguageSwitcher scrolled={scrolled} /></div>
           <button 
             className="lg:hidden p-2 hover:bg-white/20 rounded-full transition-all duration-300 hover:rotate-90"
             onClick={() => setMobileMenuOpen(true)}

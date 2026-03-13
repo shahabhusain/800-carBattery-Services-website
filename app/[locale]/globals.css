@@ -3,6 +3,10 @@
 @import "tailwindcss";
 
 
+/* body{
+  max-width: 1700px;
+  margin: 0 auto;
+} */
 
 h1{
  font-family: "Unbounded", sans-serif;
@@ -15,6 +19,12 @@ button{
 p{
   font-family: "Outfit", sans-serif;
 }
+ .bg{
+  background-image: url(../../public/about.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
 
 /* Swiper Navigation Arrows */
 .swiper-button-next,
@@ -60,3 +70,4 @@ p{
   background-color: red !important;
   width: 50px !important;
 }
+

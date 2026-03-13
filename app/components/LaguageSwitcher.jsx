@@ -25,7 +25,7 @@ const LanguageSwitcher = ({scrolled}) => {
     <div className="text-white">
       <button
         onClick={toggleLanguage}
-        className={`${scrolled ? "bg-[#000000a9] py-3 px-5" : "bg-[#FFFFFF1A]  px-4 py-2 "} text-[12px] rounded-full hover:bg-[#FFFFFF30] transition-colors flex items-center gap-2`}
+        className={`${scrolled ? "bg-[#000000e4] py-3 px-5 hover:bg-[#000000a8]" : "bg-[#FFFFFF1A]  px-4 py-2 hover:bg-[#FFFFFF30]"} text-[12px] rounded-full  transition-colors flex items-center gap-2`}
       >
         {locale === "en" ? (
           <>

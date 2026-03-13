@@ -60,6 +60,7 @@ const Footer = () => {
 
   return (
     <div dir={isRTL ? 'rtl' : 'ltr'}>
+      
       {/* Location Tabs */}
       <div className={`flex flex-col sm:flex-row ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
         {content.locations.map((location, index) => (
