@@ -43,7 +43,7 @@ const Review = () => {
       </div>
 
       {/* mobile view */}
-      <div className=' fixed top-[39rem] w-full flex md:hidden items-center gap-y-3 z-[9999]'>
+      <div className=' fixed top-[44rem] w-full flex md:hidden items-center gap-y-3 z-[9999]'>
         <button className=' bg-green-500 text-white py-2 w-full flex justify-center items-center gap-1'>Whatsapp <span><FaWhatsapp /></span></button>
          <button className='bg-red-500 text-white py-2 w-full flex justify-center items-center gap-1'>Call Us <span><MdCall /></span></button>
       </div>
