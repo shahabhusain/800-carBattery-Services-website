@@ -126,11 +126,6 @@ const TrendingProducts = () => {
             <h2 className="font-semibold text-lg sm:text-xl text-gray-900 mt-2">
               {item.price}
             </h2>
-
-            {/* Quick add button - optional for better UX on mobile */}
-            <button className="mt-3 w-full py-2 bg-gray-100 text-gray-900 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium hover:bg-red-500 hover:text-white">
-              Quick View
-            </button>
           </div>
         ))}
       </div>

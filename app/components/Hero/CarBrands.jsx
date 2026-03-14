@@ -105,7 +105,7 @@ const text =
       }
     : {
         desc: "Car Brands We Serve",
-        title1: "Compatible With All",
+        title1: "Includes All",
         title2: "Major Vehicle Brands",
         viewAll: "View All",
       };

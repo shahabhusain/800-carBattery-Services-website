@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import { GoArrowRight } from 'react-icons/go'
-import service from '@/public/service.jpg'
 import { useLocale } from 'next-intl'
+import service1 from '@/public/Home/b1.webp'
+import service2 from '@/public/Home/b2.webp'
+import service3 from '@/public/Home/b3.webp'
+import service4 from '@/public/Home/b4.webp'
 
 const Services = () => {
   
@@ -10,23 +13,23 @@ const Services = () => {
   const englishServices = [
     {
       title: "Battery Replacement",
-      description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-      image: service
+      description: "Need a quick and reliable car battery replacement? Our certified technicians provide premium-quality batteries and expert service, delivered straight to your doorstep in as little as 30 minutes.",
+      image: service1
     },
     {
       title: "Battery Boosting",
-      description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-      image: service
+      description: "Stop searching for 'battery boosting near me'! Our mobile team and fully equipped service vehicles are ready to handle your battery emergencies with ease. We make the process simple, stress-free, and fast.",
+      image: service2
     },
     {
       title: "Roadside Assistance",
-      description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-      image: service
+      description: "Stranded on the road? Our roadside assistance experts are just a call away. Equipped with the latest tools and technology, we ensure immediate support within 30 minutes, anywhere in the UAE.",
+      image: service3
     },
     {
-      title: "Car Scanning",
-      description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-      image: service
+      title: "Other Services",
+      description: "At 800BatteryPro we have a certified team of italian and German car experts in Dubai. As we offer advance car programming and car scanning services using the latest Technology.",
+      image: service4
     }
   ];
 
@@ -34,22 +37,22 @@ const Services = () => {
     {
       title: "استبدال البطارية",
       description: "نحن نغوص في مشاكلك ونضع معرفتنا وخبرتنا في خدمتك",
-      image: service
+      image: service1
     },
     {
       title: "تشغيل البطارية",
       description: "نحن نغوص في مشاكلك ونضع معرفتنا وخبرتنا في خدمتك",
-      image: service
+      image: service2
     },
     {
       title: "المساعدة على الطريق",
       description: "نحن نغوص في مشاكلك ونضع معرفتنا وخبرتنا في خدمتك",
-      image: service
+      image: service3
     },
     {
       title: "فحص السيارة",
       description: "نحن نغوص في مشاكلك ونضع معرفتنا وخبرتنا في خدمتك",
-      image: service
+      image: service4
     }
   ];
 

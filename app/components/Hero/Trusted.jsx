@@ -72,7 +72,7 @@ const Trusted = () => {
 
   // Component for an individual testimonial card
   const CreateCard = ({ card }) => (
-    <div className="p-5 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-80 shrink-0 bg-white border border-gray-100" dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className="p-5 rounded-lg mx-4  transition-all duration-200 w-80 shrink-0 bg-white border border-gray-100" dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Star Rating - Always 5 stars as per image */}
       <div className="mb-3">
         <StarRating rating={card.rating} />

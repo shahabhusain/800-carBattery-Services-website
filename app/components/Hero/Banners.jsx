@@ -5,15 +5,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import banner from '@/public/banner.png';
+import ban1 from '@/public/Home/ban1.webp'
+import ban2 from '@/public/Home/ban2.webp'
+import ban3 from '@/public/Home/ban3.webp'
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const Banners = ({ slides = 4, autoplayDelay = 3000 }) => {
+const Banners = ({ autoplayDelay = 3000 }) => {
   // Generate array for slides
-  const bannerSlides = Array.from({ length: slides }, (_, index) => index + 1);
+  const bannerSlides = [
+    ban1, ban2, ban3, banner
+  ]
 
   return (
     <div className='bg-[#FDF8F8] pt-20'>
@@ -55,10 +60,9 @@ const Banners = ({ slides = 4, autoplayDelay = 3000 }) => {
           <SwiperSlide key={slide}>
             <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
               <Image
-                src={banner}
-                alt={`Banner ${slide}`}
+                src={slide}
+                alt="banners"
                 fill
-                priority={slide === 1} // Only prioritize first image
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, 1200px"
                 className="object-cover"
               />

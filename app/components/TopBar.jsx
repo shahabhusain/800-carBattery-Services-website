@@ -7,7 +7,7 @@ const TopBar = () => {
              <div className=' absolute z-[1000] w-[70%] top-8 flex items-center justify-between '>
    <div className=' bg-[#FFFFFF1A] py-2.5 px-4 rounded-full flex items-center gap-12'>
           <button className=' text-[10px] font-medium flex items-center gap-2 text-white'><FaMailBulk size={15} /> <span>info@800batterypro.com</span></button>
-       <button className=' text-[10px] font-medium flex items-center gap-2 text-white'><FaLocationArrow size={15} /> <span>Al Quoz Industrial Area 4, Dubai, UAE</span></button>
+       <button className=' text-[10px] font-medium flex items-center gap-2 text-white'><FaLocationArrow size={15} /> <span>Dubai and Abu Dhabi, UAE</span></button>
    </div>
        <div className=' flex items-center gap-3'>
         {/* language selection */}

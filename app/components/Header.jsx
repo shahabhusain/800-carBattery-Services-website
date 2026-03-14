@@ -7,7 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import TopBar from "./TopBar";
 import LanguageSwitcher from "./LaguageSwitcher";
 
@@ -336,7 +336,7 @@ const Header = () => {
           </ul>
           
           <button className="w-full mt-8 bg-red-600 text-[14px] font-[400] py-3 px-5 rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-all duration-300 hover:scale-105 active:scale-95 group">
-            {locale === "en" ? "Book an appointment" : locale === "ar" ? "حجز موعد" : null}
+            {locale === "en" ? "Book An Appointment" : locale === "ar" ? "حجز موعد" : null}
             <span className="group-hover:translate-x-2 transition-transform duration-300">
               <GoArrowRight size={20} />
             </span>
@@ -396,7 +396,7 @@ const Header = () => {
               ? 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl' 
               : 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl'
           }`}>
-            {locale === "en" ? "Book an appointment" : locale === "ar" ? "حجز موعد" : null}
+            {locale === "en" ? "Book An Appointment" : locale === "ar" ? "حجز موعد" : null}
             <span className="group-hover:translate-x-2 transition-transform duration-300 hidden xl:inline">
               <GoArrowRight size={20} />
             </span>

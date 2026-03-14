@@ -7,12 +7,12 @@ import { useLocale } from 'next-intl';
 
 const englishContent = {
   title: "About Us",
-  heading: "800 battery pro",
-  description: "800BATTERYPRO delivers fast, reliable car battery replacement wherever you are. Whether at home, work, or roadside, our expert team provides high-quality batteries with quick on-site installation to get you back on the road without delay.",
+  heading: "battery pro",
+  description: "Welcome to 800BatteryPro—your go-to choice for rapid, reliable car battery services in Dubai and Abu Dhabi. Need the best car battery prices or 24/7 roadside assistance in Dubai? Don’t waste time searching for a battery shop near me—our mobile team and fully stocked store make battery emergencies simple and stress-free. Choose 800BatteryPro for superior speed and customer-first solutions.",
   features: [
-    "Fast on-site battery replacement",
-    "Premium, long-lasting batteries",
-    "Professional and hassle-free installation"
+    "Premium Car Brand Battery Services",
+    "Get Serviced With 24/7 Roadside Assistance",
+    "Trusted By Car Owners in Dubai & Abu Dhabi"
   ],
   cta: "Learn More"
 };

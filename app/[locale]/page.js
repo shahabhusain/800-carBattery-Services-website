@@ -9,26 +9,34 @@ import TrendingProducts from '../components/Hero/TrendingProducts'
 import RealExperience from '../components/Hero/RealExperience'
 import Trusted from '../components/Hero/Trusted'
 import Footer from '../components/Footer'
+import Review from '../components/Hero/Review'
 
 const Page = () => {
   return (
     <div>
-      <div className='sticky top-0 z-[-1]'>  {/* Added z-index */}
+
+      <div className='sticky top-0'>
         <Hero />
       </div>
-        <div className=' bg-white pb-12 rounded-t-4xl'>
-              <About />
+
+      <Review /> {/* move it here */}
+
+      <div className='bg-white pb-12 rounded-t-4xl relative z-10'>
+        <About />
         <Services />
         <Banners />
         <CarBrands />
         <BatteryBrands />
         <TrendingProducts />
-        </div>
-        <RealExperience />
-        <div className=' bg-white'>
-           <Trusted />
-                   <Footer />
-        </div>
+      </div>
+
+      <RealExperience />
+
+      <div className='bg-white relative'>
+        <Trusted />
+        <Footer />
+      </div>
+
     </div>
   )
 }
