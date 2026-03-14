@@ -37,7 +37,7 @@ const Faqs = () => {
             <p className='uppercase text-center text-[16px] font-semibold text-gray-600'>
                 Got Questions?
             </p>
-            <h1 className='text-[40px] font-semibold text-center mb-12'>
+            <h1 className='ld:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center mb-12'>
                 <span className='font-normal'>We’ve got</span>{' '}
                 <span className='text-red-700'>quick</span> answers
             </h1>
@@ -53,7 +53,7 @@ const Faqs = () => {
                             onClick={() => toggleFAQ(index)}
                             className='w-full flex items-center justify-between p-5 text-left bg-[#F8F8F8] hover:bg-gray-50 transition-colors duration-200'
                         >
-                            <span className='font-medium text-lg'>{faq.question}</span>
+                            <span className='font-medium md:text-lg text-[12px]'>{faq.question}</span>
                             <span className='text-red-700'>
                                 {openIndex === index ? (
                                     <IoIosArrowUp size={24} />

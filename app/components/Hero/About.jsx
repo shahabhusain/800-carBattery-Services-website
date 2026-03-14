@@ -36,10 +36,10 @@ const About = () => {
   const isRTL = locale === 'ar'
 
   return (
-    <div className='bg-[#FDF8F8] rounded-t-4xl py-20' dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className='bg-[#FDF8F8] rounded-t-4xl md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
       <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12 w-[90%] mx-auto'>
         <Image className='md:w-1/2' src={about} alt='about' />
-        <div className='md:w-1/2 flex flex-col gap-y-6'>
+        <div className='md:w-1/2 flex flex-col md:gap-y-6 gap-y-3'>
           <p className='uppercase md:text-[16px] text-[12px] font-bold'>
             {content.title}
           </p>

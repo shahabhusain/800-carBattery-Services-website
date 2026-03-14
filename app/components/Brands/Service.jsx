@@ -1,34 +1,37 @@
 import Image from 'next/image'
 import React from 'react'
-import serviceImg from '@/public/ser.jpg'
+import serviceImg1 from '@/public/services/1.webp'
+import serviceImg2 from '@/public/services/2.webp'
+import serviceImg3 from '@/public/services/3.webp'
+import serviceImg4 from '@/public/services/4.webp'
 const Service = () => {
-    const services = [
+ const services = [
       {
-        img:serviceImg,
-        title:"Battery Replacement",
-        desc:"Purus quis semper elementum viverra tellus. Urna arcu pulvinar est sodales. Faucibus "
+        img:serviceImg1,
+        title:"Car Battery Replacement",
+        desc:"Fast, reliable battery replacement delivered to your location in 30 minutes. "
       },
         {
-        img:serviceImg,
-        title:"Battery Replacement",
-        desc:"Purus quis semper elementum viverra tellus. Urna arcu pulvinar est sodales. Faucibus "
+        img:serviceImg2,
+        title:"Car Battery Boosting",
+        desc:"Quick and stress-free jump-start services wherever you are."
       },
         {
-        img:serviceImg,
-        title:"Battery Replacement",
-        desc:"Purus quis semper elementum viverra tellus. Urna arcu pulvinar est sodales. Faucibus "
+        img:serviceImg3,
+        title:"Roadside Assistance",
+        desc:"Immediate roadside support across the UAE, anytime, anywhere."
       },
         {
-        img:serviceImg,
-        title:"Battery Replacement",
-        desc:"Purus quis semper elementum viverra tellus. Urna arcu pulvinar est sodales. Faucibus "
+        img:serviceImg4,
+        title:"Car Scanning",
+        desc:" Advanced diagnostics to identify and resolve car issues with precision."
       },
     ]
   return (
     <div className=' w-[85%] mx-auto flex flex-col gap-y-3 py-20'>
       <p className=' uppercase text-center text-[16px] font-semibold'>sERVICES</p>
-      <h1 className=' text-[40px] font-semibold text-center'><span className=' font-normal'>Reliable</span> <span className=' text-red-700'>Car Battery</span> Services</h1>
-      <div className=' grid grid-cols-4 gap-3 mt-5'>
+      <h1 className=' ld:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center'><span className=' font-normal'>Reliable</span> <span className=' text-red-700'>Car Battery</span> Services</h1>
+      <div className=' grid md:grid-cols-4 grid-cols-1 gap-3 mt-5'>
            {
             services.map((item, index) => (
               <div key={index}>

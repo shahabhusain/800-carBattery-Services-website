@@ -112,16 +112,16 @@ const text =
 
 
     return (
-        <div className='py-12 md:py-16 lg:py-20 bg-[#FDF8F8]'>
+        <div className='pb-12 pt-5 md:pb-20 md:pt-20 md:py-16 lg:py-20 bg-[#FDF8F8]'>
             <div className='w-[95%] md:w-[85%] lg:w-[80%] mx-auto px-4 sm:px-0'>
                 {/* Header Section */}
                 <div className='text-left'>
-                    <h1 className='text-[14px] md:text-[16px] font-bold text-gray-600 uppercase tracking-wider'>
+                    <h1 className='text-[12px] md:text-[16px] font-bold text-gray-600 uppercase tracking-wider'>
                         {text.desc}
                     </h1>
                     
-                    <div className='flex flex-col md:flex-row items-center justify-between mt-4 md:mt-6 gap-6 md:gap-0'>
-                        <h1 className='text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold max-w-full md:max-w-[544px] leading-tight text-left'>
+                    <div className='flex flex-col md:flex-row items-center justify-between mt-1 md:mt-6 gap-6 md:gap-0'>
+                        <h1 className='text-[25px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold max-w-full md:max-w-[544px] leading-tight text-left'>
                             <span>{text.title1}</span>{' '}
                             <span className='text-[#C1121F]'>{text.title2}</span>{' '}
                         </h1>
