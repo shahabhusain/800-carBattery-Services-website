@@ -45,15 +45,15 @@ const Hero = () => {
       <div className='relative'>
 
         <Image
-          className='w-full md:h-[800px] h-[500px] object-cover'
+          className='w-full md:h-[800px] h-screen object-cover'
           src={herobg}
           alt='image'
         />
 
-        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-[500px]' />
+        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-screen' />
 
         <div
-          className={`absolute md:top-60 top-32 ${
+          className={`absolute md:top-60 top-44 ${
             locale === "en"
               ? "md:left-36 md:right-0 left-6 right-6"
               : "md:right-36 md:left-0 left-6 right-6"

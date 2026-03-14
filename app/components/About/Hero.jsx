@@ -21,11 +21,11 @@ const Hero = () => {
     <div className='text-white'>
       <div className='relative'>
         <Image 
-          className='w-full md:h-[450px] h-[500px] object-cover' 
+          className='w-full md:h-[450px] h-screen object-cover' 
           src={herobg} 
           alt='image'
         />
-        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-[500px]'></div>
+        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-screen'></div>
         
         {/* Centered content container */}
         <div className='absolute inset-0 top-32 flex items-center justify-center'>
@@ -38,7 +38,6 @@ const Hero = () => {
             </button>
           </div>
         </div>
-         
       </div>
   
     </div>
