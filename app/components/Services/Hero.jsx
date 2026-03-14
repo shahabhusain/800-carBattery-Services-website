@@ -12,7 +12,7 @@ const heroEnglishContent = {
   },
   desc1:"Car Battery Boosting - Battery Replacement - Roadside Assistance - Premium Car Repairs",
   btn:"Call Now",
-  mobileBtn:"Book And Appointment"
+  mobileBtn:"Book Service Now"
 }
 
 const heroArabicContent = {
@@ -23,7 +23,7 @@ const heroArabicContent = {
   },
   desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
   btn: "تحدث مع خبير",
-   mobileBtn:"Book And Appointment"
+   mobileBtn:"Book Service Now"
 };
 
 const Hero = () => {

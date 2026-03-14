@@ -13,7 +13,8 @@ const heroEnglishContent = {
     span2:"& Abu Dhabi!"
   },
   desc1:"Car Battery Boosting & Replacement - Roadside Assistance - Premium Car Programming",
-  btn:"Call Now"
+  btn:"Call Now",
+  btn1:"Book Service Now"
 }
 
 const heroArabicContent = {
@@ -23,7 +24,8 @@ const heroArabicContent = {
     span2: "وأبوظبي!"
   },
   desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-  btn: "تحدث مع خبير"
+  btn: "تحدث مع خبير",
+   btn1:"Book Service Now"
 };
 
 const Hero = () => {
@@ -72,8 +74,15 @@ const Hero = () => {
             {hero.desc1}
           </p>
 
-          <button className='text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex items-center gap-x-2 hover:bg-red-700 transition'>
+          <button className='text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white md:flex hidden items-center gap-x-2 hover:bg-red-700 transition'>
             {hero.btn}
+            <span className='rotate-[320deg]'>
+              <GoArrowRight size={30} />
+            </span>
+          </button>
+
+          <button className='text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex md:hidden items-center gap-x-2 hover:bg-red-700 transition'>
+            {hero.btn1}
             <span className='rotate-[320deg]'>
               <GoArrowRight size={30} />
             </span>
