@@ -1,18 +1,18 @@
+import Hero from '@/app/components/contact/Hero'
 import Footer from '@/app/components/Footer'
 import Trusted from '@/app/components/Hero/Trusted'
-import Banners from '@/app/components/offer/Banners'
-import Hero from '@/app/components/offer/Hero'
 import Faqs from '@/app/components/Services/Faqs'
+import Form from '@/app/components/contact/Forms'
 import React from 'react'
 
-const Offer = () => {
+const Contact = () => {
   return (
     <div>
       <div className='sticky top-0'>  {/* Removed z-[-1] */}
         <Hero />
       </div>
       <div className='bg-white  rounded-t-4xl relative z-10'>
-         <Banners />
+         <Form />
          <Faqs />
          <Trusted />
          <Footer />
@@ -21,4 +21,4 @@ const Offer = () => {
   )
 }
 
-export default Offer
+export default Contact

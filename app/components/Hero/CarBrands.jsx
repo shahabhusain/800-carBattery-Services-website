@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import bmw from '@/public/brands/bmw.png'
 import bmwcar from '@/public/brands/bmwcar.png'
@@ -27,155 +28,182 @@ import rocar from '@/public/brands/rocar.png'
 import Image from 'next/image'
 import { GoArrowRight } from 'react-icons/go'
 import { useLocale } from 'next-intl'
+import Link from 'next/link'
 
 const CarBrands = () => {
     const brands = [
         {
             logo: bmw,
             desc: "BMW",
-            car: bmwcar
+            car: bmwcar,
+            slug: "bmw"
         },
         {
             logo: bu,
             desc: "Bugatti",
-            car: bucar
+            car: bucar,
+            slug: "bugatti"
         },
         {
             logo: bra,
             desc: "Brabus",
-            car: bracar
+            car: bracar,
+            slug: "brabus"
         },
         {
             logo: la,
             desc: "Lamborghini",
-            car: lacar
+            car: lacar,
+            slug: "lamborghini"
         },
         {
             logo: fr,
             desc: "Ferrari",
-            car: frcar
+            car: frcar,
+            slug: "ferrari"
         },
         {
             logo: be,
             desc: "Bentley",
-            car: becar
+            car: becar,
+            slug: "bentley"
         },
         {
             logo: ma,
             desc: "Maserati",
-            car: macar
+            car: macar,
+            slug: "maserati"
         },
-            {
+        {
             logo: co,
             desc: "Cadillac",
-            car: cocar
+            car: cocar,
+            slug: "cadillac"
         },
         {
             logo: me,
             desc: "Mercedes",
-            car: mecar
+            car: mecar,
+            slug: "mercedes"
         },
-    
         {
             logo: po,
             desc: "Porsche",
-            car: pocar
+            car: pocar,
+            slug: "porsche"
         },
         {
             logo: ch,
             desc: "Chevrolet",
-            car: chcar
+            car: chcar,
+            slug: "chevrolet"
         },
         {
             logo: ro,
             desc: "Rolls Royce",
-            car: rocar
+            car: rocar,
+            slug: "rolls-royce"
         },
     ]
 
-    const locale =  useLocale()
+    const locale = useLocale()
 
-const text =
-  locale === "ar"
-    ? {
-        desc: "ماركات السيارات التي نخدمها",
-        title1: "متوافق مع جميع",
-        title2: "ماركات السيارات الرئيسية",
-        viewAll: "عرض الكل",
-      }
-    : {
-        desc: "Car Brands We Serve",
-        title1: "Includes All",
-        title2: "Major Vehicle Brands",
-        viewAll: "View All",
-      };
+    const text = locale === "ar"
+        ? {
+            desc: "ماركات السيارات التي نخدمها",
+            title1: "متوافق مع جميع",
+            title2: "ماركات السيارات الرئيسية",
+            viewAll: "عرض الكل",
+        }
+        : {
+            desc: "Car Brands We Serve",
+            title1: "Includes All",
+            title2: "Major Vehicle Brands",
+            viewAll: "View All",
+        }
 
+    // Function to handle view all click
+    const handleViewAll = () => {
+        window.location.href = `/${locale}/brands`
+    }
 
     return (
-        <div className='pb-12 pt-5 md:pb-20 md:pt-20 md:py-16 lg:py-20 bg-[#FDF8F8]'>
-            <div className='w-[95%] md:w-[85%] lg:w-[80%] mx-auto px-4 sm:px-0'>
+        <div className='relative pb-12 pt-5 md:pb-20 md:pt-20 md:py-16 lg:py-20 bg-gradient-to-br from-[#FDF8F8] to-[#FFF5F5] overflow-hidden'>
+
+            
+            <div className='w-[95%] md:w-[85%] lg:w-[80%] mx-auto px-4 sm:px-0 relative z-10'>
                 {/* Header Section */}
-                <div className='text-left'>
-                    <h1 className='text-[12px] md:text-[16px] font-bold text-gray-600 uppercase tracking-wider'>
-                        {text.desc}
-                    </h1>
+                <div className='text-left animate-fade-in-up'>
+                    <div className='inline-block'>
+                        <div className='relative'>
+                            <h1 className='text-[12px] md:text-[16px] font-bold text-gray-600 uppercase tracking-wider px-2'>
+                                {text.desc}
+                            </h1>
+                        </div>
+                    </div>
                     
-                    <div className='flex flex-col md:flex-row items-center justify-between mt-1 md:mt-6 gap-6 md:gap-0'>
-                        <h1 className='text-[25px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold max-w-full md:max-w-[544px] leading-tight text-left'>
-                            <span>{text.title1}</span>{' '}
-                            <span className='text-[#C1121F]'>{text.title2}</span>{' '}
+                    <div className='flex flex-col md:flex-row items-center justify-between mt-4 md:mt-6 gap-6 md:gap-0'>
+                        <h1 className='text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold max-w-full md:max-w-[600px] leading-tight text-left bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent'>
+                            {text.title1}{' '}
+                            <span className='text-[#C1121F] bg-gradient-to-r from-[#C1121F] to-[#E3342F] bg-clip-text text-transparent'>{text.title2}</span>
                         </h1>
                         
-                        <button className='w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base'>
-                            {text.viewAll}
-                            <span className='rotate-320'>
+                        <button 
+                            onClick={handleViewAll}
+                            className='group relative w-full sm:w-fit bg-gradient-to-r from-[#C1121F] to-[#E3342F] py-3 sm:py-3.5 px-6 sm:px-8 uppercase rounded-full text-white flex items-center justify-center gap-x-2  transition-all duration-300 text-sm sm:text-base overflow-hidden'
+                        >
+                            <span className='relative z-10'>{text.viewAll}</span>
+                            <span className='relative z-10 rotate-320 group-hover:translate-x-1 transition-transform duration-300'>
                                 <GoArrowRight size={24} className='sm:w-[30px] sm:h-[30px]' />
                             </span>
+                            <div className='absolute inset-0 bg-gradient-to-r from-[#A00E1A] to-[#C1121F] opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                         </button>
                     </div>
                 </div>
 
                 {/* Brands Grid */}
-                <div className='bg-white rounded-lg md:rounded-xl shadow-sm mt-8 md:mt-10 lg:mt-12'>
-                    {/* Mobile: 2 columns, Tablet: 3 columns, Desktop: 4 columns */}
+                <div className='bg-white rounded-2xl  mt-8 md:mt-10 lg:mt-12 overflow-hidden   duration-500'>
                     <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
                         {brands.map((item, index) => {
-                            // Determine border classes based on grid position
-                            const isLastInRow = (index + 1) % 2 === 0 // mobile last in row
-                            const isLastInRowSm = (index + 1) % 3 === 0 // tablet last in row
-                            const isLastInRowLg = (index + 1) % 4 === 0 // desktop last in row
+                            const isLastInRow = (index + 1) % 2 === 0
+                            const isLastInRowSm = (index + 1) % 3 === 0
+                            const isLastInRowLg = (index + 1) % 4 === 0
                             
                             return (
-                                <div 
+                                <Link 
+                                    href={`/${locale}/brands/${item.slug}`}
                                     key={index} 
                                     className={`
-                                        border-r border-b border-[#0000001e] p-4 sm:p-5 md:p-6
-                                        ${(index + 1) <= brands.length - 4 ? 'border-b' : ''}
+                                        group relative border-r border-b border-gray-100 p-4 sm:p-5 md:p-6
                                         ${!isLastInRow ? 'sm:border-r' : ''}
                                         ${!isLastInRowSm ? 'lg:border-r' : ''}
                                         ${isLastInRowLg ? 'lg:border-r-0' : ''}
-                                        hover:bg-gray-50 transition-colors duration-300
+                                        hover:bg-gradient-to-br hover:from-gray-50 hover:to-red-50 transition-all duration-500 cursor-pointer
                                     `}
                                 >
-                                    <div className='flex flex-col items-center justify-center hover:scale-105 transform transition-all duration-500 ease-in-out'>
-                                        {/* Logo */}
-                                        <div className='relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-2 sm:mb-3'>
+                                    {/* Hover effect overlay */}
+                                    <div className='absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 opacity-0 group-hover:opacity-5 transition-opacity duration-500'></div>
+                                    
+                                    <div className='flex flex-col items-center justify-center relative z-10'>
+                                        {/* Logo with animation */}
+                                        <div className='relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-2 sm:mb-3 group-hover:scale-110 transform transition-all duration-500 ease-out'>
+                                            <div className='absolute inset-0 bg-red-100 rounded-full opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-500'></div>
                                             <Image 
                                                 src={item.logo} 
                                                 alt={`${item.desc} logo`}
                                                 fill
-                                                className='object-contain'
+                                                className='object-contain relative z-10'
                                                 sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
                                             />
                                         </div>
                                         
-                                        {/* Brand Name */}
-                                        <p className='text-sm sm:text-base md:text-lg lg:text-[20px] font-medium text-center'>
+                                        {/* Brand Name with gradient on hover */}
+                                        <p className='text-sm sm:text-base md:text-lg lg:text-[20px] font-semibold text-center text-gray-800 group-hover:text-[#C1121F] transition-colors duration-300'>
                                             {item.desc}
                                         </p>
                                         
-                                        {/* Car Image */}
-                                        <div className='relative w-full h-16 sm:h-20 md:h-24 lg:h-28 mt-4 sm:mt-5 md:mt-6'>
+                                        {/* Car Image with slide-up animation */}
+                                        <div className='relative w-full h-16 sm:h-20 md:h-24 lg:h-28 mt-4 sm:mt-5 md:mt-6 group-hover:translate-y-[-8px] transition-transform duration-500 ease-out'>
                                             <Image 
                                                 src={item.car} 
                                                 alt={`${item.desc} car`}
@@ -184,21 +212,43 @@ const text =
                                                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 33vw, 25vw"
                                             />
                                         </div>
+                                        
+
                                     </div>
-                                </div>
+                                </Link>
                             )
                         })}
                     </div>
                 </div>
 
-                {/* Optional: View More Indicator for Mobile */}
+                {/* Mobile view all button - Enhanced */}
                 <div className='flex justify-center mt-8 md:hidden'>
-                    <button className='text-red-600 font-medium flex items-center gap-2'>
+                    <button 
+                        onClick={handleViewAll}
+                        className='text-red-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all duration-300 group'
+                    >
                         View More Brands
-                        <GoArrowRight size={20} />
+                        <GoArrowRight size={20} className='group-hover:translate-x-1 transition-transform duration-300' />
                     </button>
                 </div>
             </div>
+
+            {/* Add keyframe animations */}
+            <style jsx>{`
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                .animate-fade-in-up {
+                    animation: fadeInUp 0.6s ease-out;
+                }
+            `}</style>
         </div>
     )
 }
