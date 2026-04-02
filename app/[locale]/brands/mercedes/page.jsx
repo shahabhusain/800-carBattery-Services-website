@@ -10,22 +10,25 @@ import serviceImg2 from '@/public/services/2.webp'
 import serviceImg3 from '@/public/services/3.webp'
 import serviceImg4 from '@/public/services/4.webp'
 import { useLocale } from 'next-intl'
-import serviceImg from "@/public/brands/bmwBrands/service.webp"
-import serviceImg5 from "@/public/brands/bmwBrands/service1.webp"
+import serviceImg from "@/public/brands/mercedes/service.webp"
+import serviceImg5 from "@/public/brands/mercedes/service1.webp"
 import React from 'react'
 import CarBrands from '@/app/components/Brands/subPage/CarBrands'
 // car brands
-  import carBrand1 from '@/public/brands/bmwBrands/1.webp'
-   import carBrand2 from '@/public/brands/bmwBrands/2.webp'
-    import carBrand3 from '@/public/brands/bmwBrands/3.webp'
-     import carBrand4 from '@/public/brands/bmwBrands/4.webp'
-      import carBrand5 from '@/public/brands/bmwBrands/5.webp'
-       import carBrand6 from '@/public/brands/bmwBrands/6.webp'
-        import carBrand7 from '@/public/brands/bmwBrands/7.webp'
-         import carBrand8 from '@/public/brands/bmwBrands/8.webp'
-          import carBrand9 from '@/public/brands/bmwBrands/9.webp'
-           import carBrand10 from '@/public/brands/bmwBrands/10.webp' 
-            import carBrand11 from '@/public/brands/bmwBrands/11.webp'
+  import carBrand1 from '@/public/brands/mercedes/1.webp'
+   import carBrand2 from '@/public/brands/mercedes/2.webp'
+    import carBrand3 from '@/public/brands/mercedes/3.webp'
+     import carBrand4 from '@/public/brands/mercedes/4.webp'
+      import carBrand5 from '@/public/brands/mercedes/5.webp'
+       import carBrand6 from '@/public/brands/mercedes/6.webp'
+        import carBrand7 from '@/public/brands/mercedes/7.webp'
+         import carBrand8 from '@/public/brands/mercedes/8.webp'
+          import carBrand9 from '@/public/brands/mercedes/9.webp'
+           import carBrand10 from '@/public/brands/mercedes/10.webp' 
+            import carBrand11 from '@/public/brands/mercedes/11.webp'
+            import carBrand12 from '@/public/brands/mercedes/12.webp'
+            import carBrand13 from '@/public/brands/mercedes/13.webp'
+            import carBrand14 from '@/public/brands/mercedes/14.webp'
 // battery brands
 import varta from "@/public/batteryBrands/varta.png";
 import acdelco from "@/public/batteryBrands/ac.png";
@@ -35,18 +38,18 @@ import solite from "@/public/batteryBrands/solit.png";
 import volcan from "@/public/batteryBrands/volcan.png";
 import Battery from '@/app/components/Brands/subPage/Battery'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
-import herobg from '@/public/brands/bmwBrands/bg.webp'
+import herobg from '@/public/brands/mercedes/bg.webp'
 
 
-const Bmw = () => {
+const Mercedes = () => {
   const locale = useLocale()
   const heroEnglishContent = {
     desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
     title:{
-      span1:" BMW Car Battery Replacement   ",
-      span2:"& Advanced Repairs"
+      span1:" Mercedes Car Battery Replacement  ",
+      span2:" & Car Programming"
     },
-    desc1:"Don’t panic if your Car Battery Is Dead! 800Battery Offers The Under 15 Minute On-site Battery Replacement for your BMW in Dubai? Branded car battery with best customer services.",
+    desc1:"Don’t stress if your Car Battery Is Dead! 800BatteryPro provides instant Battery Replacement for your Mercedes-Benz in Dubai. We only provide genuine Battery Brands & Top Customer Support.",
     btn:"Call Now",
     btn1:"Book Service Now"
   }
@@ -64,28 +67,19 @@ const Bmw = () => {
 
     const serviceEnglishContent = {
     subtitle: "SERVICES",
-    title: " BMW Battery Replacement & Auto Repair Services",
+    title: " Mercedes-Benz Battery Replacement & Advanced Repair Services",
     services: [
       {
         id: 1,
         description:
-          "Just had your BMW battery die? Don’t panic, as you now have 800BatteryPro as a trusted partner for reliable BMW Battery Replacement in Dubai. We have a team of certified technicians who are experienced in all BMW models and a well-equipped garage, too. Our technicians only use genuine battery brands for your BMW, whether it’s a sport, sedan, SUV, coupe, or any other model. We are regarded as one of the trusted BMW service centres in the UAE, with 100 percent customer satisfaction."
+          "Don’t panic if your Mercedes battery is dead! The best car battery replacement services in Dubai are just a click away. 800BatteryPro is trusted by thousands for its quick response and onsite battery services. We have a team of certified Mercedes specialists in Dubai who knows everything about how to get your car back on the road. With the latest battery boosting equipment and a well-equipped service centre in Dubai and Abu Dhabi, you have us as a trusted partner in all car battery-related services. Whether it’s the legendary Mercedes SLR, a luxury vehicle like the S-Class, a premium SUV like the G-Wagon, or any other custom-built model, our technicians only use AGM and Lithium batteries."
       },
       {
         id: 2,
         description:
-          "We provide 24/7 roadside assistance and emergency BMW battery replacement services directly at your office, home, or anywhere in Dubai and Abu Dhabi."
+          "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of onsite car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months.  For premium Mercedes Battery replacement and car programming, contact us now at +971528475675 or book a free car inspection right now!"
       },
-      {
-        id: 3,
-        description:
-          "Our team of experts will offer free battery testing and use the latest tech, along with ensuring a genuine battery brand is used, which typically happens under 15 Minutes. Our Battery replacement service includes free battery health testing, expert installation, and up to 18 months of warranty. "
-      },
-      {
-        id: 4,
-        description:
-          "We only use genuine car batteries suited for your vehicle. For BMW Battery replacements, car scanning, engine repairs, electrical repairs or other advanced repair services, you can call us at our toll-free number at +971528475675 or book a free appointment right now!"
-      },
+    
     ]
   }
 
@@ -103,39 +97,35 @@ const Bmw = () => {
         description:
           "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
       },
-      {
-        id: 3,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-      {
-        id: 4,
-        description:
-          "بطاريات عالية الجودة مع ضمان وأداء طويل الأمد."
-      },
+      
 
     ]
   }
 
       const serviceEnglishContent1 = {
     subtitle: "SERVICES",
-    title: "BMW Service Centre in Dubai ",
+    title: "Mercedes Service Centre in Dubai ",
     services: [
       {
         id: 1,
         description:
-          "Genuine Car Battery Replacement & Advances Car Repairs - BMW are powerful German machine with next-gen powertrains which requires branded battery capable of handling quick acceleration, complex electrical systems, and smart tech features. 800BatteryPro recommends AGM and lithium batteries, which are great in their capacity and trusted for reliable functionality. Our certified BMW experts in Dubai only use the premium AGM Batteries to ensure high performance in the harsh summer season of the UAE."
+          "It's important to get the right Mercedes-Benz battery, and at 800BatteryPro, we're here to help you choose the right one for your model. We have a wide range of batteries in stock, giving you numerous choices."
       },
       {
         id: 2,
         description:
-          "We serve more than just BMW Car Battery replacement, as we have a car service center ideally located in Dubai and Abu Dhabi. Our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (I.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for BMW, which ensures peak engine performance and luxury."
+          "Mercedes-Benz vehicles feature two batteries: the main battery powers the car's electrical systems, while the auxiliary battery supports functions like lights, radio, and Stop-Start mechanisms. The main AGM battery is located under the hood, while the auxiliary battery is typically in the trunk or rear seat. Understanding their roles is crucial for timely replacement. 800BatteryPro, serving Dubai and Abu Dhabi, specializes in replacing both main and auxiliary Mercedes-Benz batteries. Trust their expertise for seamless battery solutions."
       },
       {
         id: 3,
         description:
-          "You can reserve your slot for your next Battery Checkup with the best BMW experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      }
+          "For Mercedes-Benz, our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (I.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for Mercedes-Benz, which ensures peak engine performance and luxury."
+      },
+       {
+        id: 4,
+        description:
+          "You can reserve your slot for your next Battery Checkup with the best Mercedes-Benz car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
+      },
     ]
   }
 
@@ -158,6 +148,11 @@ const Bmw = () => {
         description:
           "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
       },
+       {
+        id: 4,
+        description:
+          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
+      },
 
     ]
   }
@@ -165,23 +160,23 @@ const Bmw = () => {
   const englishServices = [
   {
     img: serviceImg1,
-    title: "Car Battery Replacement",
-    desc: "Fast, reliable battery replacement delivered to your location in 30 minutes."
+    title: "Premium 24/7 Customer Support",
+    desc: "800BatteryPro provides you with on-time Mercedes-Benz battery services with excellent customer support around the clock."
   },
   {
     img: serviceImg2,
-    title: "Car Battery Boosting",
-    desc: "Quick and stress-free jump-start services wherever you are."
+    title: "Certified Mercedes Benz Specialists",
+    desc: "We have a team of certified mercedes benz specialists using Genuine Mercedes Parts and branded car batteries for every car service we deliver."
   },
   {
     img: serviceImg3,
-    title: "Roadside Assistance",
-    desc: "Immediate roadside support across the UAE, anytime, anywhere."
+    title: "Car Battery Under 15 Minutes",
+    desc: "Once we receive your emergency call for car battery services, our team delivers every car battery replacement under 15 minutes."
   },
   {
     img: serviceImg4,
-    title: "Car Scanning",
-    desc: "Advanced diagnostics to identify and resolve car issues with precision."
+    title: "Market Competitive Pricing & No Hidden Charges",
+    desc: "Along with our free battery testing and free battery delivery, our Mercedes car battery services are available on market competitive pricings."
   }
 ]
 
@@ -256,56 +251,46 @@ const arabicContent = [
 
     const englishFaqs = [
         {
-            question: "How long does a BMW battery replacement take?",
-            answer: "800BatteryPro guarantees on-site battery replacement under 15 Minutes once our certified BMW technicians arrive at your location. We offer free battery testing and boosting services 24/7 through our specialised roadside assistance services. If you are car battery is dead or something wrong with its electrical system, just call as at +971 528475675 for immediate assistance."
+            question: "When should I change the brake pads on my Mercedes?",
+            answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
         },
         {
-            question: "How do I know if my BMW battery needs replacing?",
-            answer: " If you notice signs such as slow engine cranking, warning lights blinking, Headlights getting dimmed or even if it’s your car not starting. Then 800Battery recommends its free battery testing before any replacement happens."
+            question: "How much does a Mercedes Service cost?",
+            answer: "Not all Mercedes models are the same. The cost of service will depend on the model, engine, and drivetrain specifications. To find out how much it will cost to service your automobile, please fill out an inquiry form or call us. Our knowledgeable Service Advisors will be happy to help you and give you an estimate."
         },
         {
-            question: "Do you offer battery replacement in Dubai?",
-            answer: "800BatteryPro offers 24/7 battery replacement services in Dubai and Abu Dhabi. We have a team of certified BMW technicians using latest technology and genuine car battery serving residents of UAE with under 15 minutes roadside assistance."
+            question: "Why is it important to service my Mercedes with manufacturer-recommended oil and Filter, when there are cheaper alternatives available?",
+            answer: "Your Mercedes engine is very well designed and has very small tolerances. The makers picked a certain brand and grade of oil that works best with each engine during testing and design. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
         },
         {
-            question: "How much does a BMW battery replacement cost in Dubai?",
-            answer: "BMW Battery replacement cost varies depending upon the car model and battery type, however when it comes to 800BatteryPro we offer free battery testing and 24/7 roadside assistance which can be availed by contacting us at +971 528475675 or WhatsApp One of our experts."
+            question: "When I brake, my Mercedes vibrates, why?",
+            answer: "If your car shakes when you brake, it could be because the brake pads or brake disks are broken. Your suspension, misaligned tires, or uneven tire wear could also be causing the vibration. A specialist should look at your car to find the problem and fix it in the best way. "
         },
         {
-            question: "What warranty comes with a battery replacement?",
-            answer: "Yes, 800BatteryPro only recommends genuine Battery Brands, as our battery replacement services comes up with 18 months warranty. While, our battery boosting is completely free of cost you can avail our services by calling us at +971 528475675."
+            question: "My Mercedes's check engine light is on. What should I do?",
+            answer: "If you are driving, you should not drive the automobile or pull over safely. When there is an electronic or mechanical problem with your car's engine, the check engine light comes on. It could be anything small, like dirty injectors, or something big that could hurt your engine. We won't know until a technician connects a diagnostic instrument to your Mercedes and looks at the trouble codes. Please call us right away so we can help you avoid any major issues."
         },
 
         {
-            question: "Is BMW battery replacement in Dubai available 24/7?",
-            answer: "Yes, 800BatteryPro has 24/7 roadside assistance available for BMW battery replacement in Dubai. We have our team of certified BMW specialist in Dubai, who uses latest technology and genuine battery brands only for every battery job."
+            question: "Any German Car Experts in Dubai?",
+            answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
         },
 
         {
-            question: " Why is it important to service my BMW with manufacturer recommended Oil and Filter, when there are cheaper alternative available?",
-            answer: "Your BMW engine is very well built and has very little tolerances. The makers choose a certain brand and grade of oil that works well with each engine while they were testing and designing the engine. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
+            question: " Do we provide German Car Battery Replacement in Abu Dhabi?",
+            answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
         },
 
         {
-            question: "What do I do when the low engine oil light turns on?",
-            answer: " You can see if any oil has spilled where the automobile is parked. If oil has leaked, the engine oil lamp is probably on because of a leak. You might also have a small leak that doesn't make a big puddle but can lower the oil level over time. If not, the problem can be that the engine in your BMW is burning oil because it is too worn out. Using the right oil grade for your car is vital to avoid this."
+            question: "Which car battery do we use for replacement services?",
+            answer: "Our German car specialist only uses premium AGM and Lithium-ion batteries for Mercedes Battery replacements. We only recommend high-quality and long-lasting car batteries, which ensure peak performance and safety for our customers."
         },
 
         {
-            question: "My BMW is shaking, is it safe to drive?",
-            answer: "No is the short answer. Maybe is the long response. There could be a simple explanation why your automobile is shaking, like worn-out spark plugs, or it could be something more serious. Don't ignore the engine noise; get it checked out as soon as you can."
+            question: "What’s the best way to get your dead battery active?",
+            answer: "Don’t get stressed if your car battery is dead. Our German car experts in Dubai and Abu Dhabi use the latest equipment and technology to get your vehicle back on the road. Call us now for instant battery boosting services under 15 minutes. "
         },
 
-
-         {
-            question: "What does “transmission fault” signify on your car’s dashboard?",
-            answer: "It usually signifies that the transmission has a problem inside. It could be because of dirty gearbox fluid, a problem with the valve body, the torque converter, the internal mechanical parts, or a broken output speed sensor."
-        },
-
-         {
-            question: "What to do if my BMW is overheating?",
-            answer: "If your BMW is overheating, turn off the engine as soon as it is safe to do so. The engine can get damaged beyond repair if it gets too hot, which can happen very fast. If you're driving, you should pull over as soon as it's safe to do so and call a tow truck to take your car to the shop for an inspection. If the engine becomes too hot, even traveling a few meters can break it beyond repair."
-        },
 
            ]
 
@@ -354,7 +339,7 @@ const arabicContent = [
             title2: "ماركات السيارات الرئيسية",
         }
         : {
-            desc: "BMW Car Models We Serve",
+            desc: "Mercedes Car Models We Serve",
             title1: "Includes All",
             title2: "Major Models & Variants",
         }
@@ -374,45 +359,58 @@ const arabicContent = [
 
                      const brands = [
         {
-            desc: "BMW M1",
+            desc: "Mercedes-Maybach EQS SUV",
             car: carBrand1,
         },
         {
-            desc: "BMW M2",
+            desc: "CLA Sedan",
             car: carBrand2,
         },
         {
-            desc: "BMW M3",
+            desc: "C-Class Sedan",
             car: carBrand3,
         },
         {
-            desc: "BMW M4",
+            desc: "E-Class Sedan",
             car: carBrand4,
         },
         {
-            desc: "BMW M5",
+            desc: "E-Class SedanEQE Sedan",
             car: carBrand5,
         },
         {
-            desc: "BMW M6",
+            desc: "S-Class Sedan",
             car: carBrand6,
         },
         {
-            desc: "BMW M7",
+            desc: "E-Class Wagon",
             car: carBrand7,
         },
         {
-            desc: "BMW X7",
+            desc: "AMG S 63 E PERFORMANCE Sedan",
+            car: carBrand8,
+        },
+          {
+            desc: "CLE Coupe",
             car: carBrand9,
         },
           {
-            desc: "BMW Z4",
+            desc: "CLE Coupe",
             car: carBrand10,
         },
-          {
-            desc: "BMW M8",
+         {
+            desc: "AMG SL Roadster",
             car: carBrand11,
         },
+         {
+            desc: "Mercedes-Maybach GLS SUV",
+            car: carBrand12,
+        },
+         {
+            desc: "G-Class SUV",
+            car: carBrand13,
+        },
+
         
                   ]
               
@@ -431,7 +429,7 @@ const arabicContent = [
       <div className='sticky top-0 '>  {/* Added z-index */}
         <Hero hero={hero} herobg={herobg} />
       </div>
-        <div className=' bg-white  rounded-t-4xl relative z-10'>
+        <div className='bg-white rounded-t-4xl relative z-10'>
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
            <Services services={services} />
            <CarBrands text={text} brands={brands} />
@@ -446,4 +444,4 @@ const arabicContent = [
   )
 }
 
-export default Bmw
+export default Mercedes

@@ -10,22 +10,20 @@ import serviceImg2 from '@/public/services/2.webp'
 import serviceImg3 from '@/public/services/3.webp'
 import serviceImg4 from '@/public/services/4.webp'
 import { useLocale } from 'next-intl'
-import serviceImg from "@/public/brands/bmwBrands/service.webp"
-import serviceImg5 from "@/public/brands/bmwBrands/service1.webp"
 import React from 'react'
 import CarBrands from '@/app/components/Brands/subPage/CarBrands'
 // car brands
-  import carBrand1 from '@/public/brands/bmwBrands/1.webp'
-   import carBrand2 from '@/public/brands/bmwBrands/2.webp'
-    import carBrand3 from '@/public/brands/bmwBrands/3.webp'
-     import carBrand4 from '@/public/brands/bmwBrands/4.webp'
-      import carBrand5 from '@/public/brands/bmwBrands/5.webp'
-       import carBrand6 from '@/public/brands/bmwBrands/6.webp'
-        import carBrand7 from '@/public/brands/bmwBrands/7.webp'
-         import carBrand8 from '@/public/brands/bmwBrands/8.webp'
-          import carBrand9 from '@/public/brands/bmwBrands/9.webp'
-           import carBrand10 from '@/public/brands/bmwBrands/10.webp' 
-            import carBrand11 from '@/public/brands/bmwBrands/11.webp'
+  import carBrand1 from '@/public/brands/gmc/1.webp'
+   import carBrand2 from '@/public/brands/gmc/2.webp'
+    import carBrand3 from '@/public/brands/gmc/3.webp'
+     import carBrand4 from '@/public/brands/gmc/4.webp'
+      import carBrand5 from '@/public/brands/gmc/5.webp'
+       import carBrand6 from '@/public/brands/gmc/6.webp'
+        import carBrand7 from '@/public/brands/gmc/7.webp'
+         import carBrand8 from '@/public/brands/gmc/8.webp'
+          import carBrand9 from '@/public/brands/gmc/9.webp'
+           import carBrand10 from '@/public/brands/gmc/10.webp' 
+            import carBrand11 from '@/public/brands/gmc/11.webp'
 // battery brands
 import varta from "@/public/batteryBrands/varta.png";
 import acdelco from "@/public/batteryBrands/ac.png";
@@ -35,18 +33,19 @@ import solite from "@/public/batteryBrands/solit.png";
 import volcan from "@/public/batteryBrands/volcan.png";
 import Battery from '@/app/components/Brands/subPage/Battery'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
-import herobg from '@/public/brands/bmwBrands/bg.webp'
+import serviceImg from "@/public/brands/gmc/service.webp"
+import serviceImg5 from "@/public/brands/gmc/service1.webp"
+import bg from '@/public/brands/gmc/bg.webp'
 
-
-const Bmw = () => {
+const Gmc = () => {
   const locale = useLocale()
   const heroEnglishContent = {
     desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
     title:{
-      span1:" BMW Car Battery Replacement   ",
+      span1:"GMC Car Battery Replacement ",
       span2:"& Advanced Repairs"
     },
-    desc1:"Don’t panic if your Car Battery Is Dead! 800Battery Offers The Under 15 Minute On-site Battery Replacement for your BMW in Dubai? Branded car battery with best customer services.",
+    desc1:"Don’t panic if your GMC Car Battery Needs Quick Replacement or any other advance repairs. 800BatteryPro provides 24/7 roadside assistance under 30 minutes. ",
     btn:"Call Now",
     btn1:"Book Service Now"
   }
@@ -64,27 +63,27 @@ const Bmw = () => {
 
     const serviceEnglishContent = {
     subtitle: "SERVICES",
-    title: " BMW Battery Replacement & Auto Repair Services",
+    title: "GMC Battery Replacement & Advanced Repair Services",
     services: [
       {
         id: 1,
         description:
-          "Just had your BMW battery die? Don’t panic, as you now have 800BatteryPro as a trusted partner for reliable BMW Battery Replacement in Dubai. We have a team of certified technicians who are experienced in all BMW models and a well-equipped garage, too. Our technicians only use genuine battery brands for your BMW, whether it’s a sport, sedan, SUV, coupe, or any other model. We are regarded as one of the trusted BMW service centres in the UAE, with 100 percent customer satisfaction."
+          "Suppose you got a non-active battery that causes dim lights, electronic system fluctuations, and other issues. Our certified GMC technicians provide on-site services for all GMC car battery replacements, along with battery boosting and advance repairs. 800BatteryPro only recommends and uses car batteries that use Sila Nanotechnologies, sodium-ion batteries, solid-state batteries, and more. Our team of GMC specialists is experienced in providing 100 percent satisfactory jobs related to every GMC Battery replacement in Dubai and Abu Dhabi, ensuring you drive safely and stress-free. We are one of the trusted GMC service centres in Dubai, as we only use manufacturer-recommended car batteries, which ensures long-term peak performance. If you see any battery-failure issues, no need to stress, call us at +971528475675.  800BatteryPro provides Auxiliary and lithium batteries for GMC Cars in Dubai. "
       },
       {
         id: 2,
         description:
-          "We provide 24/7 roadside assistance and emergency BMW battery replacement services directly at your office, home, or anywhere in Dubai and Abu Dhabi."
+          "800BatteryPro offers the following are the different types of GMC Battery: Our car battery specialist recommends both AGM (Absorbent Glass Mat) or EFB (Enhanced Flooded Batteries) for premium models while, for newer hybrid GMC car’s we only use OEM-approved Lithium Battery for ensuring peak performance and longevity. Here are two different scale of GMC Battery that we offer to our customers: "
       },
       {
         id: 3,
         description:
-          "Our team of experts will offer free battery testing and use the latest tech, along with ensuring a genuine battery brand is used, which typically happens under 15 Minutes. Our Battery replacement service includes free battery health testing, expert installation, and up to 18 months of warranty. "
+          "Auxillary Battery GMC: Like for any other American car brand, GMC Auxiliary Battery replacement ensures your seamless functionality for your car’s electronic system. The auxiliary battery supports car infotainment, start-stop system, and also the smart driver-assistance systems. There is a high chance that auxiliary battery functionality may degrade due to extreme heat, leading to malfunctions or warning messages showing up on the dashboard. GMC Battery replacement needs great expertise as removing an old unit needs close attention to detail, and also for installing a genuine, OEM-approved battery. Recalibration of your car system is involved for optimizing performance and better compatibility. A routine battery check-up is compulsory to avoid any stressful times on the road."
       },
       {
         id: 4,
         description:
-          "We only use genuine car batteries suited for your vehicle. For BMW Battery replacements, car scanning, engine repairs, electrical repairs or other advanced repair services, you can call us at our toll-free number at +971528475675 or book a free appointment right now!"
+          "GMC Lithium Battery: Some of the new models now need a different solution, as GMC Lithium Battery Replacement is high in demand due to its superior features, offering long-term peak performance, are lighter in weight and quick in charging. While doing the replacement for the GMC Lithium battery, our technicians ensure to use only OEM-approved batteries and equipment, and also recalibrate the Battery Management System (BMS). If you face any issue with a new model GMC car with advance features, call us at +971528475675."
       },
     ]
   }
@@ -119,23 +118,14 @@ const Bmw = () => {
 
       const serviceEnglishContent1 = {
     subtitle: "SERVICES",
-    title: "BMW Service Centre in Dubai ",
+    title: "GMC Service Centre in Dubai  ",
     services: [
       {
         id: 1,
         description:
-          "Genuine Car Battery Replacement & Advances Car Repairs - BMW are powerful German machine with next-gen powertrains which requires branded battery capable of handling quick acceleration, complex electrical systems, and smart tech features. 800BatteryPro recommends AGM and lithium batteries, which are great in their capacity and trusted for reliable functionality. Our certified BMW experts in Dubai only use the premium AGM Batteries to ensure high performance in the harsh summer season of the UAE."
+          "Premium German Car Battery Replacement & Car Repairs - We offer expert GMC battery service to ensure your vehicle performs at its best. Whether you drive a standard model or an Gmc hybrid, maintaining a healthy battery is crucial for smooth and reliable operation. Our skilled technicians are equipped to handle everything from standard battery maintenance to GMC hybrid battery replacement, ensuring optimal performance for your eco-friendly vehicle. 800BatteryPro is one of the trusted GMC service centers in Dubai and Abu Dhabi. If you are driving a GMC premium, standard model or a hybrid version, our American Car experts know how to deliver a 100 percent quality job while using OEM-approved Battery. It’s not just about delivering the premium GMC Battery replacement to standard battery maintenance, as we ensure your safety on the road. We recommend routine car battery checkups using a GMC-approved battery for durability and reliability. We have a well-equipped car workshop in Dubai, providing market-competitive pricing for all our GMC Battery services.You can reserve your slot for your next Battery Checkup with the best GMC car experts in Dubai. Contact us at +971 528475675 or for 24/7 emergency roadside assistance."
       },
-      {
-        id: 2,
-        description:
-          "We serve more than just BMW Car Battery replacement, as we have a car service center ideally located in Dubai and Abu Dhabi. Our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (I.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for BMW, which ensures peak engine performance and luxury."
-      },
-      {
-        id: 3,
-        description:
-          "You can reserve your slot for your next Battery Checkup with the best BMW experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      }
+     
     ]
   }
 
@@ -148,16 +138,6 @@ const Bmw = () => {
         description:
           "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
       },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      {
-        id: 3,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
 
     ]
   }
@@ -165,23 +145,23 @@ const Bmw = () => {
   const englishServices = [
   {
     img: serviceImg1,
-    title: "Car Battery Replacement",
-    desc: "Fast, reliable battery replacement delivered to your location in 30 minutes."
+    title: "Premium 24/7 Customer",
+    desc: "800BatteryPro has a dedicated customer support team active 24/7 for all GMC car battery replacement and advanced repair services  in Dubai and Abu Dhabi."
   },
   {
     img: serviceImg2,
-    title: "Car Battery Boosting",
-    desc: "Quick and stress-free jump-start services wherever you are."
+    title: "Certified GMC Specialists",
+    desc: "Our technicians have 5+ years of experience working on all American Car brands including the GMC (General Motors Truck Company)."
   },
   {
     img: serviceImg3,
-    title: "Roadside Assistance",
-    desc: "Immediate roadside support across the UAE, anytime, anywhere."
+    title: "Genuine GMC Parts",
+    desc: "Our certified GMC specialists only use genuine battery and OEM-approved spare parts for every car job."
   },
   {
     img: serviceImg4,
-    title: "Car Scanning",
-    desc: "Advanced diagnostics to identify and resolve car issues with precision."
+    title: "Car Battery Under 15 Minutes",
+    desc: "Our 24/7 road side assistance for ensuring you stay safe on the road. We offer free battery testing and free car battery delivery with no hidden charges."
   }
 ]
 
@@ -256,55 +236,39 @@ const arabicContent = [
 
     const englishFaqs = [
         {
-            question: "How long does a BMW battery replacement take?",
-            answer: "800BatteryPro guarantees on-site battery replacement under 15 Minutes once our certified BMW technicians arrive at your location. We offer free battery testing and boosting services 24/7 through our specialised roadside assistance services. If you are car battery is dead or something wrong with its electrical system, just call as at +971 528475675 for immediate assistance."
+            question: "What type of Battery does my GMC need?",
+            answer: "Like all American Brands, GMC models specify the type of Battery required, which also includes AGM (Absorbent Glass Mat) or EFB (Enhanced Flooded Batteries) for cars with start-stop systems. While for the hybrid or all-electric models, 800BatteryPro recommends the lithium-ion batteries. For more details related to certified GMC technicians, call us at +9282727277"
         },
         {
-            question: "How do I know if my BMW battery needs replacing?",
-            answer: " If you notice signs such as slow engine cranking, warning lights blinking, Headlights getting dimmed or even if it’s your car not starting. Then 800Battery recommends its free battery testing before any replacement happens."
+            question: " How long does a GMC battery last?",
+            answer: " An GMC battery typically lasts 3 to 5 years, but this can vary based on driving habits, climate conditions, and regular maintenance. The lifetime of a GMC battery depends on your car mileage, maintenance routine, and the climate conditions you drive in. In the UAE, a GMC Battery typically may last from 3 to 5 years in total, but yearly checkups are still essential for keeping peak performance."
         },
         {
-            question: "Do you offer battery replacement in Dubai?",
-            answer: "800BatteryPro offers 24/7 battery replacement services in Dubai and Abu Dhabi. We have a team of certified BMW technicians using latest technology and genuine car battery serving residents of UAE with under 15 minutes roadside assistance."
+            question: "How much does it cost to replace an GMC battery?",
+            answer: "GMC battery replacement cost depends on the type and model of your car, while it also depends on the type of Battery too. When it comes to 800BatteryPro, the average prices for a car battery range from AED 500 to AED 1,500 in Dubai and Abu Dhabi, which also includes installations and system checkups."
         },
         {
-            question: "How much does a BMW battery replacement cost in Dubai?",
-            answer: "BMW Battery replacement cost varies depending upon the car model and battery type, however when it comes to 800BatteryPro we offer free battery testing and 24/7 roadside assistance which can be availed by contacting us at +971 528475675 or WhatsApp One of our experts."
+            question: "Do I need to reset my GMC system after battery replacement?",
+            answer: "Yes, our GMC specialists ensure that during battery replacement, all systems are reset and recalibrated for proper functionality of the electronic system. The Battery Management System (BMS) is taken care of to avoid further technical issues in your car. As the recalibration of the start-stop systems, infotainment, and other advance system features."
         },
         {
-            question: "What warranty comes with a battery replacement?",
-            answer: "Yes, 800BatteryPro only recommends genuine Battery Brands, as our battery replacement services comes up with 18 months warranty. While, our battery boosting is completely free of cost you can avail our services by calling us at +971 528475675."
+            question: "Can I upgrade to a lithium battery for my GMC?",
+            answer: "Yes, it’s possible to upgrade to a premium lithium battery for GMC, with advance features, lighter weight, longevity, and faster charging capabilities. At the same time, our GMC Car Battery specialist ensures the use of OEM-Approved Battery for all car jobs. "
         },
 
         {
-            question: "Is BMW battery replacement in Dubai available 24/7?",
-            answer: "Yes, 800BatteryPro has 24/7 roadside assistance available for BMW battery replacement in Dubai. We have our team of certified BMW specialist in Dubai, who uses latest technology and genuine battery brands only for every battery job."
+            question: "Do you offer on-site GMC battery replacement in Dubai?",
+            answer: "Yes, 800BatteryPro offers on-site GMC battery replacement in Dubai. You can call us for 24/7 roadside assistance or any other car battery solutions anywhere in Dubai and Abu Dhabi."
         },
 
         {
-            question: " Why is it important to service my BMW with manufacturer recommended Oil and Filter, when there are cheaper alternative available?",
-            answer: "Your BMW engine is very well built and has very little tolerances. The makers choose a certain brand and grade of oil that works well with each engine while they were testing and designing the engine. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
+            question: "Any American Car Experts in Dubai?",
+            answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of American car experts in Dubai. We have a well-equipped service center with the latest technology used for every German car repair job. We treat every car brand, including Jeep, GMC, Chevrolet, and Tesla, etc. Call us now for any American car battery replacement services at +971528475675."
         },
 
         {
-            question: "What do I do when the low engine oil light turns on?",
-            answer: " You can see if any oil has spilled where the automobile is parked. If oil has leaked, the engine oil lamp is probably on because of a leak. You might also have a small leak that doesn't make a big puddle but can lower the oil level over time. If not, the problem can be that the engine in your BMW is burning oil because it is too worn out. Using the right oil grade for your car is vital to avoid this."
-        },
-
-        {
-            question: "My BMW is shaking, is it safe to drive?",
-            answer: "No is the short answer. Maybe is the long response. There could be a simple explanation why your automobile is shaking, like worn-out spark plugs, or it could be something more serious. Don't ignore the engine noise; get it checked out as soon as you can."
-        },
-
-
-         {
-            question: "What does “transmission fault” signify on your car’s dashboard?",
-            answer: "It usually signifies that the transmission has a problem inside. It could be because of dirty gearbox fluid, a problem with the valve body, the torque converter, the internal mechanical parts, or a broken output speed sensor."
-        },
-
-         {
-            question: "What to do if my BMW is overheating?",
-            answer: "If your BMW is overheating, turn off the engine as soon as it is safe to do so. The engine can get damaged beyond repair if it gets too hot, which can happen very fast. If you're driving, you should pull over as soon as it's safe to do so and call a tow truck to take your car to the shop for an inspection. If the engine becomes too hot, even traveling a few meters can break it beyond repair."
+            question: "Do we provide American Car Battery Replacement in Abu Dhabi?",
+            answer: "Yes, 800BatteryPro has well-equipped service centers in Dubai and Abu Dhabi. We treat every American car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
         },
 
            ]
@@ -354,7 +318,7 @@ const arabicContent = [
             title2: "ماركات السيارات الرئيسية",
         }
         : {
-            desc: "BMW Car Models We Serve",
+            desc: "GMC Car Models We Serve",
             title1: "Includes All",
             title2: "Major Models & Variants",
         }
@@ -374,43 +338,47 @@ const arabicContent = [
 
                      const brands = [
         {
-            desc: "BMW M1",
+            desc: "TERRAIN DENALI",
             car: carBrand1,
         },
         {
-            desc: "BMW M2",
+            desc: "YUKON DENALI",
             car: carBrand2,
         },
         {
-            desc: "BMW M3",
+            desc: "YUKON & YUKON XL",
             car: carBrand3,
         },
         {
-            desc: "BMW M4",
+            desc: "SIERRA 1500 DENALI",
             car: carBrand4,
         },
         {
-            desc: "BMW M5",
+            desc: "GMC HUMMER EV PICKUP",
             car: carBrand5,
         },
         {
-            desc: "BMW M6",
+            desc: "GMC HUMMER EV SUV",
             car: carBrand6,
         },
         {
-            desc: "BMW M7",
+            desc: "SIERRA HD DENALI",
             car: carBrand7,
         },
         {
-            desc: "BMW X7",
+            desc: "CANYON DENALI",
+            car: carBrand8,
+        },
+          {
+            desc: "SIERRA EV",
             car: carBrand9,
         },
           {
-            desc: "BMW Z4",
+            desc: "SIERRA 3500 HD CHASSIS CAB",
             car: carBrand10,
         },
-          {
-            desc: "BMW M8",
+         {
+            desc: "GMC SAVANA CARGO",
             car: carBrand11,
         },
         
@@ -429,11 +397,11 @@ const arabicContent = [
   return (
     <div>
       <div className='sticky top-0 '>  {/* Added z-index */}
-        <Hero hero={hero} herobg={herobg} />
+        <Hero hero={hero} herobg={bg} />
       </div>
         <div className=' bg-white  rounded-t-4xl relative z-10'>
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
-           <Services services={services} />
+           <Services services={services}  />
            <CarBrands text={text} brands={brands} />
            <Battery brands={batteryBrands} batteryText={batteryText} />
             <Service serviceContent={serviceContent1} serviceImg={serviceImg5} />
@@ -446,4 +414,4 @@ const arabicContent = [
   )
 }
 
-export default Bmw
+export default Gmc

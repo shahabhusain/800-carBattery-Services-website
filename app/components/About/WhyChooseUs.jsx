@@ -28,8 +28,8 @@ const WhyChooseUs = () => {
     <div className=' bg-[#FDF8F8] py-20 mt-20 '>
             <div className=' w-[85%] mx-auto flex flex-col gap-y-4 items-center justify-center'>
       <p className=' text-[16px] font-bold text-center'>Why Choose Us</p>
-      <h1 className=' text-[40px] font-semibold text-center max-w-[855px]'>Reliable Car <span className=' text-red-800'>Battery Service</span> 
-You Can Trust</h1>
+      <h1 className=' text-[40px] font-semibold text-center max-w-[855px]'>Reliable Car <span className=' text-red-800'>Battery Service </span> 
+ You Can Trust</h1>
          <div className=' flex items-center gap-2 justify-between mt-8'>
            {
             data.map((item, index) => (

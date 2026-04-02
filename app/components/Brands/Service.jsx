@@ -4,29 +4,57 @@ import serviceImg1 from '@/public/services/1.webp'
 import serviceImg2 from '@/public/services/2.webp'
 import serviceImg3 from '@/public/services/3.webp'
 import serviceImg4 from '@/public/services/4.webp'
+import { useLocale } from 'next-intl'
 const Service = () => {
- const services = [
-      {
-        img:serviceImg1,
-        title:"Car Battery Replacement",
-        desc:"Fast, reliable battery replacement delivered to your location in 30 minutes. "
-      },
-        {
-        img:serviceImg2,
-        title:"Car Battery Boosting",
-        desc:"Quick and stress-free jump-start services wherever you are."
-      },
-        {
-        img:serviceImg3,
-        title:"Roadside Assistance",
-        desc:"Immediate roadside support across the UAE, anytime, anywhere."
-      },
-        {
-        img:serviceImg4,
-        title:"Car Scanning",
-        desc:" Advanced diagnostics to identify and resolve car issues with precision."
-      },
-    ]
+const englishServices = [
+  {
+    img: serviceImg1,
+    title: "Car Battery Replacement",
+    desc: "Fast, reliable battery replacement delivered to your location in 30 minutes."
+  },
+  {
+    img: serviceImg2,
+    title: "Car Battery Boosting",
+    desc: "Quick and stress-free jump-start services wherever you are."
+  },
+  {
+    img: serviceImg3,
+    title: "Roadside Assistance",
+    desc: "Immediate roadside support across the UAE, anytime, anywhere."
+  },
+  {
+    img: serviceImg4,
+    title: "Car Scanning",
+    desc: "Advanced diagnostics to identify and resolve car issues with precision."
+  }
+]
+
+const arabicServices = [
+  {
+    img: serviceImg1,
+    title: "استبدال بطارية السيارة",
+    desc: "استبدال سريع وموثوق لبطارية السيارة يصل إلى موقعك خلال 30 دقيقة."
+  },
+  {
+    img: serviceImg2,
+    title: "تشغيل بطارية السيارة",
+    desc: "خدمة تشغيل البطارية بسرعة وسهولة أينما كنت."
+  },
+  {
+    img: serviceImg3,
+    title: "المساعدة على الطريق",
+    desc: "دعم فوري على الطريق في جميع أنحاء الإمارات في أي وقت."
+  },
+  {
+    img: serviceImg4,
+    title: "فحص السيارة",
+    desc: "تشخيص متقدم لتحديد مشاكل السيارة وحلها بدقة."
+  }
+]
+
+    const locale = useLocale()
+    const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
+
   return (
     <div className=' w-[85%] mx-auto flex flex-col gap-y-3 py-20'>
       <p className=' uppercase text-center text-[16px] font-semibold'>sERVICES</p>

@@ -15,8 +15,8 @@ import be from '@/public/brands/be.png'
 import becar from '@/public/brands/becar.png'
 import ma from '@/public/brands/ma.png'
 import macar from '@/public/brands/macar.png'
-import co from '@/public/brands/co.png'
-import cocar from '@/public/brands/cocar.png'
+import gmclogo from '@/public/brands/gmclogo.webp'
+import gmc from '@/public/brands/gmc.webp'
 import me from '@/public/brands/me.png'
 import mecar from '@/public/brands/mecar.png'
 import po from '@/public/brands/po.png'
@@ -75,10 +75,10 @@ const CarBrands = () => {
             slug: "maserati"
         },
         {
-            logo: co,
-            desc: "Cadillac",
-            car: cocar,
-            slug: "cadillac"
+            logo: gmclogo,
+            desc: "GMC",
+            car: gmc,
+            slug: "gmc"
         },
         {
             logo: me,
