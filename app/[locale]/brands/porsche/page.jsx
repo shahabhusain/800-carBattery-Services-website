@@ -10,25 +10,17 @@ import serviceImg2 from '@/public/services/2.webp'
 import serviceImg3 from '@/public/services/3.webp'
 import serviceImg4 from '@/public/services/4.webp'
 import { useLocale } from 'next-intl'
-import serviceImg from "@/public/brands/mercedes/service.webp"
-import serviceImg5 from "@/public/brands/mercedes/service1.webp"
+import serviceImg from "@/public/brands/porsche/service.webp"
+import serviceImg5 from "@/public/brands/porsche/service1.webp"
 import React from 'react'
 import CarBrands from '@/app/components/Brands/subPage/CarBrands'
 // car brands
-  import carBrand1 from '@/public/brands/mercedes/1.webp'
-   import carBrand2 from '@/public/brands/mercedes/2.webp'
-    import carBrand3 from '@/public/brands/mercedes/3.webp'
-     import carBrand4 from '@/public/brands/mercedes/4.webp'
-      import carBrand5 from '@/public/brands/mercedes/5.webp'
-       import carBrand6 from '@/public/brands/mercedes/6.webp'
-        import carBrand7 from '@/public/brands/mercedes/7.webp'
-         import carBrand8 from '@/public/brands/mercedes/8.webp'
-          import carBrand9 from '@/public/brands/mercedes/9.webp'
-           import carBrand10 from '@/public/brands/mercedes/10.webp' 
-            import carBrand11 from '@/public/brands/mercedes/11.webp'
-            import carBrand12 from '@/public/brands/mercedes/12.webp'
-            import carBrand13 from '@/public/brands/mercedes/13.webp'
-            import carBrand14 from '@/public/brands/mercedes/14.webp'
+  import carBrand1 from '@/public/brands/porsche/1.webp'
+   import carBrand2 from '@/public/brands/porsche/2.webp'
+    import carBrand3 from '@/public/brands/porsche/3.webp'
+     import carBrand4 from '@/public/brands/porsche/4.webp'
+      import carBrand5 from '@/public/brands/porsche/5.webp'
+       import carBrand6 from '@/public/brands/porsche/6.webp'
 // battery brands
 import varta from "@/public/batteryBrands/varta.png";
 import acdelco from "@/public/batteryBrands/ac.png";
@@ -38,18 +30,18 @@ import solite from "@/public/batteryBrands/solit.png";
 import volcan from "@/public/batteryBrands/volcan.png";
 import Battery from '@/app/components/Brands/subPage/Battery'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
-import herobg from '@/public/brands/mercedes/bg.webp'
+import herobg from '@/public/brands/porsche/bg.webp'
 
 
-const Mercedes = () => {
+const Porsche = () => {
   const locale = useLocale()
   const heroEnglishContent = {
     desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
     title:{
-      span1:" Mercedes Car Battery Replacement  ",
-      span2:" & Car Programming"
+      span1:"Porsche Car Battery Replacement",
+      span2:"  & Advanced Repairs"
     },
-    desc1:"Don’t stress if your Car Battery Is Dead! 800BatteryPro provides instant Battery Replacement for your Mercedes-Benz in Dubai. We only provide genuine Battery Brands & Top Customer Support.",
+    desc1:"No need to panic if your porsche battery is dead! 800BatteryPro provide 24/7 Porsche Car Battery Replacement & next-gen repair services in Dubai. ",
     btn:"Call Now",
     btn1:"Book Service Now"
   }
@@ -67,17 +59,34 @@ const Mercedes = () => {
 
     const serviceEnglishContent = {
     subtitle: "SERVICES",
-    title: " Mercedes-Benz Battery Replacement & Advanced Repair Services",
+    title: "Porsche Battery Replacement & Advanced Repair Services",
     services: [
       {
         id: 1,
         description:
-          "Don’t panic if your Mercedes battery is dead! The best car battery replacement services in Dubai are just a click away. 800BatteryPro is trusted by thousands for its quick response and onsite battery services. We have a team of certified Mercedes specialists in Dubai who knows everything about how to get your car back on the road. With the latest battery boosting equipment and a well-equipped service centre in Dubai and Abu Dhabi, you have us as a trusted partner in all car battery-related services. Whether it’s the legendary Mercedes SLR, a luxury vehicle like the S-Class, a premium SUV like the G-Wagon, or any other custom-built model, our technicians only use AGM and Lithium batteries."
+          "There is no need to stress if your Porsche Battery is not working, you can call the Best Car Battery Replacement services in Dubai. 800BatteryPro provides Under 15 minutes onsite battery boosting and replacement services. We have a team of certified porsche specialists who only works on genuine battery brands with 18+ warranty and use only OEM standard parts. We have a years of experience in all areas of Porsche battery services. We employ high-performance batteries that can handle the heat of Dubai. 800BatteryPro offers the following are the different types of Porsche Battery:"
       },
       {
         id: 2,
         description:
-          "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of onsite car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months.  For premium Mercedes Battery replacement and car programming, contact us now at +971528475675 or book a free car inspection right now!"
+          "Porsche 911 Series: Our certified Porsche technicians use high-performance batteries that can handle the heat of Dubai."
+      },
+       {
+        id: 3,
+        description:
+          "Porsche Cayenne: Heavy-duty batteries for the Porsche Cayenne give us long-lasting power for extended travels."
+      },
+
+      {
+        id: 4,
+        description:
+          "Porsche Panamera: We employ long-lasting batteries for the Panamera's complex electronics, which are powered by batteries that are made just for them."
+      },
+
+      {
+        id: 5,
+        description:
+          "Porsche Taycan: The only batteries our Porsche expert uses in the all-electric Taycan are high-voltage ones."
       },
     
     ]
@@ -104,27 +113,22 @@ const Mercedes = () => {
 
       const serviceEnglishContent1 = {
     subtitle: "SERVICES",
-    title: "Mercedes Service Centre in Dubai ",
+    title: "Porsche Service Centre in Dubai – Premium German Car Battery Replacement ",
     services: [
       {
         id: 1,
         description:
-          "It's important to get the right Mercedes-Benz battery, and at 800BatteryPro, we're here to help you choose the right one for your model. We have a wide range of batteries in stock, giving you numerous choices."
+          "800BatteryPro offers the most advanced Porsche battery replacement services that are tailored to the needs of electric systems in fully electric models like the Porsche Taycan. To make sure that batteries work as well as possible and last as long as possible, our German car experts follow tight rules. We provide the following Porsche battery replacement services for electric cars: "
       },
       {
         id: 2,
         description:
-          "Mercedes-Benz vehicles feature two batteries: the main battery powers the car's electrical systems, while the auxiliary battery supports functions like lights, radio, and Stop-Start mechanisms. The main AGM battery is located under the hood, while the auxiliary battery is typically in the trunk or rear seat. Understanding their roles is crucial for timely replacement. 800BatteryPro, serving Dubai and Abu Dhabi, specializes in replacing both main and auxiliary Mercedes-Benz batteries. Trust their expertise for seamless battery solutions."
+          "Our professional technicians safely replace Porsche batteries while following Porsche's rules for handling the high-voltage electric battery pack. After each Porsche battery replacement, we recalibrate the BMS. This is necessary to keep track of how well the battery is working and how it is doing. As part of our Porsche battery replacement service, we adjust the new battery to make it more efficient and provide it a longer range for driving in Dubai. We check that the charging system works with the new Porsche battery to make sure that the battery lasts longer and charges more efficiently. These professional Porsche battery replacement services make sure that both electric and hybrid Porsche models work safely and well, getting your car ready for the tough driving conditions and environment in Dubai."
       },
       {
         id: 3,
         description:
-          "For Mercedes-Benz, our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (I.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for Mercedes-Benz, which ensures peak engine performance and luxury."
-      },
-       {
-        id: 4,
-        description:
-          "You can reserve your slot for your next Battery Checkup with the best Mercedes-Benz car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
+          "You can reserve your slot for your next Battery Checkup with the best Porsche car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
       },
     ]
   }
@@ -206,23 +210,23 @@ const arabicServices = [
    const englishContent = [
   {
     icons: <FaSitemap />,
-    title: "Premium 24/7 Customer",
-    desc: "800BatteryPro provides Compassionate 24/7 Customer Support For BMW In Dubai. We offer you with a complete car care solution on pricing."
+    title: "Premium 24/7 Customer Support",
+    desc: "800BatteryPro is your partner in driving safely on the road, with a dedicated Porsche team available for you 24/7."
   },
   {
     icons: <FaSitemap />,
-    title: "Certified BMW specialists",
-    desc: "We have a team of certified BMW specialists, who have 5+ years of experience working on different BMW models and Car Batteries."
+    title: "Certified Porsche Specialists",
+    desc: "We have a team of 50+ certified Porsche specialists who know how to deliver 100% customer satisfaction for every car battery job. "
   },
   {
     icons: <FaSitemap />,
-    title: "Using Genuine BMW Parts",
-    desc: "Our certified BMW specialists only use OEM approved spare parts and Branded BMW batteries for all car jobs. "
+    title: "Using Genuine Porsche Parts",
+    desc: " Our technicians use only OEM-approved repair parts and genuine car batteries for every car service we deliver."
   },
   {
     icons: <FaSitemap />,
     title: "Car Battery Under 15 Minutes",
-    desc: " 800BatteryPro offers 24/7 roadside assistance with our free battery delivery, our technicians use the latest equipment to work on your replacement."
+    desc: "If you are stuck somewhere on the road anywhere in the UAE, then you can call us at +971528475675. With free battery testing and free car battery delivery services."
   }
 ]
 
@@ -251,44 +255,29 @@ const arabicContent = [
 
     const englishFaqs = [
         {
-            question: "When should I change the brake pads on my Mercedes?",
+            question: "When should I change the brake pads on my Porsche?",
             answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
         },
         {
-            question: "How much does a Mercedes Service cost?",
-            answer: "Not all Mercedes models are the same. The cost of service will depend on the model, engine, and drivetrain specifications. To find out how much it will cost to service your automobile, please fill out an inquiry form or call us. Our knowledgeable Service Advisors will be happy to help you and give you an estimate."
+            question: "How long should a Porsche’s battery last?",
+            answer: "The battery's life relies on how it is used, how it is installed, and how it is charged. Shorter battery life can happen if you charge it too little or too much. Generally the Porsche battery needs to be replaced after a 10,000 KM or may be once a year."
         },
         {
-            question: "Why is it important to service my Mercedes with manufacturer-recommended oil and Filter, when there are cheaper alternatives available?",
-            answer: "Your Mercedes engine is very well designed and has very small tolerances. The makers picked a certain brand and grade of oil that works best with each engine during testing and design. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
+            question: "When I need to replace my Porsche’s Battery?",
+            answer: "If you can't start your Porsche, if the battery warning light is on, or if electrical parts within your Porsche aren't working. To drive safe book a free vehicle inspection today at 800BatteryPro."
         },
         {
-            question: "When I brake, my Mercedes vibrates, why?",
-            answer: "If your car shakes when you brake, it could be because the brake pads or brake disks are broken. Your suspension, misaligned tires, or uneven tire wear could also be causing the vibration. A specialist should look at your car to find the problem and fix it in the best way. "
+            question: "How Quickly 800BatteryPro does Porsche Battery Replacement?",
+            answer: "800BatteryPro provides Porsche Battery replacement under 15 minutes anywhere in Dubai and Abu Dhabi. Our services include Free Car battery testing, inspection and diagnostic, if your battery needs to be changed, we only use genuine Porsche battery for replacement. "
         },
-        {
-            question: "My Mercedes's check engine light is on. What should I do?",
-            answer: "If you are driving, you should not drive the automobile or pull over safely. When there is an electronic or mechanical problem with your car's engine, the check engine light comes on. It could be anything small, like dirty injectors, or something big that could hurt your engine. We won't know until a technician connects a diagnostic instrument to your Mercedes and looks at the trouble codes. Please call us right away so we can help you avoid any major issues."
-        },
-
         {
             question: "Any German Car Experts in Dubai?",
             answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
         },
 
         {
-            question: " Do we provide German Car Battery Replacement in Abu Dhabi?",
+            question: "Do we provide German Car Battery Replacement in Abu Dhabi?",
             answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
-        },
-
-        {
-            question: "Which car battery do we use for replacement services?",
-            answer: "Our German car specialist only uses premium AGM and Lithium-ion batteries for Mercedes Battery replacements. We only recommend high-quality and long-lasting car batteries, which ensure peak performance and safety for our customers."
-        },
-
-        {
-            question: "What’s the best way to get your dead battery active?",
-            answer: "Don’t get stressed if your car battery is dead. Our German car experts in Dubai and Abu Dhabi use the latest equipment and technology to get your vehicle back on the road. Call us now for instant battery boosting services under 15 minutes. "
         },
 
 
@@ -341,7 +330,7 @@ const arabicContent = [
             title2: "ماركات السيارات الرئيسية",
         }
         : {
-            desc: "Mercedes Car Models We Serve",
+            desc: "Porsche Car Models We Serve",
             title1: "Includes All",
             title2: "Major Models & Variants",
         }
@@ -361,58 +350,30 @@ const arabicContent = [
 
                      const brands = [
         {
-            desc: "Mercedes-Maybach EQS SUV",
+            desc: "PORRSCHE 718",
             car: carBrand1,
         },
         {
-            desc: "CLA Sedan",
+            desc: "PORRSCHE 911",
             car: carBrand2,
         },
         {
-            desc: "C-Class Sedan",
+            desc: "PORRSCHE TAYCAN",
             car: carBrand3,
         },
         {
-            desc: "E-Class Sedan",
+            desc: "PORRSCHE PANAMERA",
             car: carBrand4,
         },
         {
-            desc: "E-Class SedanEQE Sedan",
+            desc: "PORRSCHE MAYCAN",
             car: carBrand5,
         },
         {
-            desc: "S-Class Sedan",
+            desc: "PORRSCHE CAYENNE",
             car: carBrand6,
         },
-        {
-            desc: "E-Class Wagon",
-            car: carBrand7,
-        },
-        {
-            desc: "AMG S 63 E PERFORMANCE Sedan",
-            car: carBrand8,
-        },
-          {
-            desc: "CLE Coupe",
-            car: carBrand9,
-        },
-          {
-            desc: "CLE Coupe",
-            car: carBrand10,
-        },
-         {
-            desc: "AMG SL Roadster",
-            car: carBrand11,
-        },
-         {
-            desc: "Mercedes-Maybach GLS SUV",
-            car: carBrand12,
-        },
-         {
-            desc: "G-Class SUV",
-            car: carBrand13,
-        },
-
+       
         
                   ]
               
@@ -446,4 +407,4 @@ const arabicContent = [
   )
 }
 
-export default Mercedes
+export default Porsche

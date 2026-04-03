@@ -2,12 +2,12 @@
 import React from 'react'
 import bmw from '@/public/brands/bmw.png'
 import bmwcar from '@/public/brands/bmwcar.png'
-import bu from '@/public/brands/bu.png'
-import bucar from '@/public/brands/bucar.png'
+import bu from '@/public/brands/bu.webp'
+import bucar from '@/public/brands/bucar.webp'
 import la from '@/public/brands/la.png'
 import lacar from '@/public/brands/lacar.png'
-import bra from '@/public/brands/bra.png'
-import bracar from '@/public/brands/bracar.png'
+import bra from '@/public/brands/bra.webp'
+import bracar from '@/public/brands/bracar.webp'
 
 import fr from '@/public/brands/fr.png'
 import frcar from '@/public/brands/frcar.png'
@@ -40,15 +40,15 @@ const CarBrands = () => {
         },
         {
             logo: bu,
-            desc: "Bugatti",
+            desc: "Alfa Romeo",
             car: bucar,
-            slug: "bugatti"
+            slug: "alfa-romeo"
         },
         {
             logo: bra,
-            desc: "Brabus",
+            desc: "Audi",
             car: bracar,
-            slug: "brabus"
+            slug: "audi"
         },
         {
             logo: la,

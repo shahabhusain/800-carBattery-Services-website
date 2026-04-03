@@ -10,25 +10,23 @@ import serviceImg2 from '@/public/services/2.webp'
 import serviceImg3 from '@/public/services/3.webp'
 import serviceImg4 from '@/public/services/4.webp'
 import { useLocale } from 'next-intl'
-import serviceImg from "@/public/brands/mercedes/service.webp"
-import serviceImg5 from "@/public/brands/mercedes/service1.webp"
+import serviceImg from "@/public/brands/lamburgani/service.webp"
+import serviceImg5 from "@/public/brands/lamburgani/service1.webp"
 import React from 'react'
 import CarBrands from '@/app/components/Brands/subPage/CarBrands'
 // car brands
-  import carBrand1 from '@/public/brands/mercedes/1.webp'
-   import carBrand2 from '@/public/brands/mercedes/2.webp'
-    import carBrand3 from '@/public/brands/mercedes/3.webp'
-     import carBrand4 from '@/public/brands/mercedes/4.webp'
-      import carBrand5 from '@/public/brands/mercedes/5.webp'
-       import carBrand6 from '@/public/brands/mercedes/6.webp'
-        import carBrand7 from '@/public/brands/mercedes/7.webp'
-         import carBrand8 from '@/public/brands/mercedes/8.webp'
-          import carBrand9 from '@/public/brands/mercedes/9.webp'
-           import carBrand10 from '@/public/brands/mercedes/10.webp' 
-            import carBrand11 from '@/public/brands/mercedes/11.webp'
-            import carBrand12 from '@/public/brands/mercedes/12.webp'
-            import carBrand13 from '@/public/brands/mercedes/13.webp'
-            import carBrand14 from '@/public/brands/mercedes/14.webp'
+  import carBrand1 from '@/public/brands/lamburgani/1.webp'
+   import carBrand2 from '@/public/brands/lamburgani/2.webp'
+    import carBrand3 from '@/public/brands/lamburgani/3.webp'
+     import carBrand4 from '@/public/brands/lamburgani/4.webp'
+      import carBrand5 from '@/public/brands/lamburgani/5.webp'
+       import carBrand6 from '@/public/brands/lamburgani/6.webp'
+        import carBrand7 from '@/public/brands/lamburgani/7.webp'
+         import carBrand8 from '@/public/brands/lamburgani/8.webp'
+          import carBrand9 from '@/public/brands/lamburgani/9.webp'
+           import carBrand10 from '@/public/brands/lamburgani/10.webp' 
+            import carBrand11 from '@/public/brands/lamburgani/11.webp'
+            import carBrand12 from '@/public/brands/lamburgani/12.webp'
 // battery brands
 import varta from "@/public/batteryBrands/varta.png";
 import acdelco from "@/public/batteryBrands/ac.png";
@@ -38,18 +36,18 @@ import solite from "@/public/batteryBrands/solit.png";
 import volcan from "@/public/batteryBrands/volcan.png";
 import Battery from '@/app/components/Brands/subPage/Battery'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
-import herobg from '@/public/brands/mercedes/bg.webp'
+import herobg from '@/public/brands/lamburgani/bg.webp'
 
 
-const Mercedes = () => {
+const Lamborghini = () => {
   const locale = useLocale()
   const heroEnglishContent = {
     desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
     title:{
-      span1:" Mercedes Car Battery Replacement  ",
-      span2:" & Car Programming"
+      span1:" Lamborghini Car Battery &   ",
+      span2:" Advanced Repair Experts"
     },
-    desc1:"Don’t stress if your Car Battery Is Dead! 800BatteryPro provides instant Battery Replacement for your Mercedes-Benz in Dubai. We only provide genuine Battery Brands & Top Customer Support.",
+    desc1:"Call our Italian Car Specialist at 800BatteryPro For Lamborghini Battery Replacement in Dubai or Advance Repair Services.",
     btn:"Call Now",
     btn1:"Book Service Now"
   }
@@ -67,17 +65,17 @@ const Mercedes = () => {
 
     const serviceEnglishContent = {
     subtitle: "SERVICES",
-    title: " Mercedes-Benz Battery Replacement & Advanced Repair Services",
+    title: "  Lamborghini Battery Replacement & Auto Repair",
     services: [
       {
         id: 1,
         description:
-          "Don’t panic if your Mercedes battery is dead! The best car battery replacement services in Dubai are just a click away. 800BatteryPro is trusted by thousands for its quick response and onsite battery services. We have a team of certified Mercedes specialists in Dubai who knows everything about how to get your car back on the road. With the latest battery boosting equipment and a well-equipped service centre in Dubai and Abu Dhabi, you have us as a trusted partner in all car battery-related services. Whether it’s the legendary Mercedes SLR, a luxury vehicle like the S-Class, a premium SUV like the G-Wagon, or any other custom-built model, our technicians only use AGM and Lithium batteries."
+          "Lamborghini vehicles are a symbol of power, elegance, and innovation. Speed, style, and sophistication—Lamborghini is the ultimate trifecta. At 800BatteryPro UAE, our team of certified technicians delivers reliable Lamborghini battery replacement in Dubai to align with the craftsmanship and luxury of this iconic car brand. We have Lamborghini specialists for Urus, Huracán, Aventador, Temerario, and Revuelto, who only use premium batteries and OEM standard car parts for each car model. "
       },
       {
         id: 2,
         description:
-          "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of onsite car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months.  For premium Mercedes Battery replacement and car programming, contact us now at +971528475675 or book a free car inspection right now!"
+          "800BatteryPro has years of experience delivering every Lamborghini electrical system job with 100 percent customer satisfaction, because our technicians follow the original specifications while delivering the best battery replacement services in Dubai. If you spot any signs such as headlights dimming, slow ignition, non-functional AC, or any other unwanted noise from your car, call our 24/7 roadside assistance to ensure optimised performance. Contact 800BatteryPro at +971528475675 for Lamborghini Battery replacements, car scanning, engine repairs, electrical repairs or other advanced repair services."
       },
     
     ]
@@ -104,28 +102,19 @@ const Mercedes = () => {
 
       const serviceEnglishContent1 = {
     subtitle: "SERVICES",
-    title: "Mercedes Service Centre in Dubai ",
+    title: "Lamborghini Service Centre in Dubai – Genuine Car Battery",
     services: [
       {
         id: 1,
         description:
-          "It's important to get the right Mercedes-Benz battery, and at 800BatteryPro, we're here to help you choose the right one for your model. We have a wide range of batteries in stock, giving you numerous choices."
+          "Lamborghini's advanced powertrains need batteries that can handle quick acceleration, electronics that use a lot of power, and clever power distribution. 800BatteryPro sells AGM and lithium batteries that are made to be as reliable as possible. Our certified Lamborghini experts in Dubai recommend using premium AGM Batteries to ensure high performance and reliability in the harsh summer of the UAE. "
       },
       {
         id: 2,
         description:
-          "Mercedes-Benz vehicles feature two batteries: the main battery powers the car's electrical systems, while the auxiliary battery supports functions like lights, radio, and Stop-Start mechanisms. The main AGM battery is located under the hood, while the auxiliary battery is typically in the trunk or rear seat. Understanding their roles is crucial for timely replacement. 800BatteryPro, serving Dubai and Abu Dhabi, specializes in replacing both main and auxiliary Mercedes-Benz batteries. Trust their expertise for seamless battery solutions."
+          "Our services expand beyond just Lamborghini Car Battery replacement, as we have a well-equipped service centre in Dubai and Abu Dhabi. From 24/7 roadside assistance, advance car repair, and mechanical and electrical repair services, we deliver every car job with 100 percent customer satisfaction. Fill out the form to book an appointment with one of our Lamborghini battery experts in Dubai."
       },
-      {
-        id: 3,
-        description:
-          "For Mercedes-Benz, our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (I.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for Mercedes-Benz, which ensures peak engine performance and luxury."
-      },
-       {
-        id: 4,
-        description:
-          "You can reserve your slot for your next Battery Checkup with the best Mercedes-Benz car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      },
+
     ]
   }
 
@@ -206,23 +195,23 @@ const arabicServices = [
    const englishContent = [
   {
     icons: <FaSitemap />,
-    title: "Premium 24/7 Customer",
-    desc: "800BatteryPro provides Compassionate 24/7 Customer Support For BMW In Dubai. We offer you with a complete car care solution on pricing."
+    title: "Premium 24/7 Customer Support",
+    desc: "800BatteryPro is your one stop shop for all your Lamborghini Car Battery and advance repair services, with 24/7 customer support."
   },
   {
     icons: <FaSitemap />,
-    title: "Certified BMW specialists",
-    desc: "We have a team of certified BMW specialists, who have 5+ years of experience working on different BMW models and Car Batteries."
+    title: "Certified Lamborghini specialists",
+    desc: "We have certified Lamborghini specialists, who are experienced in delivering precision with complete car care in Dubai and Abu Dhabi."
   },
   {
     icons: <FaSitemap />,
-    title: "Using Genuine BMW Parts",
-    desc: "Our certified BMW specialists only use OEM approved spare parts and Branded BMW batteries for all car jobs. "
+    title: "Using Genuine Lamborghini Parts",
+    desc: "Our technicians only use OEM-approved and genuine Lamborghini parts which are recommended by the manufacturer."
   },
   {
     icons: <FaSitemap />,
     title: "Car Battery Under 15 Minutes",
-    desc: " 800BatteryPro offers 24/7 roadside assistance with our free battery delivery, our technicians use the latest equipment to work on your replacement."
+    desc: "Our Onsite car battery replacement for the Lamborghini comes with rapid response under 30 minutes of delivery time that too with market competitive pricing."
   }
 ]
 
@@ -251,46 +240,47 @@ const arabicContent = [
 
     const englishFaqs = [
         {
-            question: "When should I change the brake pads on my Mercedes?",
-            answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
+            question: "Do you provide car battery replacement for Lamborghini?",
+            answer: "Yes, 800BatteryPro can replace the batteries in Lamborghini cars and is certified to do so. We utilize real OEM-standard parts and batteries from well-known brands for all Italian automobile models, such as Ferrari, Alfa Romeo, Pagani, Fiat, and Maserati. Call us at +971 528475675 for help on the road 24 hours a day, seven days a week."
         },
         {
-            question: "How much does a Mercedes Service cost?",
-            answer: "Not all Mercedes models are the same. The cost of service will depend on the model, engine, and drivetrain specifications. To find out how much it will cost to service your automobile, please fill out an inquiry form or call us. Our knowledgeable Service Advisors will be happy to help you and give you an estimate."
+            question: " Do you use OEM parts for repairing Italian car brands?",
+            answer: "Yes, of course. We only utilize OEM-standard parts for repairs on Italian automobile brands, including Alfa Romeo, Lamborghini, Fiat, Ferrari, Pagani, and Maserati at 800BatteryPro. "
         },
         {
-            question: "Why is it important to service my Mercedes with manufacturer-recommended oil and Filter, when there are cheaper alternatives available?",
-            answer: "Your Mercedes engine is very well designed and has very small tolerances. The makers picked a certain brand and grade of oil that works best with each engine during testing and design. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
-        },
-        {
-            question: "When I brake, my Mercedes vibrates, why?",
-            answer: "If your car shakes when you brake, it could be because the brake pads or brake disks are broken. Your suspension, misaligned tires, or uneven tire wear could also be causing the vibration. A specialist should look at your car to find the problem and fix it in the best way. "
-        },
-        {
-            question: "My Mercedes's check engine light is on. What should I do?",
-            answer: "If you are driving, you should not drive the automobile or pull over safely. When there is an electronic or mechanical problem with your car's engine, the check engine light comes on. It could be anything small, like dirty injectors, or something big that could hurt your engine. We won't know until a technician connects a diagnostic instrument to your Mercedes and looks at the trouble codes. Please call us right away so we can help you avoid any major issues."
+            question: "Who are the best Lamborghini experts in Dubai?",
+            answer: "800BatteryPro is known as one of the best companies in Dubai and Abu Dhabi for Lamborghini service. We work on practically all exotic and luxury automobile brands in the UAE. We have more than 50 qualified Italian car specialists and state-of-the-art service centers."
         },
 
-        {
-            question: "Any German Car Experts in Dubai?",
-            answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
+          {
+            question: " What are the warning Signs of a Weak Lamborghini Battery?",
+            answer: "Finding out that your battery is failing early is the best way to avoid unexpected malfunctions. Be careful if the engine starts slowly or not at all, inactive start-stop feature, dashboard lights that flicker, check the light on the battery, infotainment screen rebooting or freezing, delays with keyless entry, sound of clicking upon starting, the battery is older than three years, the battery has a strange burning scent, or needs to be jump-started often. If you see any of these signs, contact 800batterypro for a quick lamborghini battery check."
         },
 
-        {
-            question: " Do we provide German Car Battery Replacement in Abu Dhabi?",
-            answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
+          {
+            question: " Why Choose 800BatteryPro for Lamborghini Battery Service in Dubai?",
+            answer: "The following are a few reasons why you should always choose 800BatteryPro as your go-to choice for Lamborghini Battery Service in Dubai. As we have Knowledge About Lamborghinis We have years of experience working on high-end Lamborghini vehicles and know how their unique design and power needs work. We only recommend battery brands that meet OEM standards, batteries we use are from well-known brands and meet or exceed Lamborghini's original specifications. We use diagnostic tools that are specific to each car to examine every important electrical parameter before and after installation. Flexibility at Work and on the Job. You can choose between a mobile service that comes to you or a professional installation in our state-of-the-art Dubai facility. Individualised Help for Customers We give you personalised help and advice after installation to make sure you know how to keep your battery working well."
         },
 
-        {
-            question: "Which car battery do we use for replacement services?",
-            answer: "Our German car specialist only uses premium AGM and Lithium-ion batteries for Mercedes Battery replacements. We only recommend high-quality and long-lasting car batteries, which ensure peak performance and safety for our customers."
+            {
+            question: "How Much Is To Rent A Lamborghini In Dubai?",
+            answer: "The daily cost of renting a Lamborghini in Dubai is usually between AED 1,900 and AED 4,000 for popular models like the Huracan and Urus. For high-performance variants like the Aventador SVJ, the cost can go up to AED 9,000. The daily pricing depends on the model year, how long you need it, and the rental company. Discounts are often available for weekly or monthly rentals. Typical Daily Rental Prices (in AED): For Lamborghini Urus (SUV): Prices start at AED 1,599 and go up to AED 3,000. For The Lamborghini Huracan (Evo/Spyder) costs between AED 2,195 and AED 3,300. For The Lamborghini Huracan STO costs between AED 3,000 and AED 4,000. For The Lamborghini Aventador SVJ costs about AED 9,000.For Lamborghini Revuelto: Prices start at around AED 12,000."
         },
 
-        {
-            question: "What’s the best way to get your dead battery active?",
-            answer: "Don’t get stressed if your car battery is dead. Our German car experts in Dubai and Abu Dhabi use the latest equipment and technology to get your vehicle back on the road. Call us now for instant battery boosting services under 15 minutes. "
+                {
+            question: "What factors affect the fuel consumption of my Lamborghini?",
+            answer: " There are several things that can affect how fuel-efficient your Lamborghini is, such as, the weight and aerodynamics of the vehicle, the kind, size, pressure, and condition of the tires, the kind of transmission and the gear ratios, how you drive (for example, speeding or accelerating too quickly), the age and condition of the car, the quality of the fuel, the weather and the state of the roads. you may save money on gas and get better gas mileage by taking care of these things."
         },
 
+               {
+            question: " How do I fix an overheating Lamborghini?",
+            answer: "If your Lamborghini is getting too hot, you need to fix it right away to keep the engine from being damaged. Some common reasons for overheating are, coolant levels that are too low, a radiator or thermostat that isn't working right, broken water pump, and radiator pipes that are blocked. To fix the problem, you can refill the coolant, replace broken parts, or flush the cooling system. you can get experienced help at 800batterypro service centres in dubai or abu dhabi."
+        },
+
+            {
+            question: "How do I know if I need new brakes for my Lamborghini?",
+            answer: "Here are some signs that your Lamborghini might require new brakes, Noises like squeaking or grinding when you hit the brakes, A brake pedal that feels mushy or spongy , A light on the dashboard that warns you to brake It's very important to check your brakes on a regular basis to keep yourself safe and avoid bigger problems. Our professional technicians at 800BatteryPro offer full brake services for Lamborghini cars."
+        },
 
            ]
 
@@ -341,7 +331,7 @@ const arabicContent = [
             title2: "ماركات السيارات الرئيسية",
         }
         : {
-            desc: "Mercedes Car Models We Serve",
+            desc: "Lamborghini Car Models We Serve",
             title1: "Includes All",
             title2: "Major Models & Variants",
         }
@@ -361,56 +351,52 @@ const arabicContent = [
 
                      const brands = [
         {
-            desc: "Mercedes-Maybach EQS SUV",
+            desc: "Lamborghini Temerario",
             car: carBrand1,
         },
         {
-            desc: "CLA Sedan",
+            desc: "Lamborghini Revuelto",
             car: carBrand2,
         },
         {
-            desc: "C-Class Sedan",
+            desc: "Lamborghini Urus",
             car: carBrand3,
         },
         {
-            desc: "E-Class Sedan",
+            desc: "Lamborghini Huracán",
             car: carBrand4,
         },
         {
-            desc: "E-Class SedanEQE Sedan",
+            desc: "Lamborghini Huracán Sterrato",
             car: carBrand5,
         },
         {
-            desc: "S-Class Sedan",
+            desc: "Lamborghini Veneno",
             car: carBrand6,
         },
         {
-            desc: "E-Class Wagon",
+            desc: "Lamborghini Reventón",
             car: carBrand7,
         },
         {
-            desc: "AMG S 63 E PERFORMANCE Sedan",
+            desc: "Lamborghini  Centenario",
             car: carBrand8,
         },
           {
-            desc: "CLE Coupe",
+            desc: "Lamborghini Sesto Elemento",
             car: carBrand9,
         },
           {
-            desc: "CLE Coupe",
+            desc: "Lamborghini Sián FKP 37",
             car: carBrand10,
         },
          {
-            desc: "AMG SL Roadster",
+            desc: "Lamborghini Countach LPI 800-4",
             car: carBrand11,
         },
          {
-            desc: "Mercedes-Maybach GLS SUV",
+            desc: "Lamborghini Fenomeno",
             car: carBrand12,
-        },
-         {
-            desc: "G-Class SUV",
-            car: carBrand13,
         },
 
         
@@ -446,4 +432,4 @@ const arabicContent = [
   )
 }
 
-export default Mercedes
+export default Lamborghini

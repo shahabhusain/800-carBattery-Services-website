@@ -46,15 +46,15 @@ const CarBrands = ({text, brands}) => {
                                         ${isLastInRowLg ? 'lg:border-r-0' : ''}
                                     `}
                                 >
-                                    <div className='flex flex-col items-center justify-center relative z-10'>
+                                    <div className='flex flex-col group items-center justify-center relative z-10'>
                                         
                                         {/* Brand Name */}
-                                        <p className='text-sm sm:text-base md:text-lg lg:text-[20px] font-semibold text-center text-gray-800'>
+                                        <p className='text-sm uppercase sm:text-base md:text-lg lg:text-[20px] font-semibold text-center text-gray-800'>
                                             {item.desc}
                                         </p>
                                         
                                         {/* Car Image */}
-                                        <div className='relative w-full h-16 sm:h-20 md:h-24 lg:h-28 mt-4 sm:mt-5 md:mt-6'>
+                                        <div className='relative group-hover:scale-[1.3] transition-all duration-500 ease-in-out w-full h-16 sm:h-20 md:h-24 lg:h-28 mt-4 sm:mt-5 md:mt-6'>
                                             <Image 
                                                 src={item.car} 
                                                 alt={`${item.desc} car`}
