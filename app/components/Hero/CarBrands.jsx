@@ -64,9 +64,9 @@ const CarBrands = () => {
         },
         {
             logo: be,
-            desc: "Bentley",
+            desc: "Jeep",
             car: becar,
-            slug: "bentley"
+            slug: "jeep"
         },
         {
             logo: ma,
