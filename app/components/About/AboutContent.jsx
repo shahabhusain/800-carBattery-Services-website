@@ -73,19 +73,19 @@ const AboutContent = () => {
           </div>
         </div>
       </div>
-      <div className=' flex items-center gap-12 justify-between w-[90%] mx-auto mt-12'>
-       <div className=' w-1/2 flex flex-col gap-y-3 bg-[#F8F8F8] p-8 rounded-2xl'>
-         <h1 className=' text-[32px] font-bold flex items-center justify-between'>Our Mission <span className=' p-4 rounded-full bg-white'><IoAtCircleOutline /></span></h1>
-         <p className=' text-[14px] font-normal text-[#4E4E4E]'>Our mission is to deliver reliable, efficient, and professional automotive services that keep vehicles safe, road-ready, and customers confident at every stage.</p>
+      <div className=' flex flex-col md:flex-row items-center gap-12 justify-between w-[90%] mx-auto mt-12'>
+       <div className=' md:w-1/2 flex flex-col gap-y-3 bg-[#F8F8F8] md:p-8 p-4 rounded-2xl'>
+         <h1 className=' md:text-[32px] text-[20px] font-bold flex items-center justify-between'>Our Mission <span className=' p-4 rounded-full bg-white'><IoAtCircleOutline /></span></h1>
+         <p className=' md:text-[14px] text-[12px] font-normal text-[#4E4E4E]'>Our mission is to deliver reliable, efficient, and professional automotive services that keep vehicles safe, road-ready, and customers confident at every stage.</p>
           <div className=' grid grid-cols-2 gap-2 mt-3'>
-             {data.mission.map(item => <p className=' bg-white p-4 flex items-center gap-2'><MdOutlineKeyboardDoubleArrowRight />{item}</p>)}
+             {data.mission.map(item => <p className=' md:text-[16px] text-[12px] bg-white md:p-4 p-2 flex items-center gap-2'><MdOutlineKeyboardDoubleArrowRight size={20} />{item}</p>)}
           </div>
        </div>
-        <div className=' w-1/2 flex flex-col gap-y-3 bg-[#F8F8F8] p-8 rounded-2xl'>
-           <h1 className=' text-[32px] font-bold flex items-center justify-between'>Our Vision <span className=' p-4 rounded-full bg-white'><FaEye /></span></h1>
-         <p className=' text-[14px] font-normal text-[#4E4E4E]'>Our mission is to deliver reliable, efficient, and professional automotive services that keep vehicles safe, road-ready, and customers confident at every stage.</p>
+        <div className=' md:w-1/2 flex flex-col gap-y-3 bg-[#F8F8F8] md:p-8 p-4 rounded-2xl'>
+           <h1 className=' md:text-[32px] text-[20px] font-bold flex items-center justify-between'>Our Vision <span className=' p-4 rounded-full bg-white'><FaEye /></span></h1>
+         <p className=' md:text-[14px] text-[12px] font-normal text-[#4E4E4E]'>Our mission is to deliver reliable, efficient, and professional automotive services that keep vehicles safe, road-ready, and customers confident at every stage.</p>
          <div className=' grid grid-cols-2 gap-2 mt-3'>
-                 {data.vision.map(item => <p className=' bg-white p-4 flex items-center gap-2'><MdOutlineKeyboardDoubleArrowRight />{item}</p>)}
+                 {data.vision.map(item => <p className=' md:text-[16px] text-[12px] bg-white md:p-4 p-2 flex items-center gap-2'><MdOutlineKeyboardDoubleArrowRight size={20} />{item}</p>)}
          </div>
         </div>
       </div>

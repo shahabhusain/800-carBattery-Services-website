@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const CarBrands = ({text, brands}) => {
     return (
-        <div className='relative pb-12 pt-5 md:pb-20 md:pt-20 md:py-16 lg:py-20 bg-gradient-to-br from-[#FDF8F8] to-[#FFF5F5] overflow-hidden'>
+        <div className='relative pb-12 pt-5 md:pb-20 md:pt-20 md:py-16 lg:py-20 bg-gradient-to-br from-[#FDF8F8] to-[#FFF5F5] overflow-hidden mt-10 md:mt-0'>
 
             <div className='w-[95%] md:w-[85%] lg:w-[80%] mx-auto px-4 sm:px-0 relative z-10'>
                 

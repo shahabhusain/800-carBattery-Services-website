@@ -5,13 +5,13 @@ import Image from 'next/image'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 const Founder = () => {
   return (
-    <div className=' relative w-[85%] mx-auto max-w-[1500px]'>
-      <Image src={bg} alt='bg'/>
-      <div className=' absolute top-36 w-full flex items-center justify-around'>
-           <div className=' w-1/2'>
+    <div className=' relative md:w-[85%] w-[90%] md:mb-20 mb-[900px] mx-auto max-w-[1500px]'>
+      <Image className='md:block hidden' src={bg} alt='bg'/>
+      <div className=' absolute md:top-36 top-12 w-full flex flex-col md:flex-row items-center justify-around'>
+           <div className=' md:w-1/2'>
             <Image className='' src={founder} alt='founder'/>
            </div>
-           <div className=' w-1/2 flex flex-col gap-2'>
+           <div className=' md:w-1/2 flex flex-col gap-2'>
               <h1 className=' text-red-800 text-[40px] font-semibold'>Samin Jan</h1>
               <h2 className=' text-[20px] font-semibold'>Founder & CEO</h2>
               <div className=' flex items-center gap-3'>

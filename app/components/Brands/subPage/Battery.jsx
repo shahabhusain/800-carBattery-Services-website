@@ -12,7 +12,7 @@ const Battery = ({ autoplayDelay = 3000, brands, batteryText }) => {
 
 
   return (
-    <div className="bg-[#FDF8F8] py-20">
+    <div className="bg-[#FDF8F8] md:py-20 py-10">
            <div className='flex flex-col gap-y-3 md:flex-row items-center md:w-[80%] w-[95%] mx-auto justify-between'>
                 <h1 className='text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold max-w-full md:max-w-[544px] leading-tight text-left'>
                   <span className='font-normal'>{batteryText.title1}</span>{' '}

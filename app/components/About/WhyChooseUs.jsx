@@ -25,18 +25,18 @@ const WhyChooseUs = () => {
         },
     ]
   return (
-    <div className=' bg-[#FDF8F8] py-20 mt-20 '>
+    <div className=' bg-[#FDF8F8] md:py-20 pt-10 md:mt-20 '>
             <div className=' w-[85%] mx-auto flex flex-col gap-y-4 items-center justify-center'>
       <p className=' text-[16px] font-bold text-center'>Why Choose Us</p>
-      <h1 className=' text-[40px] font-semibold text-center max-w-[855px]'>Reliable Car <span className=' text-red-800'>Battery Service </span> 
+      <h1 className=' lg:text-[40px] md:text-[35px] sm:text-[30px] text-[26px]  font-semibold text-center max-w-[855px]'>Reliable Car <span className=' text-red-800'>Battery Service </span> 
  You Can Trust</h1>
-         <div className=' flex items-center gap-2 justify-between mt-8'>
+         <div className=' flex flex-col md:flex-row items-center gap-2 justify-between mt-8'>
            {
             data.map((item, index) => (
-                <div className=' flex flex-col gap-y-5 items-start bg-white p-12 h-[50ppx] w-[350px]' key={index}>
-                    <span className=' text-[25px]'>{item.icons}</span>
-                    <h2 className=' text-[24px] font-semibold '>{item.title}</h2>
-                    <p className=' text-[16px] font-normal text-[#4E4E4E]'>{item.desc}</p>
+                <div className=' flex flex-col gap-y-5 items-start bg-white md:p-12 p-4 h-[50ppx] w-[350px]' key={index}>
+                    <span className=' md:text-[25px] text-[20px]'>{item.icons}</span>
+                    <h2 className=' md:text-[24px] text-[18px] font-semibold '>{item.title}</h2>
+                    <p className=' md:text-[16px] text-[14px] font-normal text-[#4E4E4E]'>{item.desc}</p>
                 </div>
             ))
            }

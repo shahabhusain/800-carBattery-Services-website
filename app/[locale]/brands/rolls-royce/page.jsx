@@ -15,20 +15,16 @@ import serviceImg5 from "@/public/brands/roll/service1.webp"
 import React from 'react'
 import CarBrands from '@/app/components/Brands/subPage/CarBrands'
 // car brands
-  import carBrand1 from '@/public/brands/mercedes/1.webp'
-   import carBrand2 from '@/public/brands/mercedes/2.webp'
-    import carBrand3 from '@/public/brands/mercedes/3.webp'
-     import carBrand4 from '@/public/brands/mercedes/4.webp'
-      import carBrand5 from '@/public/brands/mercedes/5.webp'
-       import carBrand6 from '@/public/brands/mercedes/6.webp'
-        import carBrand7 from '@/public/brands/mercedes/7.webp'
-         import carBrand8 from '@/public/brands/mercedes/8.webp'
-          import carBrand9 from '@/public/brands/mercedes/9.webp'
-           import carBrand10 from '@/public/brands/mercedes/10.webp' 
-            import carBrand11 from '@/public/brands/mercedes/11.webp'
-            import carBrand12 from '@/public/brands/mercedes/12.webp'
-            import carBrand13 from '@/public/brands/mercedes/13.webp'
-            import carBrand14 from '@/public/brands/mercedes/14.webp'
+  import carBrand1 from '@/public/brands/roll/1.webp'
+   import carBrand2 from '@/public/brands/roll/2.webp'
+    import carBrand3 from '@/public/brands/roll/3.webp'
+     import carBrand4 from '@/public/brands/roll/4.webp'
+      import carBrand5 from '@/public/brands/roll/5.webp'
+       import carBrand6 from '@/public/brands/roll/6.webp'
+        import carBrand7 from '@/public/brands/roll/7.webp'
+         import carBrand8 from '@/public/brands/roll/8.webp'
+          import carBrand9 from '@/public/brands/roll/9.webp'
+           import carBrand10 from '@/public/brands/roll/10.webp' 
 // battery brands
 import varta from "@/public/batteryBrands/varta.png";
 import acdelco from "@/public/batteryBrands/ac.png";
@@ -338,7 +334,7 @@ const arabicContent = [
             title2: "ماركات السيارات الرئيسية",
         }
         : {
-            desc: "Mercedes Car Models We Serve",
+            desc: "Rolls Royece Car Models We Serve",
             title1: "Includes All",
             title2: "Major Models & Variants",
         }
@@ -358,57 +354,46 @@ const arabicContent = [
 
                      const brands = [
         {
-            desc: "Mercedes-Maybach EQS SUV",
+            desc: "ROLLS ROYCE PHANTOM",
             car: carBrand1,
         },
         {
-            desc: "CLA Sedan",
+            desc: "ROLLS ROYCE PHANTOM EXTENDED",
             car: carBrand2,
         },
         {
-            desc: "C-Class Sedan",
+            desc: "ROLLS ROYCE SPECTRE",
             car: carBrand3,
         },
         {
-            desc: "E-Class Sedan",
+            desc: "ROLLS ROYCE GHOST",
             car: carBrand4,
         },
         {
-            desc: "E-Class SedanEQE Sedan",
+            desc: "ROLLS ROYCE GHOST EXTENDED",
             car: carBrand5,
         },
         {
-            desc: "S-Class Sedan",
+            desc: "ROLLS ROYCE CULLINAN",
             car: carBrand6,
         },
         {
-            desc: "E-Class Wagon",
+            desc: "ROLLS ROYCE BLACK BADGE",
             car: carBrand7,
         },
         {
-            desc: "AMG S 63 E PERFORMANCE Sedan",
+            desc: "ROLLS ROYCE BOAT TAIL",
             car: carBrand8,
         },
           {
-            desc: "CLE Coupe",
+            desc: "ROLLS ROYCE WRAITH ",
             car: carBrand9,
         },
           {
-            desc: "CLE Coupe",
+            desc: "ROLLS ROYCE SWEPTAIL",
             car: carBrand10,
         },
-         {
-            desc: "AMG SL Roadster",
-            car: carBrand11,
-        },
-         {
-            desc: "Mercedes-Maybach GLS SUV",
-            car: carBrand12,
-        },
-         {
-            desc: "G-Class SUV",
-            car: carBrand13,
-        },
+        
 
         
                   ]
@@ -430,7 +415,7 @@ const arabicContent = [
       </div>
         <div className='bg-white rounded-t-4xl relative z-10'>
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
-           <Services services={services} />
+           {/* <Services services={services} /> */}
            <CarBrands text={text} brands={brands} />
            <Battery brands={batteryBrands} batteryText={batteryText} />
             <Service serviceContent={serviceContent1} serviceImg={serviceImg5} />

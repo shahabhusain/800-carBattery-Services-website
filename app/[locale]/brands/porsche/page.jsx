@@ -394,7 +394,7 @@ const arabicContent = [
       </div>
         <div className='bg-white rounded-t-4xl relative z-10'>
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
-           <Services services={services} />
+           {/* <Services services={services} /> */}
            <CarBrands text={text} brands={brands} />
            <Battery brands={batteryBrands} batteryText={batteryText} />
             <Service serviceContent={serviceContent1} serviceImg={serviceImg5} />

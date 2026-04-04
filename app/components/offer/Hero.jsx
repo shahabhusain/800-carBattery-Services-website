@@ -5,12 +5,12 @@ import { useLocale } from 'next-intl'
 
 const heroEnglishContent = {
   title: "OFFERS",
-  btn: "Home / Offers"
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore quibusdam repudiandae voluptate Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore quibusdam repudiandae voluptate Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore quibusdam repudiandae voluptate."
 }
 
 const heroArabicContent = {
   title: "خبير",
-  btn: "تحدث مع خبير"
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore quibusdam repudiandae voluptate Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore quibusdam repudiandae voluptate Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore quibusdam repudiandae voluptate."
 }
 
 const Hero = () => {
@@ -21,21 +21,19 @@ const Hero = () => {
     <div className='text-white'>
       <div className='relative'>
         <Image 
-          className='w-full md:h-[450px] h-screen object-cover' 
+          className='w-full h-[450px] object-cover' 
           src={herobg} 
           alt='image'
         />
         <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-screen'></div>
         
         {/* Centered content container */}
-        <div className='absolute inset-0 top-32 flex items-center justify-center'>
-          <div className={`flex flex-col items-center justify-center text-center gap-y-6 px-4 max-w-3xl mx-auto`}>
+        <div className='absolute md:left-32 md:top-52 top-32 '>
+          <div className={`flex flex-col  gap-y-2 px-4`}>
             <h1 className='lg:text-[45px] md:text-[43px] sm:text-[33px] text-[25px] font-bold text-white md:leading-[4rem]'>
               {hero.title}
             </h1>
-            <button className='text-[12px] md:text-[13px] w-fit bg-[#ffffff12] backdrop-blur-lg md:py-3 md:px-5 py-2 px-4  rounded-full text-white'>
-              {hero.btn}
-            </button>
+          <p className=' md:max-w-2xl'>{hero.desc}</p>
           </div>
         </div>
       </div>
