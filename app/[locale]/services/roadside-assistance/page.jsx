@@ -18,6 +18,8 @@ import Battery from '@/app/components/Brands/subPage/Battery'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
 import herobg from '@/public/brands/serviceBanners/rsa.webp'
 import CarBrands from '@/app/components/Hero/CarBrands'
+import Car from '@/app/components/Services/Car'
+import HowItWorks from '@/app/components/Hero/HowItWorks'
 
 
 const RoadSide = () => {
@@ -215,7 +217,10 @@ const arabicContent = [
       <div className='sticky top-0 '>
         <Hero hero={hero} herobg={herobg} />
       </div>
+      
         <div className='bg-white rounded-t-4xl relative z-10'>
+          <Car />
+           <HowItWorks />
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
            <CarBrands />
            <Battery brands={batteryBrands} batteryText={batteryText} />

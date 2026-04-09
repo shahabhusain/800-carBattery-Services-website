@@ -126,27 +126,24 @@ const arabicContent = [
 
     const englishFaqs = [
         {
-            question: "How accurate are your car scanning and diagnostic services?",
-            answer: "We use dealership-level diagnostic tools to read your vehicle's computer systems with absolute precision. This advanced technology allows our certified technicians to pinpoint the exact root cause of any warning light or performance issue. By finding the precise fault, we prevent unnecessary parts replacement and save you money."
+            question: "Do you offer mechanical services in Dubai?",
+            answer: "800BatteryPro offers premium mechanical services in Dubai to all major American and European car brands. We have a team of 50+ certified mechanics who are experienced in working on all minor and major car jobs. No matter if it's an engine repair, transmission repair, or any other hardware job in your car we take care of it with 100 percent customer satisfaction. "
         },
         {
-            question: "What types of computer and module repairs do you handle?",
-            answer: "Our experts manage a wide range of complex electronic fixes to keep your car running smoothly. We provide specialised ECU repair, Car ABS repair, and Car BCM repair services. We also perform TCM repair service and Car PCB repair to ensure your transmission and main control boards work flawlessly."
+            question: "Do we use OEM-Approved Spare parts?",
+            answer: "Our team of experts only uses OEM-approved spare parts for every car job. Along with that our car specialists are trained to use the best practices for completing every mechanical car job with standard safety procedures."
         },
         {
-            question: "Can you fix and recalibrate advanced safety sensors?",
-            answer: "Yes, we fully restore and align your vehicle's modern safety features. Our team performs complete Car 360 calibration and ADAS sensor repair and recalibration. This expert alignment ensures your cameras, radar, and lane-assist systems function perfectly to keep you safe on the road."
+            question: "Do we fix the Bentley Transmission system?",
+            answer: "Yes, 800BatteryPro has a team of Bentley experts in Dubai who are trained to fix any model of Bentley transmission system. We use the latest technology to fix your car with market competitive service pricing."
         },
 
           {
-            question: "Do you offer specialised services for flooded cars or key programming?",
-            answer: "We certainly do. Our technicians specialise in severe flood car repair, working carefully to salvage and restore water-damaged electrical systems. We also offer fast car key programming and custom automotive tuning to optimise your daily driving experience."
+            question: "Which one is the best service center for mechanical repair in Dubai?",
+            answer: "800BatteryPro has a well-equipped car service center for mechanical repair in Dubai. We have a team of certified technicians who use the latest technology for fixing your car and making sure you drive safe on the road. Call us now!"
         },
 
-          {
-            question: "Why is advanced diagnostic technology so important for my car?",
-            answer: "Modern vehicles rely on highly sensitive computer networks to operate. Using outdated scanners can cause data loss or dangerous electrical spikes. Our advanced diagnostic technology connects securely to your car, allowing us to read error codes safely while protecting your engine management and internal memory systems."
-        },
+
 
           
 

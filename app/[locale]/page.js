@@ -10,6 +10,7 @@ import RealExperience from '../components/Hero/RealExperience'
 import Trusted from '../components/Hero/Trusted'
 import Footer from '../components/Footer'
 import Review from '../components/Hero/Review'
+import HowItWorks from '../components/Hero/HowItWorks'
 
 const Page = () => {
   return (
@@ -33,6 +34,7 @@ const Page = () => {
       <RealExperience />
 
       <div className='bg-white relative'>
+        <HowItWorks />
         <Trusted />
         <Footer />
       </div>

@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import about from '@/public/about.png'
+import about from '@/public/Home/about.png'
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { GoArrowRight } from 'react-icons/go';
 import { useLocale } from 'next-intl';
+import { FaEye } from 'react-icons/fa';
 
 const englishContent = {
   title: "About Us",
@@ -29,6 +30,29 @@ const arabicContent = {
   cta: "اقرأ المزيد"
 };
 
+const cards = [
+  {
+    icon:<FaEye />,
+    title:"100k",
+    desc:"years of experience"
+  },
+  {
+    icon:<FaEye />,
+    title:"100k",
+    desc:"years of experience"
+  },
+  {
+    icon:<FaEye />,
+    title:"100k",
+    desc:"years of experience"
+  },
+  {
+    icon:<FaEye />,
+    title:"100k",
+    desc:"years of experience"
+  },
+]
+
 const About = () => {
   const locale = useLocale()
   const content = locale === "en" ? englishContent : locale === "ar" ? arabicContent : englishContent
@@ -36,26 +60,38 @@ const About = () => {
   const isRTL = locale === 'ar'
 
   return (
-    <div className='bg-[#FDF8F8] rounded-t-4xl md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
-      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12 w-[90%] mx-auto'>
+    <div className='bg-gradient-to-r from-black to-red-900 rounded-t-4xl md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
+       <div className='w-[90%] mx-auto'>
+           <div className=' grid md:grid-cols-4 gap-x-3 grid-cols-1'>
+              {
+                cards.map((item,index) => (
+                   <div key={index} className=' flex flex-col items-start gap-y-3 bg-[#FFFFFF0D] backdrop-blur-lg p-6 rounded-md text-white'>
+                <span className=' text-xl'>{item.icon}</span>
+                <h2 className=' text-4xl font-bold'>{item.title}</h2>
+                <p>{item.desc}</p>
+              </div>
+                ))
+              }
+         </div>
+      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-20 '>
         <Image className='md:w-1/2' src={about} alt='about' />
         <div className='md:w-1/2 flex flex-col md:gap-y-6 gap-y-3'>
-          <p className='uppercase md:text-[16px] text-[12px] font-bold'>
+          <p className='uppercase md:text-[16px] text-white text-[12px] font-bold'>
             {content.title}
           </p>
-          <h1 className='uppercase lg:text-[40px] md:text-[36px] text-[25px] font-semibold'>
+          <h1 className='uppercase text-white lg:text-[40px] md:text-[36px] text-[25px] font-semibold'>
             <span className='text-red-500'>800</span> {content.heading}
           </h1>
-          <p className='md:text-[16px] text-[12px] font-normal text-[#00000099]'>
+          <p className='md:text-[16px] text-[12px] font-normal text-gray-200'>
             {content.description}
           </p>
           <div className='flex flex-col gap-y-3'>
             {content.features.map((feature, index) => (
               <button 
                 key={index} 
-                className='bg-white p-4 md:text-[16px] text-[12px] rounded-br-full text-[#4E4E4E] rounded-tr-full flex items-center gap-3'
+                className='bg-[#FFFFFF1A] text-white backdrop-blur-lg p-4 md:text-[16px] text-[12px] rounded-br-full text-[#4E4E4E] rounded-tr-full flex items-center gap-3'
               >
-                <span className='bg-[#F8F8F8] p-3 rounded-tr-full rounded-br-full'>
+                <span className='bg-[#FFFFFF1A] p-3 rounded-tr-full rounded-br-full'>
                   <RiArrowRightDoubleLine className={isRTL ? 'rotate-180' : ''} />
                 </span>
                 {feature}
@@ -70,6 +106,7 @@ const About = () => {
           </button>
         </div>
       </div>
+       </div>
     </div>
   )
 }
