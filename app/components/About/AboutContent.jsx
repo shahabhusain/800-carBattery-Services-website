@@ -33,12 +33,12 @@ const arabicContent = {
 const englishCards = [
   {
     icon:<FaEye />,
-    title:"5+ ",
+    title:"10+ ",
     desc:"years of experience"
   },
   {
     icon:<FaEye />,
-    title:"5000+",
+    title:"10000+",
     desc:"Loyal Customer Serve"
   },
   {
