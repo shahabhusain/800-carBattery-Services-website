@@ -2,6 +2,9 @@ import { useLocale } from 'next-intl';
 import React from 'react'
 import { GoArrowRight } from 'react-icons/go';
 import service from '@/public/locations/service.png'
+import service1 from '@/public/locations/service1.webp'
+import service2 from '@/public/locations/service2.webp'
+import service3 from '@/public/locations/service3.webp'
 import Image from 'next/image';
 import { FaArrowDown } from 'react-icons/fa';
 
@@ -15,17 +18,17 @@ const Services = () => {
     {
         title: "Car Battery Boosting",
         hoverDec: "Get 24/7 Car Battery Boosting/jump start services under 30 minutes anywhere in Dubai by 800BatteryPro",
-        img: service
+        img: service2
     },
     {
         title: "24/7 Roadside Assistance",
         hoverDec: "800BatteryPro has well-equipped vans and 50+ certified technicians offering 24/7 roadside assistance anywhere in the UAE. Fast & Reliable RSA!",
-        img: service
+        img: service1
     },
     {
         title: "Car Scanning & Diagnostics",
         hoverDec: "Get complete Advanced Car Scanning & Diagnostics at 800BatteryPro. Fast Service & Best Pricing. Contact Us Now!",
-        img: service
+        img: service3
     },
 ]
 
