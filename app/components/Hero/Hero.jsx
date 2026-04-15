@@ -1,10 +1,11 @@
 "use client"
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import herobg from '@/public/Home/ban3.webp'
 import { GoArrowRight } from 'react-icons/go'
 import { useLocale } from 'next-intl'
+import AppointmentModal from '../AppointmentModal'
 
 const heroEnglishContent = {
   desc:"24/7 Roadside Assistance & Car Battery Service in Dubai",
@@ -31,7 +32,15 @@ const heroArabicContent = {
 const Hero = () => {
 
   const locale = useLocale()
+  const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
+  // Handle closing the modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   const hero =
     locale === "en"
       ? heroEnglishContent
@@ -47,12 +56,12 @@ const Hero = () => {
       <div className='relative'>
 
         <Image
-          className='w-full md:h-[800px] h-[500px] object-cover'
+          className='w-full md:h-[800px] h-[600px] object-cover'
           src={herobg}
           alt='image'
         />
 
-        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-[500px]' />
+        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-[600px]' />
 
         <div
           className={`absolute md:top-60 top-32 ${
@@ -81,7 +90,7 @@ const Hero = () => {
             </span>
           </button>
 
-          <button className='text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex md:hidden items-center gap-x-2 hover:bg-red-700 transition'>
+          <button   onClick={handleOpenModal} className='text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex md:hidden items-center gap-x-2 hover:bg-red-700 transition'>
             {hero.btn1}
             <span className='rotate-[320deg]'>
               <GoArrowRight size={30} />
@@ -91,7 +100,11 @@ const Hero = () => {
 
       </div>
 
-    
+         {/* Appointment Modal */}
+      <AppointmentModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+      />
 
     </div>
   )

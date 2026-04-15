@@ -30,7 +30,7 @@ export default async function RootLayout({ children, params }) {
           {/* Desktop View - Floating WhatsApp & Call Buttons */}
           <div className='fixed top-[37rem] md:flex hidden flex-col gap-y-3 right-6 z-[9999]'>
             <a 
-              href="https://wa.me/971XXXXXXXXX" 
+              href="https://wa.me/971528475675" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:scale-110 transition-transform duration-300"
@@ -40,7 +40,7 @@ export default async function RootLayout({ children, params }) {
               </div>
             </a>
             <a 
-              href="tel:971XXXXXXXXX" 
+              href="tel:971528475675" 
               className="hover:scale-110 transition-transform duration-300"
             >
               <div className='text-2xl animate-bounce bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition-colors cursor-pointer'>
@@ -52,7 +52,7 @@ export default async function RootLayout({ children, params }) {
           {/* Mobile View - Floating WhatsApp & Call Buttons */}
           <div className='fixed bottom-0 left-0 right-0 w-full flex md:hidden items-center z-[9999] shadow-2xl'>
             <a 
-              href="https://wa.me/971XXXXXXXXX" 
+              href="https://971528475675" 
               target="_blank" 
               rel="noopener noreferrer"
               className='w-1/2'
@@ -63,7 +63,7 @@ export default async function RootLayout({ children, params }) {
               </button>
             </a>
             <a 
-              href="tel:971XXXXXXXXX" 
+              href="tel:971528475675" 
               className='w-1/2'
             >
               <button className='bg-red-500 text-white py-4 w-full flex justify-center items-center gap-2 hover:bg-red-600 active:bg-red-700 transition-all duration-300'>

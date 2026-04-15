@@ -21,12 +21,12 @@ const Modal = ({ isOpen, onClose, children, title }) => {
     <>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[200] transition-all duration-300"
+        className="fixed inset-0 backdrop-blur-2xl bg-black/70 backdrop-blur-sm z-[3000] transition-all duration-300"
         onClick={onClose}
       />
       
       {/* Modal */}
-      <div className="fixed inset-0 z-[201] flex items-center justify-center p-4">
+      <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4">
         <div 
           className="relative w-full max-w-md bg-transparent rounded-2xl shadow-2xl transition-all duration-300 animate-in fade-in zoom-in"
           onClick={(e) => e.stopPropagation()}
