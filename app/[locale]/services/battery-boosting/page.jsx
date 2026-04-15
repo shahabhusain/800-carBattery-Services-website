@@ -23,161 +23,139 @@ import HowItWorks from '@/app/components/Hero/HowItWorks'
 
 const BatteryBoosting = () => {
   const locale = useLocale()
-  const heroEnglishContent = {
-    desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
-    title:{
-      span1:" 24/7 Car Battery Boosting ",
-      span2:" Services in Dubai "
-    },
-    desc1:"Get expert roadside assistance with free on-site testing and safe jump-starts in under 30 minutes. ",
-    btn:"Call Now",
-    btn1:"Book Service Now"
-  }
-  
-  const heroArabicContent = {
-    desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
+// Hero Section
+const heroEnglishContent = {
+    desc: "Top Car Brands – 24/7 Emergency Support & Anywhere!",
     title: {
-      span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-      span2: "وأبوظبي!"
+        span1: "24/7 Car Battery Boosting",
+        span2: " Services in Dubai"
     },
-    desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-    btn: "تحدث مع خبير",
-     btn1:"Book Service Now"
-  };
+    desc1: "Get expert roadside assistance with free on-site testing and safe jump-starts in under 30 minutes.",
+    btn: "Call Now",
+    btn1: "Book Service Now"
+}
 
-    const serviceEnglishContent = {
+const heroArabicContent = {
+    desc: "أفضل ماركات السيارات – دعم طوارئ 24/7 في أي مكان!",
+    title: {
+        span1: "خدمات تشغيل بطارية السيارة",
+        span2: "على مدار 24/7 في دبي"
+    },
+    desc1: "احصل على مساعدة خبراء على الطريق مع فحص مجاني في الموقع وتشغيل آمن للبطارية خلال 30 دقيقة.",
+    btn: "اتصل الآن",
+    btn1: "احجز الخدمة الآن"
+}
+
+// Service Section
+const serviceEnglishContent = {
     subtitle: "SERVICES",
     title: "Stranded in Dubai or Abu Dhabi",
     services: [
-      {
-        id: 1,
-        description:
-          "with a dead car battery? Don’t wait or take risks—call the experts who guarantee 24/7 roadside assistance and arrival in under 30 minutes! A dead vehicle battery disrupts your entire schedule. You need a fast, reliable team to get your car moving again safely. 800BatteryPro delivers premium 24/7 emergency battery boosting directly to your exact location. We dispatch certified technicians immediately so you never wait long in the heat. Our experts use advanced diagnostic technology to deliver a secure power surge. This precise method protects your car's sensitive internal computers from dangerous electrical spikes. If you need a replacement, we provide only premium branded batteries, delivered and installed at no extra cost. Using advanced installation technology, we ensure your vehicle’s electronic systems remain protected and operational, so you can drive away with peace of mind. We pride ourselves on reliability, speed, and hassle-free service—no hidden fees, no compromises. Whether you’re stuck at home, work, or on the road, our team is ready to get you moving again quickly and safely. Trust the UAE’s leading experts in mobile car battery boosting and enjoy convenience with every call. Contact us now for immediate, reliable help."
-      },
+        {
+            id: 1,
+            description: "with a dead car battery? Don't wait or take risks—call the experts who guarantee 24/7 roadside assistance and arrival in under 30 minutes! A dead vehicle battery disrupts your entire schedule. You need a fast, reliable team to get your car moving again safely. 800BatteryPro delivers premium 24/7 emergency battery boosting directly to your exact location. We dispatch certified technicians immediately so you never wait long in the heat. Our experts use advanced diagnostic technology to deliver a secure power surge. This precise method protects your car's sensitive internal computers from dangerous electrical spikes. If you need a replacement, we provide only premium branded batteries, delivered and installed at no extra cost. Using advanced installation technology, we ensure your vehicle's electronic systems remain protected and operational, so you can drive away with peace of mind. We pride ourselves on reliability, speed, and hassle-free service—no hidden fees, no compromises. Whether you're stuck at home, work, or on the road, our team is ready to get you moving again quickly and safely. Trust the UAE's leading experts in mobile car battery boosting and enjoy convenience with every call. Contact us now for immediate, reliable help."
+        },
     ]
-  }
+}
 
-  const serviceArabicContent = {
+const serviceArabicContent = {
     subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
+    title: "تعطلت في دبي أو أبو ظبي؟",
     services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      
-
+        {
+            id: 1,
+            description: "مع بطارية سيارة فارغة؟ لا تنتظر أو تخاطر - اتصل بالخبراء الذين يضمنون المساعدة على الطريق 24/7 والوصول خلال 30 دقيقة! بطارية السيارة الفارغة تعطل جدولك بالكامل. أنت بحاجة إلى فريق سريع وموثوق لإعادة سيارتك إلى الحركة بأمان. يقدم 800BatteryPro خدمة تشغيل بطارية الطوارئ المتميزة 24/7 مباشرة إلى موقعك بالضبط. نرسل فنيين معتمدين فوراً حتى لا تنتظر طويلاً في الحرارة. يستخدم خبراؤنا تقنية تشخيص متقدمة لتوفير شحن آمن. تحمي هذه الطريقة الدقيقة أجهزة الكمبيوتر الداخلية الحساسة لسيارتك من الارتفاعات الكهربائية الخطرة. إذا كنت بحاجة إلى استبدال، فإننا نقدم فقط بطاريات ذات علامات تجارية متميزة، يتم توصيلها وتركيبها بتكلفة إضافية. باستخدام تقنية التركيب المتقدمة، نضمن بقاء الأنظمة الإلكترونية لسيارتك محمية وتعمل بشكل طبيعي، حتى تتمكن من القيادة براحة بال. نحن نفتخر بالموثوقية والسرعة والخدمة الخالية من المتاعب - بدون رسوم خفية أو تنازلات. سواء كنت عالقاً في المنزل أو العمل أو على الطريق، فإن فريقنا جاهز لإعادتك إلى الحركة بسرعة وأمان. ثق بالخبراء الرائدين في الإمارات في مجال تشغيل بطارية السيارة المتنقلة واستمتع بالراحة مع كل مكالمة. اتصل بنا الآن للحصول على مساعدة فورية وموثوقة."
+        },
     ]
-  }
+}
 
-
-
-
-   const englishContent = [
-  {
-    icons: <FaSitemap />,
-    title: "Arrival in Under 30 Minutes",
-    desc: "Your time is valuable. We strategically position our well-equipped service vehicles across Dubai and Abu Dhabi to guarantee an under 30-minute response time. We get to you fast so you can get on with your day."
-  },
-  {
-    icons: <FaSitemap />,
-    title: "Free Battery Testing and Delivery",
-    desc: "We never guess what is wrong with your car. Our technicians use the latest technology to perform a free battery test right on the spot. If your battery just needs a boost, we will jump-start it safely. If the battery is completely dead, we offer free battery delivery to your location."
-  },
-  {
-    icons: <FaSitemap />,
-    title: "Premium Branded Batteries and Genuine Parts",
-    desc: "We strictly use OEM-approved spare parts and genuine, premium batteries recommended by your vehicle manufacturer. Using top-tier brands ensures your new battery withstands the intense UAE climate and provides reliable power for years to come."
-  },
-  {
-    icons: <FaSitemap />,
-    title: "Advanced Installation Technology",
-    desc: "Swapping a battery in a modern car is not just about turning a wrench. We use advanced diagnostic tools to ensure your new battery syncs perfectly with your car's internal computers. Our expert installation process prevents data loss and ensures your radio, seat memory, and engine management systems function flawlessly."
-  }
+// Cards Content
+const englishContent = [
+    {
+        icons: <FaSitemap />,
+        title: "Genuine Car Battery Replacement ",
+        desc: "If you are stuck with a dead car battery or issues in your car electronic system. Don’t Panic !800BatteryPro provides you with 24/7 car battery replacement and free battery testing, which comes along with expert car electronic system repairs in Dubai. "
+    },
+    {
+        icons: <FaSitemap />,
+        title: "Certified Technicians & 5+ Years Of Experience",
+        desc: "800BatteryPro has one of the best and trusted car service centers in Dubai. We have 50+ technicians with over 5+ years of experience working on premium car repairs delivering car jobs with 100 percent precision and customer satisfaction. Our team of technicians are all well-trained and certified by vendors to work on all major car brands."
+    },
+    {
+        icons: <FaSitemap />,
+        title: "OEM-Approved Spare Parts & Genuine Car Battery",
+        desc: "Don’t worry 800BatteryPro only uses OEM-approved spare parts for your car. Our technicians only recommend genuine car batteries for installation if needed after a free battery testing. "
+    },
+    {
+        icons: <FaSitemap />,
+        title: "No Hidden Cost & Free Battery Testing",
+        desc: "Unlike other service providers, 800BatteryPro provides every customer with free battery testing services with no hidden costs. If you need a replacement, our technicians will use a branded car battery for replacement services anywhere in Dubai and Abu Dhabi."
+    }
 ]
 
 const arabicContent = [
-  {
-    icons: <FaSitemap />,
-    title: "استجابة سريعة",
-    desc: "خدمة سريعة لإعادة تشغيل سيارتك والعودة إلى الطريق دون انتظار طويل."
-  },
-  {
-    icons: <FaSitemap />,
-    title: "بطاريات عالية الجودة",
-    desc: "نوفر بطاريات عالية الأداء وطويلة العمر تناسب مجموعة واسعة من السيارات."
-  },
-  {
-    icons: <FaSitemap />,
-    title: "فنيون متخصصون",
-    desc: "يضمن خبراؤنا المدربون تركيب البطارية بأمان وكفاءة دون أي متاعب."
-  },
-  {
-    icons: <FaSitemap />,
-    title: "رضا العملاء",
-    desc: "نركز على تقديم خدمة موثوقة وتجربة سلسة لكل عميل."
-  }
+    {
+        icons: <FaSitemap />,
+        title: "الوصول خلال 30 دقيقة",
+        desc: "وقتك ثمين. نضع سيارات الخدمة المجهزة بالكامل بشكل استراتيجي في جميع أنحاء دبي وأبو ظبي لضمان وقت استجابة أقل من 30 دقيقة. نصل إليك بسرعة حتى تتمكن من مواصلة يومك."
+    },
+    {
+        icons: <FaSitemap />,
+        title: "فحص وتوصيل البطارية مجاناً",
+        desc: "نحن لا نخمن أبداً ما هو الخطأ في سيارتك. يستخدم فنيونا أحدث التقنيات لإجراء فحص مجاني للبطارية في المكان. إذا كانت بطاريتك تحتاج فقط إلى شحن، فسنقوم بتشغيلها بأمان. إذا كانت البطارية فارغة تماماً، فإننا نقدم توصيل مجاني للبطارية إلى موقعك."
+    },
+    {
+        icons: <FaSitemap />,
+        title: "بطاريات ذات علامات تجارية متميزة وقطع أصلية",
+        desc: "نستخدم بدقة قطع الغيار المعتمدة من المصنع والبطاريات الأصلية المتميزة الموصى بها من قبل الشركة المصنعة لسيارتك. استخدام العلامات التجارية الراقية يضمن أن بطاريتك الجديدة تتحمل مناخ الإمارات القاسي وتوفر طاقة موثوقة لسنوات قادمة."
+    },
+    {
+        icons: <FaSitemap />,
+        title: "تقنية تركيب متقدمة",
+        desc: "استبدال البطارية في سيارة حديثة ليس مجرد استخدام مفتاح ربط. نستخدم أدوات تشخيص متقدمة لضمان تزامن بطاريتك الجديدة بشكل مثالي مع أجهزة الكمبيوتر الداخلية لسيارتك. تمنع عملية التركيب الخبيرة لدينا فقدان البيانات وتضمن عمل الراديو وذاكرة المقاعد وأنظمة إدارة المحرك بشكل لا تشوبه شائبة."
+    }
 ]
 
-    const englishFaqs = [
-        {
-            question: "How quickly can you reach me in Dubai or Abu Dhabi?",
-            answer: "We strategically place our fully-equipped service vehicles across both cities. This allows our technicians to reach your exact location in under 30 minutes, 24 hours a day, 7 days a week."
-        },
-        {
-            question: "Will a jump-start damage my modern car?",
-            answer: "No. Modern vehicles have complex electrical systems that require careful handling. We use advanced diagnostic tools and surge-protected equipment to boost your car safely, preventing any damage to your engine management, seat memory, or radio systems. "
-        },
-        {
-            question: "Do you charge for testing the battery?",
-            answer: "We provide completely free battery testing. When our technicians arrive, they check the exact health of your battery to find the root issue before taking any action."
-        },
-
-          {
-            question: "What happens if my car battery is completely dead?",
-            answer: "If your battery cannot take a boost, we offer free delivery of a replacement. We stock premium branded batteries recommended by your manufacturer and install them using advanced technology to keep your vehicle running smoothly for years to come."
-        },
-
-          
-
-           ]
+// FAQs Section
+  // FAQs Section
+  const englishFaqs = [
+      {
+          question: "How quickly can you reach me in Dubai or Abu Dhabi?",
+          answer: "We strategically place our fully-equipped service vehicles across both cities. This allows our technicians to reach your exact location in under 30 minutes, 24 hours a day, 7 days a week."
+      },
+      {
+          question: "Will a jump-start damage my modern car?",
+          answer: "No. Modern vehicles have complex electrical systems that require careful handling. We use advanced diagnostic tools and surge-protected equipment to boost your car safely, preventing any damage to your engine management, seat memory, or radio systems."
+      },
+      {
+          question: "Do you charge for testing the battery?",
+          answer: "We provide completely free battery testing. When our technicians arrive, they check the exact health of your battery to find the root issue before taking any action."
+      },
+      {
+          question: "What happens if my car battery is completely dead?",
+          answer: "If your battery cannot take a boost, we offer free delivery of a replacement. We stock premium branded batteries recommended by your manufacturer and install them using advanced technology to keep your vehicle running smoothly for years to come."
+      },
+  ]
 
 
-
- const arabicFaqs = [
-  {
-    question: "ما هي الخدمات التي تقدمونها؟",
-    answer:
-      "نقدم خدمات شاملة لبطاريات السيارات تشمل فحص البطارية، تشغيل السيارة عند توقفها، استبدال البطارية، والمساعدة على الطريق. كما نقدم خدمات إصلاح السيارات المميزة ودعم الطوارئ على مدار الساعة في دبي وأبوظبي."
-  },
-  {
-    question: "كم يستغرق استبدال البطارية؟",
-    answer:
-      "يمكن لفنيينا المحترفين استبدال بطارية سيارتك عادةً خلال 15 إلى 30 دقيقة في موقعك. نحن ندرك أن وقتك مهم، لذلك نحرص على تقديم خدمة سريعة وفعالة."
-  },
-  {
-    question: "هل توفرون المساعدة على الطريق على مدار الساعة؟",
-    answer:
-      "نعم، نقدم خدمة المساعدة على الطريق على مدار 24 ساعة في دبي وأبوظبي. سواء كان ذلك في النهار أو الليل أو في عطلة نهاية الأسبوع أو العطلات الرسمية، فريقنا مستعد دائمًا لمساعدتك في أي حالة طارئة تتعلق بالبطارية."
-  },
-  {
-    question: "ما هي المناطق التي تغطونها؟",
-    answer:
-      "نغطي جميع المناطق الرئيسية في دبي وأبوظبي، بما في ذلك وسط مدينة دبي، دبي مارينا، أبراج بحيرات الجميرا (JLT)، الخليج التجاري، جزيرة الريم، وجزيرة ياس."
-  },
-  {
-    question: "هل تقدمون ضمانًا على البطاريات؟",
-    answer:
-      "نعم، جميع بطارياتنا تأتي مع ضمان شامل. تختلف مدة الضمان حسب نوع وعلامة البطارية. يرجى التواصل معنا للحصول على تفاصيل الضمان الخاصة بكل نوع من البطاريات."
-  }
+const arabicFaqs = [
+    {
+        question: "كم من الوقت يستغرق وصولكم إلي في دبي أو أبو ظبي؟",
+        answer: "نضع سيارات الخدمة المجهزة بالكامل بشكل استراتيجي في جميع أنحاء المدينتين. وهذا يسمح لفنيينا بالوصول إلى موقعك بالضبط في أقل من 30 دقيقة، 24 ساعة في اليوم، 7 أيام في الأسبوع."
+    },
+    {
+        question: "هل تشغيل البطارية قد يتلف سيارتي الحديثة؟",
+        answer: "لا. السيارات الحديثة لديها أنظمة كهربائية معقدة تتطلب معالجة دقيقة. نستخدم أدوات تشخيص متقدمة ومعدات محمية من زيادة التيار لشحن سيارتك بأمان، مما يمنع أي ضرر لأنظمة إدارة المحرك أو ذاكرة المقاعد أو أنظمة الراديو."
+    },
+    {
+        question: "هل تتقاضون رسماً لفحص البطارية؟",
+        answer: "نقدم فحصاً مجانياً تماماً للبطارية. عندما يصل فنيونا، يتحققون من صحة بطاريتك بالضبط للعثور على المشكلة الجذرية قبل اتخاذ أي إجراء."
+    },
+    {
+        question: "ماذا يحدث إذا كانت بطارية سيارتي فارغة تماماً؟",
+        answer: "إذا كانت بطاريتك لا تقبل الشحن، فإننا نقدم توصيل مجاني لبطارية بديلة. نحن نتوفر على بطاريات ذات علامات تجارية متميزة موصى بها من قبل الشركة المصنعة لسيارتك ونقوم بتركيبها باستخدام تقنية متقدمة للحفاظ على تشغيل سيارتك بسلاسة لسنوات قادمة."
+    },
 ]
-
 
 
 

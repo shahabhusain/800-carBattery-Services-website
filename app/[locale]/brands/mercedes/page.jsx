@@ -43,121 +43,105 @@ import herobg from '@/public/brands/mercedes/bg.webp'
 
 const Mercedes = () => {
   const locale = useLocale()
-  const heroEnglishContent = {
-    desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
-    title:{
-      span1:" Mercedes Car Battery Replacement  ",
-      span2:" & Car Programming"
+const heroEnglishContent = {
+  desc: "Top Car Brands – 24/7 Emergency Support & Anywhere!",
+  title: {
+    span1: " Mercedes Car Battery Replacement  ",
+    span2: " & Car Programming"
+  },
+  desc1: "Don't stress if your Car Battery Is Dead! 800BatteryPro provides instant Battery Replacement for your Mercedes-Benz in Dubai. We only provide genuine Battery Brands & Top Customer Support.",
+  btn: "Call Now",
+  btn1: "Book Service Now"
+}
+
+const heroArabicContent = {
+  desc: "أفضل ماركات السيارات – دعم طارئ 24/7 أينما كنت!",
+  title: {
+    span1: "استبدال بطارية مرسيدس ",
+    span2: "وبرمجة السيارات"
+  },
+  desc1: "لا تقلق إذا كانت بطارية سيارتك فارغة! يقدم 800BatteryPro استبدال فوري للبطارية لسيارتك مرسيدس-بنز في دبي. نحن نقدم فقط ماركات البطاريات الأصلية وأفضل دعم للعملاء.",
+  btn: "اتصل الآن",
+  btn1: "احجز الخدمة الآن"
+};
+
+const serviceEnglishContent = {
+  subtitle: "SERVICES",
+  title: "Mercedes-Benz Battery Replacement & Advanced Repair Services",
+  services: [
+    {
+      id: 1,
+      description: "Don't panic if your Mercedes battery is dead! The best car battery replacement services in Dubai are just a click away. 800BatteryPro is trusted by thousands for its quick response and onsite battery services. We have a team of certified Mercedes specialists in Dubai who knows everything about how to get your car back on the road. With the latest battery boosting equipment and a well-equipped service centre in Dubai and Abu Dhabi, you have us as a trusted partner in all car battery-related services. Whether it's the legendary Mercedes SLR, a luxury vehicle like the S-Class, a premium SUV like the G-Wagon, or any other custom-built model, our technicians only use AGM and Lithium batteries."
     },
-    desc1:"Don’t stress if your Car Battery Is Dead! 800BatteryPro provides instant Battery Replacement for your Mercedes-Benz in Dubai. We only provide genuine Battery Brands & Top Customer Support.",
-    btn:"Call Now",
-    btn1:"Book Service Now"
-  }
-  
-  const heroArabicContent = {
-    desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
-    title: {
-      span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-      span2: "وأبوظبي!"
+    {
+      id: 2,
+      description: "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of onsite car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months. For premium Mercedes Battery replacement and car programming, contact us now at +971528475675 or book a free car inspection right now!"
     },
-    desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-    btn: "تحدث مع خبير",
-     btn1:"Book Service Now"
-  };
+  ]
+}
 
-    const serviceEnglishContent = {
-    subtitle: "SERVICES",
-    title: " Mercedes-Benz Battery Replacement & Advanced Repair Services",
-    services: [
-      {
-        id: 1,
-        description:
-          "Don’t panic if your Mercedes battery is dead! The best car battery replacement services in Dubai are just a click away. 800BatteryPro is trusted by thousands for its quick response and onsite battery services. We have a team of certified Mercedes specialists in Dubai who knows everything about how to get your car back on the road. With the latest battery boosting equipment and a well-equipped service centre in Dubai and Abu Dhabi, you have us as a trusted partner in all car battery-related services. Whether it’s the legendary Mercedes SLR, a luxury vehicle like the S-Class, a premium SUV like the G-Wagon, or any other custom-built model, our technicians only use AGM and Lithium batteries."
-      },
-      {
-        id: 2,
-        description:
-          "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of onsite car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months.  For premium Mercedes Battery replacement and car programming, contact us now at +971528475675 or book a free car inspection right now!"
-      },
-    
-    ]
-  }
+const serviceArabicContent = {
+  subtitle: "الخدمات",
+  title: "استبدال بطارية مرسيدس-بنز وخدمات الإصلاح المتقدمة",
+  services: [
+    {
+      id: 1,
+      description: "لا داعي للذعر إذا كانت بطارية مرسيدس الخاصة بك فارغة! أفضل خدمات استبدال بطارية السيارة في دبي هي على بعد نقرة واحدة. يثق الآلاف في 800BatteryPro لاستجابته السريعة وخدمات البطارية في الموقع. لدينا فريق من فنيي مرسيدس المعتمدين في دبي الذين يعرفون كل شيء عن كيفية إعادة سيارتك إلى الطريق. باستخدام أحدث معدات تعزيز البطارية ومركز خدمة مجهز تجهيزًا جيدًا في دبي وأبوظبي، يمكنك الاعتماد علينا كشريك موثوق في جميع الخدمات المتعلقة ببطارية السيارة. سواء كانت مرسيدس SLR الأسطورية، أو سيارة فاخرة مثل S-Class، أو سيارة دفع رباعي فاخرة مثل G-Wagon، أو أي موديل آخر مصمم خصيصًا، يستخدم فنيونا فقط بطاريات AGM والليثيوم."
+    },
+    {
+      id: 2,
+      description: "يوفر 800BatteryPro مساعدة على الطريق 24/7 مع توصيل بطارية السيارة في الموقع خلال أقل من 15 دقيقة في أي مكان في دبي. اختبار البطارية والتوصيل مجاني، بينما يصل ضمان البطارية إلى 18 شهرًا. للحصول على استبدال بطارية مرسيدس فاخر وبرمجة السيارات، اتصل بنا الآن على +971528475675 أو احجز فحص سيارة مجاني الآن!"
+    },
+  ]
+}
 
-  const serviceArabicContent = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      
+const serviceEnglishContent1 = {
+  subtitle: "SERVICES",
+  title: "Mercedes Service Centre in Dubai",
+  services: [
+    {
+      id: 1,
+      description: "It's important to get the right Mercedes-Benz battery, and at 800BatteryPro, we're here to help you choose the right one for your model. We have a wide range of batteries in stock, giving you numerous choices."
+    },
+    {
+      id: 2,
+      description: "Mercedes-Benz vehicles feature two batteries: the main battery powers the car's electrical systems, while the auxiliary battery supports functions like lights, radio, and Stop-Start mechanisms. The main AGM battery is located under the hood, while the auxiliary battery is typically in the trunk or rear seat. Understanding their roles is crucial for timely replacement. 800BatteryPro, serving Dubai and Abu Dhabi, specializes in replacing both main and auxiliary Mercedes-Benz batteries. Trust their expertise for seamless battery solutions."
+    },
+    {
+      id: 3,
+      description: "For Mercedes-Benz, our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (i.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for Mercedes-Benz, which ensures peak engine performance and luxury."
+    },
+    {
+      id: 4,
+      description: "You can reserve your slot for your next Battery Checkup with the best Mercedes-Benz car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
+    },
+  ]
+}
 
-    ]
-  }
+const serviceArabicContent1 = {
+  subtitle: "الخدمات",
+  title: "مركز خدمة مرسيدس في دبي",
+  services: [
+    {
+      id: 1,
+      description: "من المهم الحصول على بطارية مرسيدس-بنز الصحيحة، وفي 800BatteryPro، نحن هنا لمساعدتك في اختيار البطارية المناسبة لموديل سيارتك. لدينا مجموعة واسعة من البطاريات في المخزون، مما يمنحك خيارات عديدة."
+    },
+    {
+      id: 2,
+      description: "تتميز سيارات مرسيدس-بنز ببطاريتين: البطارية الرئيسية تشغل الأنظمة الكهربائية للسيارة، بينما تدعم البطارية المساعدة وظائف مثل الأضواء والراديو وأنظمة التشغيل والإيقاف. توجد بطارية AGM الرئيسية تحت غطاء المحرك، بينما توجد البطارية المساعدة عادة في صندوق السيارة الخلفي أو المقعد الخلفي. فهم أدوارهما أمر بالغ الأهمية للاستبدال في الوقت المناسب. 800BatteryPro، الذي يخدم دبي وأبوظبي، متخصص في استبدال بطاريات مرسيدس-بنز الرئيسية والمساعدة. ثق بخبرتهم للحصول على حلول بطارية سلسة."
+    },
+    {
+      id: 3,
+      description: "بالنسبة لمرسيدس-بنز، تشمل قائمة خدماتنا المساعدة على الطريق 24/7، وتعزيز البطارية المجاني، وإصلاحات السيارات المتقدمة (مثل ECU، TCM، وغيرها)، وجميع خدمات الإصلاح الكهربائي والميكانيكي المقدمة بنسبة رضا عملاء 100٪ وأسعار تنافسية في السوق. يستخدم فنيونا فقط قطع الغيار الأصلية بمعايير OEM لمرسيدس-بنز، مما يضمن أداء المحرك الأمثل والفخامة."
+    },
+    {
+      id: 4,
+      description: "يمكنك حجز موعدك لفحص البطارية القادم مع أفضل خبراء سيارات مرسيدس-بنز في دبي. اتصل بنا على +971528475675 للحصول على مساعدة طارئة على الطريق 24/7."
+    },
+  ]
+}
 
-      const serviceEnglishContent1 = {
-    subtitle: "SERVICES",
-    title: "Mercedes Service Centre in Dubai ",
-    services: [
-      {
-        id: 1,
-        description:
-          "It's important to get the right Mercedes-Benz battery, and at 800BatteryPro, we're here to help you choose the right one for your model. We have a wide range of batteries in stock, giving you numerous choices."
-      },
-      {
-        id: 2,
-        description:
-          "Mercedes-Benz vehicles feature two batteries: the main battery powers the car's electrical systems, while the auxiliary battery supports functions like lights, radio, and Stop-Start mechanisms. The main AGM battery is located under the hood, while the auxiliary battery is typically in the trunk or rear seat. Understanding their roles is crucial for timely replacement. 800BatteryPro, serving Dubai and Abu Dhabi, specializes in replacing both main and auxiliary Mercedes-Benz batteries. Trust their expertise for seamless battery solutions."
-      },
-      {
-        id: 3,
-        description:
-          "For Mercedes-Benz, our services catalogue includes 24/7 roadside assistance, Free Battery Boosting, advance car repairs (I.e ECU, TCM, etc.), and all electrical and mechanical repair services delivered with 100 percent customer satisfaction and market competitive pricing. Our technicians only use OEM standard spare parts for Mercedes-Benz, which ensures peak engine performance and luxury."
-      },
-       {
-        id: 4,
-        description:
-          "You can reserve your slot for your next Battery Checkup with the best Mercedes-Benz car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      },
-    ]
-  }
-
-  const serviceArabicContent1 = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      {
-        id: 3,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-       {
-        id: 4,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-
-    ]
-  }
-
-  const englishServices = [
+const englishServices = [
   {
     img: serviceImg1,
     title: "Premium 24/7 Customer Support",
@@ -183,27 +167,27 @@ const Mercedes = () => {
 const arabicServices = [
   {
     img: serviceImg1,
-    title: "استبدال بطارية السيارة",
-    desc: "استبدال سريع وموثوق لبطارية السيارة يصل إلى موقعك خلال 30 دقيقة."
+    title: "دعم عملاء مميز 24/7",
+    desc: "يوفر لك 800BatteryPro خدمات بطارية مرسيدس-بنز في الوقت المحدد مع دعم عملاء ممتاز على مدار الساعة."
   },
   {
     img: serviceImg2,
-    title: "تشغيل بطارية السيارة",
-    desc: "خدمة تشغيل البطارية بسرعة وسهولة أينما كنت."
+    title: "فنيو مرسيدس-بنز معتمدون",
+    desc: "لدينا فريق من فنيي مرسيدس-بنز المعتمدين يستخدمون قطع غيار مرسيدس الأصلية وبطاريات السيارات ذات العلامات التجارية لكل خدمة سيارة نقدمها."
   },
   {
     img: serviceImg3,
-    title: "المساعدة على الطريق",
-    desc: "دعم فوري على الطريق في جميع أنحاء الإمارات في أي وقت."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "بمجرد استلام مكالمة الطوارئ الخاصة بخدمات بطارية السيارة، يقدم فريقنا كل استبدال لبطارية السيارة خلال أقل من 15 دقيقة."
   },
   {
     img: serviceImg4,
-    title: "فحص السيارة",
-    desc: "تشخيص متقدم لتحديد مشاكل السيارة وحلها بدقة."
+    title: "أسعار تنافسية في السوق ولا رسوم خفية",
+    desc: "إلى جانب فحص البطارية المجاني وتوصيل البطارية المجاني، تتوفر خدمات بطارية مرسيدس لدينا بأسعار تنافسية في السوق."
   }
 ]
 
-   const englishContent = [
+const englishContent = [
   {
     icons: <FaSitemap />,
     title: "Premium 24/7 Customer",
@@ -217,134 +201,134 @@ const arabicServices = [
   {
     icons: <FaSitemap />,
     title: "Using Genuine BMW Parts",
-    desc: "Our certified BMW specialists only use OEM approved spare parts and Branded BMW batteries for all car jobs. "
+    desc: "Our certified BMW specialists only use OEM approved spare parts and Branded BMW batteries for all car jobs."
   },
   {
     icons: <FaSitemap />,
     title: "Car Battery Under 15 Minutes",
-    desc: " 800BatteryPro offers 24/7 roadside assistance with our free battery delivery, our technicians use the latest equipment to work on your replacement."
+    desc: "800BatteryPro offers 24/7 roadside assistance with our free battery delivery, our technicians use the latest equipment to work on your replacement."
   }
 ]
 
 const arabicContent = [
   {
     icons: <FaSitemap />,
-    title: "استجابة سريعة",
-    desc: "خدمة سريعة لإعادة تشغيل سيارتك والعودة إلى الطريق دون انتظار طويل."
+    title: "دعم عملاء مميز 24/7",
+    desc: "يوفر 800BatteryPro دعم عملاء مميز على مدار الساعة لسيارات مرسيدس-بنز في دبي. نقدم لك حلاً كاملاً للعناية بالسيارة بأسعار تنافسية."
   },
   {
     icons: <FaSitemap />,
-    title: "بطاريات عالية الجودة",
-    desc: "نوفر بطاريات عالية الأداء وطويلة العمر تناسب مجموعة واسعة من السيارات."
+    title: "فنيو مرسيدس-بنز معتمدون",
+    desc: "لدينا فريق من فنيي مرسيدس-بنز المعتمدين، الذين لديهم أكثر من 5 سنوات من الخبرة في العمل على موديلات مرسيدس المختلفة وبطاريات السيارات."
   },
   {
     icons: <FaSitemap />,
-    title: "فنيون متخصصون",
-    desc: "يضمن خبراؤنا المدربون تركيب البطارية بأمان وكفاءة دون أي متاعب."
+    title: "استخدام قطع غيار مرسيدس الأصلية",
+    desc: "يستخدم فنيو مرسيدس-بنز المعتمدون لدينا فقط قطع الغيار المعتمدة من OEM وبطاريات مرسيدس ذات العلامات التجارية لجميع مهام السيارات."
   },
   {
     icons: <FaSitemap />,
-    title: "رضا العملاء",
-    desc: "نركز على تقديم خدمة موثوقة وتجربة سلسة لكل عميل."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "يقدم 800BatteryPro مساعدة على الطريق 24/7 مع توصيل بطارية مجاني، ويستخدم فنيونا أحدث المعدات للعمل على استبدالك."
   }
 ]
 
-    const englishFaqs = [
-        {
-            question: "When should I change the brake pads on my Mercedes?",
-            answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
-        },
-        {
-            question: "How much does a Mercedes Service cost?",
-            answer: "Not all Mercedes models are the same. The cost of service will depend on the model, engine, and drivetrain specifications. To find out how much it will cost to service your automobile, please fill out an inquiry form or call us. Our knowledgeable Service Advisors will be happy to help you and give you an estimate."
-        },
-        {
-            question: "Why is it important to service my Mercedes with manufacturer-recommended oil and Filter, when there are cheaper alternatives available?",
-            answer: "Your Mercedes engine is very well designed and has very small tolerances. The makers picked a certain brand and grade of oil that works best with each engine during testing and design. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
-        },
-        {
-            question: "When I brake, my Mercedes vibrates, why?",
-            answer: "If your car shakes when you brake, it could be because the brake pads or brake disks are broken. Your suspension, misaligned tires, or uneven tire wear could also be causing the vibration. A specialist should look at your car to find the problem and fix it in the best way. "
-        },
-        {
-            question: "My Mercedes's check engine light is on. What should I do?",
-            answer: "If you are driving, you should not drive the automobile or pull over safely. When there is an electronic or mechanical problem with your car's engine, the check engine light comes on. It could be anything small, like dirty injectors, or something big that could hurt your engine. We won't know until a technician connects a diagnostic instrument to your Mercedes and looks at the trouble codes. Please call us right away so we can help you avoid any major issues."
-        },
-
-        {
-            question: "Any German Car Experts in Dubai?",
-            answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
-        },
-
-        {
-            question: " Do we provide German Car Battery Replacement in Abu Dhabi?",
-            answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
-        },
-
-        {
-            question: "Which car battery do we use for replacement services?",
-            answer: "Our German car specialist only uses premium AGM and Lithium-ion batteries for Mercedes Battery replacements. We only recommend high-quality and long-lasting car batteries, which ensure peak performance and safety for our customers."
-        },
-
-        {
-            question: "What’s the best way to get your dead battery active?",
-            answer: "Don’t get stressed if your car battery is dead. Our German car experts in Dubai and Abu Dhabi use the latest equipment and technology to get your vehicle back on the road. Call us now for instant battery boosting services under 15 minutes. "
-        },
-
-
-           ]
-
-
-
- const arabicFaqs = [
+const englishFaqs = [
   {
-    question: "ما هي الخدمات التي تقدمونها؟",
-    answer:
-      "نقدم خدمات شاملة لبطاريات السيارات تشمل فحص البطارية، تشغيل السيارة عند توقفها، استبدال البطارية، والمساعدة على الطريق. كما نقدم خدمات إصلاح السيارات المميزة ودعم الطوارئ على مدار الساعة في دبي وأبوظبي."
+    question: "When should I change the brake pads on my Mercedes?",
+    answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
   },
   {
-    question: "كم يستغرق استبدال البطارية؟",
-    answer:
-      "يمكن لفنيينا المحترفين استبدال بطارية سيارتك عادةً خلال 15 إلى 30 دقيقة في موقعك. نحن ندرك أن وقتك مهم، لذلك نحرص على تقديم خدمة سريعة وفعالة."
+    question: "How much does a Mercedes Service cost?",
+    answer: "Not all Mercedes models are the same. The cost of service will depend on the model, engine, and drivetrain specifications. To find out how much it will cost to service your automobile, please fill out an inquiry form or call us. Our knowledgeable Service Advisors will be happy to help you and give you an estimate."
   },
   {
-    question: "هل توفرون المساعدة على الطريق على مدار الساعة؟",
-    answer:
-      "نعم، نقدم خدمة المساعدة على الطريق على مدار 24 ساعة في دبي وأبوظبي. سواء كان ذلك في النهار أو الليل أو في عطلة نهاية الأسبوع أو العطلات الرسمية، فريقنا مستعد دائمًا لمساعدتك في أي حالة طارئة تتعلق بالبطارية."
+    question: "Why is it important to service my Mercedes with manufacturer-recommended oil and Filter, when there are cheaper alternatives available?",
+    answer: "Your Mercedes engine is very well designed and has very small tolerances. The makers picked a certain brand and grade of oil that works best with each engine during testing and design. Changing the kind and occasionally even the brand of oil can make the engine run worse and wear it out faster. We use the kind and grade of oil that the manufacturer recommends, even if it costs a little more, because it makes the engine last longer and work better."
   },
   {
-    question: "ما هي المناطق التي تغطونها؟",
-    answer:
-      "نغطي جميع المناطق الرئيسية في دبي وأبوظبي، بما في ذلك وسط مدينة دبي، دبي مارينا، أبراج بحيرات الجميرا (JLT)، الخليج التجاري، جزيرة الريم، وجزيرة ياس."
+    question: "When I brake, my Mercedes vibrates, why?",
+    answer: "If your car shakes when you brake, it could be because the brake pads or brake disks are broken. Your suspension, misaligned tires, or uneven tire wear could also be causing the vibration. A specialist should look at your car to find the problem and fix it in the best way."
   },
   {
-    question: "هل تقدمون ضمانًا على البطاريات؟",
-    answer:
-      "نعم، جميع بطارياتنا تأتي مع ضمان شامل. تختلف مدة الضمان حسب نوع وعلامة البطارية. يرجى التواصل معنا للحصول على تفاصيل الضمان الخاصة بكل نوع من البطاريات."
-  }
+    question: "My Mercedes's check engine light is on. What should I do?",
+    answer: "If you are driving, you should not drive the automobile or pull over safely. When there is an electronic or mechanical problem with your car's engine, the check engine light comes on. It could be anything small, like dirty injectors, or something big that could hurt your engine. We won't know until a technician connects a diagnostic instrument to your Mercedes and looks at the trouble codes. Please call us right away so we can help you avoid any major issues."
+  },
+  {
+    question: "Any German Car Experts in Dubai?",
+    answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
+  },
+  {
+    question: "Do we provide German Car Battery Replacement in Abu Dhabi?",
+    answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services."
+  },
+  {
+    question: "Which car battery do we use for replacement services?",
+    answer: "Our German car specialist only uses premium AGM and Lithium-ion batteries for Mercedes Battery replacements. We only recommend high-quality and long-lasting car batteries, which ensure peak performance and safety for our customers."
+  },
+  {
+    question: "What's the best way to get your dead battery active?",
+    answer: "Don't get stressed if your car battery is dead. Our German car experts in Dubai and Abu Dhabi use the latest equipment and technology to get your vehicle back on the road. Call us now for instant battery boosting services under 15 minutes."
+  },
 ]
 
+const arabicFaqs = [
+  {
+    question: "متى يجب علي تغيير تيل الفرامل في سيارتي مرسيدس؟",
+    answer: "نقوم بفحص تيل الفرامل في كل خدمة لمعرفة المدة المتبقية لها ونقترح تغييرها عندما يتبقى 15-20٪ من عمرها. أيضًا، معظم السيارات الجديدة مزودة بأجهزة استشعار تخبرك عندما يكون تيل الفرامل على وشك التآكل. إذا كانت سيارتك تحتوي على أجهزة استشعار لتيل الفرامل، فيجب عليك تغيير التيل فورًا (في غضون 1000 كيلومتر) عندما ترى التنبيه على لوحة العدادات. إذا انتظرت فترة طويلة جدًا لتغيير تيل الفرامل، فقد تتلف فرامل القرص والملاقط، والتي يكون إصلاحها أو استبدالها مكلفًا."
+  },
+  {
+    question: "كم تكلفة خدمة مرسيدس؟",
+    answer: "ليست كل موديلات مرسيدس متشابهة. ستعتمد تكلفة الخدمة على الموديل والمحرك ومواصفات مجموعة الحركة. لمعرفة تكلفة خدمة سيارتك، يرجى ملء نموذج استفسار أو الاتصال بنا. سيسعد مستشارو الخدمة ذوو المعرفة لدينا بمساعدتك وتقديم تقدير لك."
+  },
+  {
+    question: "لماذا من المهم صيانة سيارتي مرسيدس بالزيت والفلتر الموصى بهما من قبل الشركة المصنعة، عندما توجد بدائل أرخص؟",
+    answer: "محرك مرسيدس الخاص بك مصمم بشكل جيد للغاية وله تفاوتات صغيرة جدًا. اختار المصنعون علامة تجارية ودرجة معينة من الزيت تعمل بشكل أفضل مع كل محرك أثناء الاختبار والتصميم. تغيير نوع الزيت وأحيانًا حتى العلامة التجارية يمكن أن يجعل المحرك يعمل بشكل أسئ ويسبب تآكلًا أسرع. نستخدم نوع ودرجة الزيت التي توصي بها الشركة المصنعة، حتى لو كان ذلك يكلف أكثر قليلاً، لأنه يجعل المحرك يدوم لفترة أطول ويعمل بشكل أفضل."
+  },
+  {
+    question: "عندما أضغط على الفرامل، تهتز سيارتي مرسيدس، لماذا؟",
+    answer: "إذا كانت سيارتك تهتز عند الضغط على الفرامل، فقد يكون ذلك بسبب تلف تيل الفرامل أو أقراص الفرامل. قد يتسبب نظام التعليق أو الإطارات غير المحاذاة أو تآكل الإطارات غير المتساوي أيضًا في الاهتزاز. يجب أن ينظر أخصائي في سيارتك للعثور على المشكلة وإصلاحها بأفضل طريقة."
+  },
+  {
+    question: "ضوء فحص المحرك في سيارتي مرسيدس مضاء. ماذا علي أن أفعل؟",
+    answer: "إذا كنت تقود، فلا يجب أن تستمر في قيادة السيارة أو تتوقف بأمان. عند وجود مشكلة إلكترونية أو ميكانيكية في محرك سيارتك، يضيء ضوء فحص المحرك. قد يكون شيئًا صغيرًا، مثل الحقن المتسخة، أو شيئًا كبيرًا يمكن أن يضر محركك. لن نعرف حتى يقوم فني بتوصيل أداة تشخيص بسيارتك مرسيدس والنظر إلى رموز الأعطال. يرجى الاتصال بنا على الفور حتى نتمكن من مساعدتك في تجنب أي مشاكل كبيرة."
+  },
+  {
+    question: "هل يوجد خبراء سيارات ألمانية في دبي؟",
+    answer: "نعم، 800BatteryPro هو واحد من المراكز الموثوقة ولديه فريق معتمد من خبراء السيارات الألمانية في دبي. لدينا مركز خدمة مجهز جيدًا بأحدث التقنيات المستخدمة في كل مهمة إصلاح للسيارات الألمانية. نتعامل مع كل ماركات السيارات بما في ذلك مرسيدس وبي إم دبليو وبورش وأودي وغيرها. اتصل بنا الآن لأي خدمة استبدال بطارية سيارة ألمانية على +971528475675."
+  },
+  {
+    question: "هل تقدمون خدمة استبدال بطارية السيارات الألمانية في أبوظبي؟",
+    answer: "نعم، لدى 800BatteryPro مراكز خدمة مجهزة تجهيزًا جيدًا في دبي وأبوظبي. نتعامل مع كل استبدال بطارية سيارة ألمانية باستبدال بطارية أصلية وفاخرة. قاعدة عملائنا راضية بنسبة 100٪ عن خدمات إصلاح السيارات والبطاريات لدينا. إذا كانت بطارية سيارتك فارغة، اتصل بنا الآن على +971528475675 للحصول على خدمات المساعدة الطارئة."
+  },
+  {
+    question: "ما هي بطارية السيارة التي تستخدمونها لخدمات الاستبدال؟",
+    answer: "يستخدم أخصائي السيارات الألمانية لدينا فقط بطاريات AGM والليثيوم أيون الفاخرة لاستبدال بطاريات مرسيدس. نوصي فقط ببطاريات السيارات عالية الجودة وطويلة الأمد، والتي تضمن الأداء الأمثل والسلامة لعملائنا."
+  },
+  {
+    question: "ما هي أفضل طريقة لتنشيط البطارية الفارغة؟",
+    answer: "لا تشدد إذا كانت بطارية سيارتك فارغة. يستخدم خبراء السيارات الألمانية لدينا في دبي وأبوظبي أحدث المعدات والتقنيات لإعادة سيارتك إلى الطريق. اتصل بنا الآن للحصول على خدمات تعزيز البطارية الفورية خلال أقل من 15 دقيقة."
+  },
+]
 
+const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
+const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
+const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
+const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
+const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
+const faqs = locale === "ar" ? arabicFaqs : englishFaqs
 
-
-      const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
-      const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
-      const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
-      const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
-      const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
-       const faqs = locale === "ar" ? arabicFaqs : englishFaqs
-
-       const text = locale === "ar"
-        ? {
-            desc: "ماركات السيارات التي نخدمها",
-            title1: "متوافق مع جميع",
-            title2: "ماركات السيارات الرئيسية",
-        }
-        : {
-            desc: "Mercedes Car Models We Serve",
-            title1: "Includes All",
-            title2: "Major Models & Variants",
-        }
+const text = locale === "ar"
+  ? {
+      desc: "ماركات السيارات التي نخدمها",
+      title1: "متوافق مع جميع",
+      title2: "ماركات السيارات الرئيسية",
+    }
+  : {
+      desc: "Mercedes Car Models We Serve",
+      title1: "Includes All",
+      title2: "Major Models & Variants",
+    }
 
         const batteryText =
   locale === "ar"

@@ -35,133 +35,121 @@ import herobg from '@/public/brands/porsche/bg.webp'
 
 const Porsche = () => {
   const locale = useLocale()
-  const heroEnglishContent = {
-    desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
-    title:{
-      span1:"Porsche Car Battery Replacement",
-      span2:"  & Advanced Repairs"
+const heroEnglishContent = {
+  desc: "Top Car Brands – 24/7 Emergency Support & Anywhere!",
+  title: {
+    span1: "Porsche Car Battery Replacement",
+    span2: "  & Advanced Repairs"
+  },
+  desc1: "No need to panic if your porsche battery is dead! 800BatteryPro provide 24/7 Porsche Car Battery Replacement & next-gen repair services in Dubai.",
+  btn: "Call Now",
+  btn1: "Book Service Now"
+}
+
+const heroArabicContent = {
+  desc: "أفضل ماركات السيارات – دعم طارئ 24/7 أينما كنت!",
+  title: {
+    span1: "استبدال بطارية بورش ",
+    span2: "وإصلاحات متقدمة"
+  },
+  desc1: "لا داعي للذعر إذا كانت بطارية بورش الخاصة بك فارغة! يقدم 800BatteryPro استبدال بطارية بورش 24/7 وخدمات إصلاح من الجيل التالي في دبي.",
+  btn: "اتصل الآن",
+  btn1: "احجز الخدمة الآن"
+};
+
+const serviceEnglishContent = {
+  subtitle: "SERVICES",
+  title: "Porsche Battery Replacement & Advanced Repair Services",
+  services: [
+    {
+      id: 1,
+      description: "There is no need to stress if your Porsche Battery is not working, you can call the Best Car Battery Replacement services in Dubai. 800BatteryPro provides Under 15 minutes onsite battery boosting and replacement services. We have a team of certified porsche specialists who only works on genuine battery brands with 18+ warranty and use only OEM standard parts. We have a years of experience in all areas of Porsche battery services. We employ high-performance batteries that can handle the heat of Dubai. 800BatteryPro offers the following are the different types of Porsche Battery:"
     },
-    desc1:"No need to panic if your porsche battery is dead! 800BatteryPro provide 24/7 Porsche Car Battery Replacement & next-gen repair services in Dubai. ",
-    btn:"Call Now",
-    btn1:"Book Service Now"
-  }
-  
-  const heroArabicContent = {
-    desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
-    title: {
-      span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-      span2: "وأبوظبي!"
+    {
+      id: 2,
+      description: "Porsche 911 Series: Our certified Porsche technicians use high-performance batteries that can handle the heat of Dubai."
     },
-    desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-    btn: "تحدث مع خبير",
-     btn1:"Book Service Now"
-  };
+    {
+      id: 3,
+      description: "Porsche Cayenne: Heavy-duty batteries for the Porsche Cayenne give us long-lasting power for extended travels."
+    },
+    {
+      id: 4,
+      description: "Porsche Panamera: We employ long-lasting batteries for the Panamera's complex electronics, which are powered by batteries that are made just for them."
+    },
+    {
+      id: 5,
+      description: "Porsche Taycan: The only batteries our Porsche expert uses in the all-electric Taycan are high-voltage ones."
+    },
+  ]
+}
 
-    const serviceEnglishContent = {
-    subtitle: "SERVICES",
-    title: "Porsche Battery Replacement & Advanced Repair Services",
-    services: [
-      {
-        id: 1,
-        description:
-          "There is no need to stress if your Porsche Battery is not working, you can call the Best Car Battery Replacement services in Dubai. 800BatteryPro provides Under 15 minutes onsite battery boosting and replacement services. We have a team of certified porsche specialists who only works on genuine battery brands with 18+ warranty and use only OEM standard parts. We have a years of experience in all areas of Porsche battery services. We employ high-performance batteries that can handle the heat of Dubai. 800BatteryPro offers the following are the different types of Porsche Battery:"
-      },
-      {
-        id: 2,
-        description:
-          "Porsche 911 Series: Our certified Porsche technicians use high-performance batteries that can handle the heat of Dubai."
-      },
-       {
-        id: 3,
-        description:
-          "Porsche Cayenne: Heavy-duty batteries for the Porsche Cayenne give us long-lasting power for extended travels."
-      },
+const serviceArabicContent = {
+  subtitle: "الخدمات",
+  title: "استبدال بطارية بورش وخدمات الإصلاح المتقدمة",
+  services: [
+    {
+      id: 1,
+      description: "لا داعي للتوتر إذا كانت بطارية بورش الخاصة بك لا تعمل، يمكنك الاتصال بأفضل خدمات استبدال بطارية السيارة في دبي. يقدم 800BatteryPro خدمات تعزيز واستبدال البطارية في الموقع خلال أقل من 15 دقيقة. لدينا فريق من فنيي بورش المعتمدين الذين يعملون فقط على ماركات البطاريات الأصلية مع ضمان يزيد عن 18 شهرًا ويستخدمون فقط قطع الغيار الأصلية بمعايير OEM. لدينا سنوات من الخبرة في جميع مجالات خدمات بطارية بورش. نوظف بطاريات عالية الأداء يمكنها تحمل حرارة دبي. يقدم 800BatteryPro الأنواع التالية من بطاريات بورش:"
+    },
+    {
+      id: 2,
+      description: "سلسلة بورش 911: يستخدم فنيو بورش المعتمدون لدينا بطاريات عالية الأداء يمكنها تحمل حرارة دبي."
+    },
+    {
+      id: 3,
+      description: "بورش كايين: توفر لنا البطاريات الثقيلة لسيارة بورش كايين طاقة طويلة الأمد للرحلات الممتدة."
+    },
+    {
+      id: 4,
+      description: "بورش باناميرا: نوظف بطاريات طويلة الأمد للإلكترونيات المعقدة في باناميرا، والتي تعمل ببطاريات مصنوعة خصيصًا لها."
+    },
+    {
+      id: 5,
+      description: "بورش تايكان: البطاريات الوحيدة التي يستخدمها خبير بورش لدينا في تايكان الكهربائية بالكامل هي بطاريات عالية الجهد."
+    },
+  ]
+}
 
-      {
-        id: 4,
-        description:
-          "Porsche Panamera: We employ long-lasting batteries for the Panamera's complex electronics, which are powered by batteries that are made just for them."
-      },
+const serviceEnglishContent1 = {
+  subtitle: "SERVICES",
+  title: "Porsche Service Centre in Dubai – Premium German Car Battery Replacement",
+  services: [
+    {
+      id: 1,
+      description: "800BatteryPro offers the most advanced Porsche battery replacement services that are tailored to the needs of electric systems in fully electric models like the Porsche Taycan. To make sure that batteries work as well as possible and last as long as possible, our German car experts follow tight rules. We provide the following Porsche battery replacement services for electric cars:"
+    },
+    {
+      id: 2,
+      description: "Our professional technicians safely replace Porsche batteries while following Porsche's rules for handling the high-voltage electric battery pack. After each Porsche battery replacement, we recalibrate the BMS. This is necessary to keep track of how well the battery is working and how it is doing. As part of our Porsche battery replacement service, we adjust the new battery to make it more efficient and provide it a longer range for driving in Dubai. We check that the charging system works with the new Porsche battery to make sure that the battery lasts longer and charges more efficiently. These professional Porsche battery replacement services make sure that both electric and hybrid Porsche models work safely and well, getting your car ready for the tough driving conditions and environment in Dubai."
+    },
+    {
+      id: 3,
+      description: "You can reserve your slot for your next Battery Checkup with the best Porsche car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
+    },
+  ]
+}
 
-      {
-        id: 5,
-        description:
-          "Porsche Taycan: The only batteries our Porsche expert uses in the all-electric Taycan are high-voltage ones."
-      },
-    
-    ]
-  }
+const serviceArabicContent1 = {
+  subtitle: "الخدمات",
+  title: "مركز خدمة بورش في دبي – استبدال بطارية سيارة ألمانية فاخرة",
+  services: [
+    {
+      id: 1,
+      description: "يقدم 800BatteryPro أحدث خدمات استبدال بطارية بورش المصممة خصيصًا لاحتياجات الأنظمة الكهربائية في الموديلات الكهربائية بالكامل مثل بورش تايكان. لضمان أن تعمل البطاريات بأفضل شكل ممكن وتدوم لأطول فترة ممكنة، يتبع خبراء السيارات الألمانية لدينا قواعد صارمة. نقدم خدمات استبدال بطارية بورش التالية للسيارات الكهربائية:"
+    },
+    {
+      id: 2,
+      description: "يستبدل فنيونا المحترفون بطاريات بورش بأمان مع اتباع قواعد بورش للتعامل مع حزمة البطارية الكهربائية عالية الجهد. بعد كل استبدال لبطارية بورش، نقوم بإعادة معايرة نظام إدارة البطارية (BMS). هذا ضروري لتتبع مدى جودة عمل البطارية وأدائها. كجزء من خدمة استبدال بطارية بورش، نقوم بضبط البطارية الجديدة لجعلها أكثر كفاءة وتوفير مدى أطول للقيادة في دبي. نتحقق من أن نظام الشحن يعمل مع بطارية بورش الجديدة لضمان أن البطارية تدوم لفترة أطول وتشحن بكفاءة أكبر. تضمن خدمات استبدال بطارية بورش الاحترافية هذه أن تعمل موديلات بورش الكهربائية والهجينة بأمان وجيد، وإعداد سيارتك لظروف القيادة والبيئة القاسية في دبي."
+    },
+    {
+      id: 3,
+      description: "يمكنك حجز موعدك لفحص البطارية القادم مع أفضل خبراء سيارات بورش في دبي. اتصل بنا على +971528475675 للحصول على مساعدة طارئة على الطريق 24/7."
+    },
+  ]
+}
 
-  const serviceArabicContent = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      
-
-    ]
-  }
-
-      const serviceEnglishContent1 = {
-    subtitle: "SERVICES",
-    title: "Porsche Service Centre in Dubai – Premium German Car Battery Replacement ",
-    services: [
-      {
-        id: 1,
-        description:
-          "800BatteryPro offers the most advanced Porsche battery replacement services that are tailored to the needs of electric systems in fully electric models like the Porsche Taycan. To make sure that batteries work as well as possible and last as long as possible, our German car experts follow tight rules. We provide the following Porsche battery replacement services for electric cars: "
-      },
-      {
-        id: 2,
-        description:
-          "Our professional technicians safely replace Porsche batteries while following Porsche's rules for handling the high-voltage electric battery pack. After each Porsche battery replacement, we recalibrate the BMS. This is necessary to keep track of how well the battery is working and how it is doing. As part of our Porsche battery replacement service, we adjust the new battery to make it more efficient and provide it a longer range for driving in Dubai. We check that the charging system works with the new Porsche battery to make sure that the battery lasts longer and charges more efficiently. These professional Porsche battery replacement services make sure that both electric and hybrid Porsche models work safely and well, getting your car ready for the tough driving conditions and environment in Dubai."
-      },
-      {
-        id: 3,
-        description:
-          "You can reserve your slot for your next Battery Checkup with the best Porsche car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      },
-    ]
-  }
-
-  const serviceArabicContent1 = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      {
-        id: 3,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-       {
-        id: 4,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-
-    ]
-  }
-
-  const englishServices = [
+const englishServices = [
   {
     img: serviceImg1,
     title: "Premium 24/7 Customer Support",
@@ -187,27 +175,27 @@ const Porsche = () => {
 const arabicServices = [
   {
     img: serviceImg1,
-    title: "استبدال بطارية السيارة",
-    desc: "استبدال سريع وموثوق لبطارية السيارة يصل إلى موقعك خلال 30 دقيقة."
+    title: "دعم عملاء مميز 24/7",
+    desc: "يوفر لك 800BatteryPro خدمات بطارية بورش في الوقت المحدد مع دعم عملاء ممتاز على مدار الساعة."
   },
   {
     img: serviceImg2,
-    title: "تشغيل بطارية السيارة",
-    desc: "خدمة تشغيل البطارية بسرعة وسهولة أينما كنت."
+    title: "فنيو بورش معتمدون",
+    desc: "لدينا فريق من فنيي بورش المعتمدين يستخدمون قطع غيار بورش الأصلية وبطاريات السيارات ذات العلامات التجارية لكل خدمة سيارة نقدمها."
   },
   {
     img: serviceImg3,
-    title: "المساعدة على الطريق",
-    desc: "دعم فوري على الطريق في جميع أنحاء الإمارات في أي وقت."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "بمجرد استلام مكالمة الطوارئ الخاصة بخدمات بطارية السيارة، يقدم فريقنا كل استبدال لبطارية السيارة خلال أقل من 15 دقيقة."
   },
   {
     img: serviceImg4,
-    title: "فحص السيارة",
-    desc: "تشخيص متقدم لتحديد مشاكل السيارة وحلها بدقة."
+    title: "أسعار تنافسية في السوق ولا رسوم خفية",
+    desc: "إلى جانب فحص البطارية المجاني وتوصيل البطارية المجاني، تتوفر خدمات بطارية بورش لدينا بأسعار تنافسية في السوق."
   }
 ]
 
-   const englishContent = [
+const englishContent = [
   {
     icons: <FaSitemap />,
     title: "Premium 24/7 Customer Support",
@@ -216,12 +204,12 @@ const arabicServices = [
   {
     icons: <FaSitemap />,
     title: "Certified Porsche Specialists",
-    desc: "We have a team of 50+ certified Porsche specialists who know how to deliver 100% customer satisfaction for every car battery job. "
+    desc: "We have a team of 50+ certified Porsche specialists who know how to deliver 100% customer satisfaction for every car battery job."
   },
   {
     icons: <FaSitemap />,
     title: "Using Genuine Porsche Parts",
-    desc: " Our technicians use only OEM-approved repair parts and genuine car batteries for every car service we deliver."
+    desc: "Our technicians use only OEM-approved repair parts and genuine car batteries for every car service we deliver."
   },
   {
     icons: <FaSitemap />,
@@ -233,107 +221,98 @@ const arabicServices = [
 const arabicContent = [
   {
     icons: <FaSitemap />,
-    title: "استجابة سريعة",
-    desc: "خدمة سريعة لإعادة تشغيل سيارتك والعودة إلى الطريق دون انتظار طويل."
+    title: "دعم عملاء مميز 24/7",
+    desc: "800BatteryPro هو شريكك في القيادة الآمنة على الطريق، مع فريق بورش مخصص متاح لك 24/7."
   },
   {
     icons: <FaSitemap />,
-    title: "بطاريات عالية الجودة",
-    desc: "نوفر بطاريات عالية الأداء وطويلة العمر تناسب مجموعة واسعة من السيارات."
+    title: "فنيو بورش معتمدون",
+    desc: "لدينا فريق من أكثر من 50 فني بورش معتمد يعرفون كيفية تقديم رضا العملاء بنسبة 100٪ لكل مهمة بطارية سيارة."
   },
   {
     icons: <FaSitemap />,
-    title: "فنيون متخصصون",
-    desc: "يضمن خبراؤنا المدربون تركيب البطارية بأمان وكفاءة دون أي متاعب."
+    title: "استخدام قطع غيار بورش الأصلية",
+    desc: "يستخدم فنيونا فقط قطع الغيار المعتمدة من OEM وبطاريات السيارات الأصلية لكل خدمة سيارة نقدمها."
   },
   {
     icons: <FaSitemap />,
-    title: "رضا العملاء",
-    desc: "نركز على تقديم خدمة موثوقة وتجربة سلسة لكل عميل."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "إذا كنت عالقًا في مكان ما على الطريق في أي مكان في الإمارات، فيمكنك الاتصال بنا على +971528475675. مع خدمات فحص بطارية مجانية وتوصيل بطارية سيارة مجاني."
   }
 ]
 
-    const englishFaqs = [
-        {
-            question: "When should I change the brake pads on my Porsche?",
-            answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
-        },
-        {
-            question: "How long should a Porsche’s battery last?",
-            answer: "The battery's life relies on how it is used, how it is installed, and how it is charged. Shorter battery life can happen if you charge it too little or too much. Generally the Porsche battery needs to be replaced after a 10,000 KM or may be once a year."
-        },
-        {
-            question: "When I need to replace my Porsche’s Battery?",
-            answer: "If you can't start your Porsche, if the battery warning light is on, or if electrical parts within your Porsche aren't working. To drive safe book a free vehicle inspection today at 800BatteryPro."
-        },
-        {
-            question: "How Quickly 800BatteryPro does Porsche Battery Replacement?",
-            answer: "800BatteryPro provides Porsche Battery replacement under 15 minutes anywhere in Dubai and Abu Dhabi. Our services include Free Car battery testing, inspection and diagnostic, if your battery needs to be changed, we only use genuine Porsche battery for replacement. "
-        },
-        {
-            question: "Any German Car Experts in Dubai?",
-            answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
-        },
-
-        {
-            question: "Do we provide German Car Battery Replacement in Abu Dhabi?",
-            answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
-        },
-
-
-           ]
-
-
-
- const arabicFaqs = [
+const englishFaqs = [
   {
-    question: "ما هي الخدمات التي تقدمونها؟",
-    answer:
-      "نقدم خدمات شاملة لبطاريات السيارات تشمل فحص البطارية، تشغيل السيارة عند توقفها، استبدال البطارية، والمساعدة على الطريق. كما نقدم خدمات إصلاح السيارات المميزة ودعم الطوارئ على مدار الساعة في دبي وأبوظبي."
+    question: "When should I change the brake pads on my Porsche?",
+    answer: "We inspect the brake pads at every service to see how much life they have left and suggest changing them when they have 20–15% of their life left. Also, most new automobiles feature sensors that let you know when the brake pad is about to wear out. If your automobile contains brake pad sensors, you should change the pads right away (within 1000Km) when you see the alert on your dashboard. If you wait too long to change your brake pads, you could damage your disk brakes and calipers, which are expensive to fix or replace."
   },
   {
-    question: "كم يستغرق استبدال البطارية؟",
-    answer:
-      "يمكن لفنيينا المحترفين استبدال بطارية سيارتك عادةً خلال 15 إلى 30 دقيقة في موقعك. نحن ندرك أن وقتك مهم، لذلك نحرص على تقديم خدمة سريعة وفعالة."
+    question: "How long should a Porsche's battery last?",
+    answer: "The battery's life relies on how it is used, how it is installed, and how it is charged. Shorter battery life can happen if you charge it too little or too much. Generally the Porsche battery needs to be replaced after a 10,000 KM or may be once a year."
   },
   {
-    question: "هل توفرون المساعدة على الطريق على مدار الساعة؟",
-    answer:
-      "نعم، نقدم خدمة المساعدة على الطريق على مدار 24 ساعة في دبي وأبوظبي. سواء كان ذلك في النهار أو الليل أو في عطلة نهاية الأسبوع أو العطلات الرسمية، فريقنا مستعد دائمًا لمساعدتك في أي حالة طارئة تتعلق بالبطارية."
+    question: "When I need to replace my Porsche's Battery?",
+    answer: "If you can't start your Porsche, if the battery warning light is on, or if electrical parts within your Porsche aren't working. To drive safe book a free vehicle inspection today at 800BatteryPro."
   },
   {
-    question: "ما هي المناطق التي تغطونها؟",
-    answer:
-      "نغطي جميع المناطق الرئيسية في دبي وأبوظبي، بما في ذلك وسط مدينة دبي، دبي مارينا، أبراج بحيرات الجميرا (JLT)، الخليج التجاري، جزيرة الريم، وجزيرة ياس."
+    question: "How Quickly 800BatteryPro does Porsche Battery Replacement?",
+    answer: "800BatteryPro provides Porsche Battery replacement under 15 minutes anywhere in Dubai and Abu Dhabi. Our services include Free Car battery testing, inspection and diagnostic, if your battery needs to be changed, we only use genuine Porsche battery for replacement."
   },
   {
-    question: "هل تقدمون ضمانًا على البطاريات؟",
-    answer:
-      "نعم، جميع بطارياتنا تأتي مع ضمان شامل. تختلف مدة الضمان حسب نوع وعلامة البطارية. يرجى التواصل معنا للحصول على تفاصيل الضمان الخاصة بكل نوع من البطاريات."
-  }
+    question: "Any German Car Experts in Dubai?",
+    answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of German car experts in Dubai. We have a well-equipped service centre with the latest technology used for every German car repair job. We treat every car brand, including Mercedes, BMW, Porsche, and Audi, etc. Call us now for any German car battery replacement services at +971528475675."
+  },
+  {
+    question: "Do we provide German Car Battery Replacement in Abu Dhabi?",
+    answer: "Yes, 800BatteryPro has well-equipped service centres in Dubai and Abu Dhabi. We treat every German car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services."
+  },
 ]
 
+const arabicFaqs = [
+  {
+    question: "متى يجب علي تغيير تيل الفرامل في سيارتي بورش؟",
+    answer: "نقوم بفحص تيل الفرامل في كل خدمة لمعرفة المدة المتبقية لها ونقترح تغييرها عندما يتبقى 15-20٪ من عمرها. أيضًا، معظم السيارات الجديدة مزودة بأجهزة استشعار تخبرك عندما يكون تيل الفرامل على وشك التآكل. إذا كانت سيارتك تحتوي على أجهزة استشعار لتيل الفرامل، فيجب عليك تغيير التيل فورًا (في غضون 1000 كيلومتر) عندما ترى التنبيه على لوحة العدادات. إذا انتظرت فترة طويلة جدًا لتغيير تيل الفرامل، فقد تتلف فرامل القرص والملاقط، والتي يكون إصلاحها أو استبدالها مكلفًا."
+  },
+  {
+    question: "كم من الوقت يجب أن تدوم بطارية بورش؟",
+    answer: "يعتمد عمر البطارية على كيفية استخدامها وكيفية تركيبها وكيفية شحنها. يمكن أن يحدث عمر بطارية أقصر إذا قمت بشحنها قليلاً جدًا أو كثيرًا جدًا. بشكل عام، تحتاج بطارية بورش إلى الاستبدال بعد 10000 كيلومتر أو مرة واحدة في السنة."
+  },
+  {
+    question: "متى أحتاج إلى استبدال بطارية بورش الخاصة بي؟",
+    answer: "إذا لم تتمكن من تشغيل سيارتك بورش، أو إذا كان ضوء تحذير البطارية مضاءً، أو إذا كانت الأجزاء الكهربائية في سيارتك بورش لا تعمل. للقيادة بأمان، احجز فحص سيارة مجاني اليوم في 800BatteryPro."
+  },
+  {
+    question: "ما مدى سرعة 800BatteryPro في استبدال بطارية بورش؟",
+    answer: "يوفر 800BatteryPro استبدال بطارية بورش خلال أقل من 15 دقيقة في أي مكان في دبي وأبوظبي. تشمل خدماتنا فحص بطارية السيارة مجانًا، والفحص والتشخيص، إذا كانت البطارية بحاجة إلى التغيير، فإننا نستخدم فقط بطارية بورش الأصلية للاستبدال."
+  },
+  {
+    question: "هل يوجد خبراء سيارات ألمانية في دبي؟",
+    answer: "نعم، 800BatteryPro هو واحد من المراكز الموثوقة ولديه فريق معتمد من خبراء السيارات الألمانية في دبي. لدينا مركز خدمة مجهز جيدًا بأحدث التقنيات المستخدمة في كل مهمة إصلاح للسيارات الألمانية. نتعامل مع كل ماركات السيارات بما في ذلك مرسيدس وبي إم دبليو وبورش وأودي وغيرها. اتصل بنا الآن لأي خدمة استبدال بطارية سيارة ألمانية على +971528475675."
+  },
+  {
+    question: "هل تقدمون خدمة استبدال بطارية السيارات الألمانية في أبوظبي؟",
+    answer: "نعم، لدى 800BatteryPro مراكز خدمة مجهزة تجهيزًا جيدًا في دبي وأبوظبي. نتعامل مع كل استبدال بطارية سيارة ألمانية باستبدال بطارية أصلية وفاخرة. قاعدة عملائنا راضية بنسبة 100٪ عن خدمات إصلاح السيارات والبطاريات لدينا. إذا كانت بطارية سيارتك فارغة، اتصل بنا الآن على +971528475675 للحصول على خدمات المساعدة الطارئة."
+  },
+]
 
+const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
+const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
+const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
+const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
+const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
+const faqs = locale === "ar" ? arabicFaqs : englishFaqs
 
-
-      const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
-      const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
-      const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
-      const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
-      const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
-       const faqs = locale === "ar" ? arabicFaqs : englishFaqs
-
-       const text = locale === "ar"
-        ? {
-            desc: "ماركات السيارات التي نخدمها",
-            title1: "متوافق مع جميع",
-            title2: "ماركات السيارات الرئيسية",
-        }
-        : {
-            desc: "Porsche Car Models We Serve",
-            title1: "Includes All",
-            title2: "Major Models & Variants",
-        }
+const text = locale === "ar"
+  ? {
+      desc: "ماركات السيارات التي نخدمها",
+      title1: "متوافق مع جميع",
+      title2: "ماركات السيارات الرئيسية",
+    }
+  : {
+      desc: "Porsche Car Models We Serve",
+      title1: "Includes All",
+      title2: "Major Models & Variants",
+    }
 
         const batteryText =
   locale === "ar"

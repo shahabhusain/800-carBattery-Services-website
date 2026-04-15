@@ -1,7 +1,6 @@
 import Service from '@/app/components/Brands/subPage/Service'
 import Hero from '@/app/components/Brands/subPage/Hero'
 import { FaSitemap } from 'react-icons/fa'
-import Services from '@/app/components/Brands/subPage/Services'
 import Faq from '@/app/components/Brands/subPage/Faq'
 import Footer from '@/app/components/Footer'
 import Trusted from '@/app/components/Hero/Trusted'
@@ -34,120 +33,109 @@ import bg from '@/public/brands/jeep/bg.webp'
 
 const Jeep = () => {
   const locale = useLocale()
-  const heroEnglishContent = {
-    desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
-    title:{
-      span1:"Jeep Car Battery Replacement & ",
-      span2:"Advanced Repairs"
+const heroEnglishContent = {
+  desc: "Top Car Brands – 24/7 Emergency Support & Anywhere!",
+  title: {
+    span1: "Jeep Car Battery Replacement & ",
+    span2: "Advanced Repairs"
+  },
+  desc1: "Don't stress if you are stranded with your dead Jeep battery! 800BatteryPro provides premium Car Battery Replacement Under 30 Minutes, With Free Battery Boosting & Advance Repairs in Dubai.",
+  btn: "Call Now",
+  btn1: "Book Service Now"
+}
+
+const heroArabicContent = {
+  desc: "أفضل ماركات السيارات – دعم طارئ 24/7 أينما كنت!",
+  title: {
+    span1: "استبدال بطارية جيب ",
+    span2: "وإصلاحات متقدمة"
+  },
+  desc1: "لا تقلق إذا كنت عالقًا مع بطارية جيب الفارغة! يقدم 800BatteryPro خدمة استبدال بطارية سيارة فاخرة خلال أقل من 30 دقيقة، مع تعزيز بطارية مجاني وإصلاحات متقدمة في دبي.",
+  btn: "اتصل الآن",
+  btn1: "احجز الخدمة الآن"
+};
+
+const serviceEnglishContent = {
+  subtitle: "SERVICES",
+  title: "Jeep Battery Replacement & Advanced Repair Services",
+  services: [
+    {
+      id: 1,
+      description: "Jeep is one of the major American car brands, with a variety of premium and off-road models. 800BatteryPro has a team of certified Jeep specialist, who only uses OEM-approved batteries and the latest technology to complete every job with 100 percent customer satisfaction. Our Jeep specialists will do an on-site free battery checkup, followed by a car battery replacement using the latest technology and equipment. If you are stuck somewhere with a dead car battery or a malfunctioning electronic system, contact us for immediate roadside assistance at +971528475675."
     },
-    desc1:"Don’t stress if you are stranded with your dead Jeep battery! 800BatteryPro provides premium Car Battery Replacement Under 30 Minutes, With Free Battery Boosting & Advance Repairs in Dubai.",
-    btn:"Call Now",
-    btn1:"Book Service Now"
-  }
-  
-  const heroArabicContent = {
-    desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
-    title: {
-      span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-      span2: "وأبوظبي!"
+    {
+      id: 2,
+      description: "To make sure you don't face any car battery-related issues, you should do a routine battery checkup after each 10,000 Km's or once a year. Our technicians only use OEM-approved spare parts and genuine car batteries for every car job. If you are stranded somewhere on the road, you should get our 24/7 roadside assistance instantly with free Car battery boosting services. We are just a call away at +971528475675."
     },
-    desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-    btn: "تحدث مع خبير",
-     btn1:"Book Service Now"
-  };
+    {
+      id: 3,
+      description: "800BatteryPro offers the following types of Jeep batteries: Our American car Specialists recommend an AGM (Absorbent Glass Mat) battery for Jeep, because it's much more durable and provides support for the vehicle's peak performance."
+    },
+    {
+      id: 4,
+      description: "Types of Jeep Car Batteries We Provide: Jeep AGM BATTERY: AGM car batteries are trusted by many for their stable power output, even in harsh environments and longevity. However, like any other car battery, AGM also needs a routine checkup after 10,000 KM or once a year."
+    },
+    {
+      id: 5,
+      description: "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of on-site Jeep car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months. For premium Jeep Battery replacement and advanced repairs, contact us now at +971528475675 or book a free car inspection appointment right now!"
+    },
+  ]
+}
 
-    const serviceEnglishContent = {
-    subtitle: "SERVICES",
-    title: " Jeep Battery Replacement & Advanced Repair Services",
-    services: [
-      {
-        id: 1,
-        description:
-          "Jeep is one of the major American car brands, with a variety of premium and off-road models. 800BatteryPro has a team of certified Jeep specialist, who only uses OEM-approved batteries and the latest technology to complete every job with 100 percent customer satisfaction. Our Jeep specialists will do an on-site free battery checkup, followed by a car battery replacement using the latest technology and equipment. If you are stuck somewhere with a dead car battery or a malfunctioning electronic system, contact us for immediate roadside assistance at +971528475675. "
-      },
-      {
-        id: 2,
-        description:
-          "To make sure you don’t face any car battery-related issues, you should do a routine battery checkup after each 10,000 Km’s or once a year. Our technicians only use OEM-approved spare parts and genuine car batteries for every car job. If you are stranded somewhere on the road, you should get our 24/7 roadside assistance instantly with free Car battery boosting services. We are just a call away at +971528475675. "
-      },
-         {
-        id: 3,
-        description:
-          "800BatteryPro offers the following types of Jeep batteries: Our American car Specialists recommend an AGM (Absorbent Glass Mat) battery for Jeep, because it's much more durable and provides support for the vehicle’s peak performance. "
-      },
-         {
-        id: 4,
-        description:
-          "Types of Jeep Car Batteries We Provide: Jeep AGM BATTERY: AGM car batteries are trusted by many for their stable power output, even in harsh environments and longevity. However, like any other car battery, AGM also needs a routine checkup after 10,000 KM or once a year."
-      },
-         {
-        id: 5,
-        description:
-          "800BatteryPro provides 24/7 roadside assistance with under 15 minutes of on-site Jeep car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months.  For premium Jeep Battery replacement and advanced repairs, contact us now at +971528475675 or book a free car inspection appointment right now!"
-      },
-      
-    ]
-  }
+const serviceArabicContent = {
+  subtitle: "الخدمات",
+  title: "استبدال بطارية جيب وخدمات الإصلاح المتقدمة",
+  services: [
+    {
+      id: 1,
+      description: "جيب هي واحدة من أكبر ماركات السيارات الأمريكية، مع مجموعة متنوعة من الموديلات الفاخرة والمخصصة للطرق الوعرة. لدى 800BatteryPro فريق من فنيي جيب المعتمدين، الذين يستخدمون فقط البطاريات المعتمدة من OEM وأحدث التقنيات لإكمال كل مهمة بنسبة رضا عملاء 100%. سيقوم فنيو جيب لدينا بفحص بطارية مجاني في الموقع، يليه استبدال بطارية السيارة باستخدام أحدث التقنيات والمعدات. إذا كنت عالقًا في مكان ما مع بطارية سيارة فارغة أو نظام إلكتروني معطل، فاتصل بنا للحصول على مساعدة فورية على الطريق على +971528475675."
+    },
+    {
+      id: 2,
+      description: "للتأكد من أنك لا تواجه أي مشاكل متعلقة ببطارية السيارة، يجب عليك إجراء فحص دوري للبطارية بعد كل 10000 كيلومتر أو مرة واحدة في السنة. يستخدم فنيونا فقط قطع الغيار المعتمدة من OEM وبطاريات السيارات الأصلية لكل مهمة سيارة. إذا كنت عالقًا في مكان ما على الطريق، فيجب عليك الحصول على مساعدتنا على الطريق 24/7 فورًا مع خدمات تعزيز بطارية السيارة المجانية. نحن على بعد مكالمة هاتفية على +971528475675."
+    },
+    {
+      id: 3,
+      description: "يقدم 800BatteryPro الأنواع التالية من بطاريات جيب: يوصي خبراء السيارات الأمريكية لدينا ببطارية AGM (مات الزجاج الماص) لجيب، لأنها أكثر متانة وتوفر الدعم للأداء الأمثل للسيارة."
+    },
+    {
+      id: 4,
+      description: "أنواع بطاريات جيب التي نقدمها: بطارية جيب AGM: بطاريات AGM موثوقة من قبل الكثيرين لإخراج الطاقة المستقر، حتى في البيئات القاسية وطول العمر. ومع ذلك، مثل أي بطارية سيارة أخرى، تحتاج AGM أيضًا إلى فحص روتيني بعد 10000 كيلومتر أو مرة واحدة في السنة."
+    },
+    {
+      id: 5,
+      description: "يوفر 800BatteryPro مساعدة على الطريق 24/7 مع توصيل بطارية جيب في الموقع خلال أقل من 15 دقيقة في أي مكان في دبي. اختبار البطارية والتوصيل مجاني، بينما يصل ضمان البطارية إلى 18 شهرًا. للحصول على استبدال بطارية جيب فاخر وإصلاحات متقدمة، اتصل بنا الآن على +971528475675 أو احجز موعدًا لفحص سيارتك المجاني الآن!"
+    },
+  ]
+}
 
-  const serviceArabicContent = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      {
-        id: 3,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-      {
-        id: 4,
-        description:
-          "بطاريات عالية الجودة مع ضمان وأداء طويل الأمد."
-      },
+const serviceEnglishContent1 = {
+  subtitle: "SERVICES",
+  title: "Jeep Service Center in Dubai – Premium American Car Battery Replacement",
+  services: [
+    {
+      id: 1,
+      description: "We have well-equipped Jeep car service centers in Dubai and Abu Dhabi, delivering excellence in battery replacement, car programming, electrical, and mechanical repair works. With a team of over 50+ certified Jeep technicians available 24/7 for any emergency roadside assistance and free inspection of your car battery. 800BatteryPro has years of experience serving residents of the Emirates with premium Jeep car batteries and advance repair services. We only use OEM-approved spare parts and genuine Jeep batteries for all our customers. You can reserve your slot for your next Battery Check-up with the best Jeep experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
+    },
+  ]
+}
 
-    ]
-  }
+const serviceArabicContent1 = {
+  subtitle: "الخدمات",
+  title: "مركز خدمة جيب في دبي – استبدال بطارية سيارة أمريكية فاخرة",
+  services: [
+    {
+      id: 1,
+      description: "لدينا مراكز خدمة سيارات جيب مجهزة تجهيزًا جيدًا في دبي وأبوظبي، تقدم التميز في استبدال البطاريات وبرمجة السيارات وأعمال الإصلاح الكهربائي والميكانيكي. مع فريق يضم أكثر من 50 فني جيب معتمد متاح 24/7 لأي مساعدة طارئة على الطريق وفحص مجاني لبطارية سيارتك. لدى 800BatteryPro سنوات من الخبرة في خدمة سكان الإمارات ببطاريات جيب الفاخرة وخدمات الإصلاح المتقدمة. نستخدم فقط قطع الغيار المعتمدة من OEM وبطاريات جيب الأصلية لجميع عملائنا. يمكنك حجز موعدك لفحص البطارية القادم مع أفضل خبراء جيب في دبي. اتصل بنا على +971528475675 للحصول على مساعدة طارئة على الطريق 24/7."
+    },
+  ]
+}
 
-      const serviceEnglishContent1 = {
-    subtitle: "SERVICES",
-    title: " Jeep Service Center in Dubai – Premium American Car Battery Replacement",
-    services: [
-      {
-        id: 1,
-        description:
-          "We have well-equipped Jeep car service centers in Dubai and Abu Dhabi, delivering excellence in battery replacement, car programming, electrical, and mechanical repair works. With a team of over 50+ certified Jeep technicians available 24/7 for any emergency roadside assistance and free inspection of your car battery. 800BatteryPro has years of experience serving residents of the Emirates with premium Jeep car batteries and advance repair services. We only use OEM-approved spare parts and genuine Jeep batteries for all our customers. You can reserve your slot for your next Battery Check-up with the best Jeep experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      },
-     
-    ]
-  }
-
-  const serviceArabicContent1 = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-
-    ]
-  }
-
-  const englishServices = [
+const englishServices = [
   {
     img: serviceImg1,
     title: "Premium 24/7 Customer",
-    desc: "800BatteryPro has a dedicated customer support team active 24/7 for all GMC car battery replacement and advanced repair services  in Dubai and Abu Dhabi."
+    desc: "800BatteryPro has a dedicated customer support team active 24/7 for all GMC car battery replacement and advanced repair services in Dubai and Abu Dhabi."
   },
   {
     img: serviceImg2,
@@ -169,27 +157,27 @@ const Jeep = () => {
 const arabicServices = [
   {
     img: serviceImg1,
-    title: "استبدال بطارية السيارة",
-    desc: "استبدال سريع وموثوق لبطارية السيارة يصل إلى موقعك خلال 30 دقيقة."
+    title: "دعم عملاء مميز 24/7",
+    desc: "لدى 800BatteryPro فريق دعم عملاء مخصص يعمل 24/7 لجميع خدمات استبدال بطارية جيب والإصلاح المتقدم في دبي وأبوظبي."
   },
   {
     img: serviceImg2,
-    title: "تشغيل بطارية السيارة",
-    desc: "خدمة تشغيل البطارية بسرعة وسهولة أينما كنت."
+    title: "فنيو جيب معتمدون",
+    desc: "يتمتع فنيونا بخبرة تزيد عن 5 سنوات في العمل على جميع ماركات السيارات الأمريكية بما في ذلك جيب."
   },
   {
     img: serviceImg3,
-    title: "المساعدة على الطريق",
-    desc: "دعم فوري على الطريق في جميع أنحاء الإمارات في أي وقت."
+    title: "قطع غيار جيب أصلية",
+    desc: "يستخدم فنيو جيب المعتمدون لدينا فقط البطاريات الأصلية وقطع الغيار المعتمدة من OEM لكل مهمة سيارة."
   },
   {
     img: serviceImg4,
-    title: "فحص السيارة",
-    desc: "تشخيص متقدم لتحديد مشاكل السيارة وحلها بدقة."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "مساعدتنا على الطريق 24/7 لضمان سلامتك على الطريق. نقدم فحص بطارية مجاني وتوصيل بطارية سيارة مجاني بدون رسوم خفية."
   }
 ]
 
-   const englishContent = [
+const englishContent = [
   {
     icons: <FaSitemap />,
     title: "Premium 24/7 Customer Support",
@@ -203,7 +191,7 @@ const arabicServices = [
   {
     icons: <FaSitemap />,
     title: "Genuine Jeep Parts & OEM-Approved Battery",
-    desc: "Our team of technicians only use the OEM-approved spare parts and genuine battery for all its models. "
+    desc: "Our team of technicians only use the OEM-approved spare parts and genuine battery for all its models."
   },
   {
     icons: <FaSitemap />,
@@ -215,110 +203,106 @@ const arabicServices = [
 const arabicContent = [
   {
     icons: <FaSitemap />,
-    title: "استجابة سريعة",
-    desc: "خدمة سريعة لإعادة تشغيل سيارتك والعودة إلى الطريق دون انتظار طويل."
+    title: "دعم عملاء مميز 24/7",
+    desc: "يقدم 800BatteryPro دعم عملاء 24/7 لجميع عملائه لخدمات بطارية السيارة الفاخرة والإصلاح المتقدم."
   },
   {
     icons: <FaSitemap />,
-    title: "بطاريات عالية الجودة",
-    desc: "نوفر بطاريات عالية الأداء وطويلة العمر تناسب مجموعة واسعة من السيارات."
+    title: "فنيو جيب معتمدون",
+    desc: "لدينا فريق من الفنيين المعتمدين الذين لديهم خبرة في العمل على جميع ماركات السيارات الأمريكية بما في ذلك جيب."
   },
   {
     icons: <FaSitemap />,
-    title: "فنيون متخصصون",
-    desc: "يضمن خبراؤنا المدربون تركيب البطارية بأمان وكفاءة دون أي متاعب."
+    title: "قطع غيار جيب أصلية وبطارية معتمدة من OEM",
+    desc: "يستخدم فريق فنيينا فقط قطع الغيار المعتمدة من OEM والبطارية الأصلية لجميع موديلاتها."
   },
   {
     icons: <FaSitemap />,
-    title: "رضا العملاء",
-    desc: "نركز على تقديم خدمة موثوقة وتجربة سلسة لكل عميل."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "إذا كنت عالقًا في مكان ما بسبب بطارية سيارة فارغة في أي مكان في دبي وأبوظبي، فيمكنك الاتصال بنا على +971528475675."
   }
 ]
 
-    const englishFaqs = [
-        {
-            question: "What type of Battery does my Jeep need?",
-            answer: "At 800BatteryPro, we have certified Jeep technicians who only recommends the AGM (Absorbent Glass Mat) car batteries. Because of its durability, high-density, and peak performance support features. You can book your next battery replacement by contacting us at 800BatteryPro right now!"
-        },
-        {
-            question: "How long does a Jeep battery last?",
-            answer: " A genuine Jeep Battery may last from 2-5 years, which directly depends upon the mileage of your car, the climate conditions in which you drive the car, and how you drive. Which needs a routine check-up after a specific time, most commonly yearly or after 10,000 KM. You can book a free battery check-up at 800BatteryPro right now!"
-        },
-        {
-            question: "How much does it cost to replace a Jeep battery?",
-            answer: "Jeep battery replacement cost depends on the type and model of your car, while it also depends on the type of Battery too. When it comes to 800BatteryPro, the average prices for a car battery range from AED 500 to AED 1,500 in Dubai and Abu Dhabi, which also includes free installations and system check-ups."
-        },
-        {
-            question: "Do I need to reset my Jeep system after battery replacement?",
-            answer: " Yes, our Jeep specialists ensure that during battery replacement, all systems are reset and recalibrated for proper functionality of the electronic system. The Battery Management System (BMS) is taken care of to avoid further technical issues in your car. As the recalibration of the start-stop systems, infotainment, and other advance system features."
-        },
-        {
-            question: "Do you offer on-site Jeep battery replacement in Dubai?",
-            answer: " Yes, 800BatteryPro offers on-site Jeep battery replacement in Dubai. You can call us for 24/7 roadside assistance or any other car battery solutions anywhere in Dubai and Abu Dhabi."
-        },
-
-        {
-            question: " Any American Car Experts in Dubai?",
-            answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of American car experts in Dubai. We have a well-equipped service center with the latest technology used for every German car repair job. We treat every car brand, including Jeep, GMC, Chevrolet, and Tesla, etc. Call us now for any American car battery replacement services at +971528475675."
-        },
-
-        {
-            question: "Do we provide American Car Battery Replacement in Abu Dhabi?",
-            answer: " Yes, 800BatteryPro has well-equipped service centers in Dubai and Abu Dhabi. We treat every American car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
-        },
-
-
-           ]
-
- const arabicFaqs = [
+const englishFaqs = [
   {
-    question: "ما هي الخدمات التي تقدمونها؟",
-    answer:
-      "نقدم خدمات شاملة لبطاريات السيارات تشمل فحص البطارية، تشغيل السيارة عند توقفها، استبدال البطارية، والمساعدة على الطريق. كما نقدم خدمات إصلاح السيارات المميزة ودعم الطوارئ على مدار الساعة في دبي وأبوظبي."
+    question: "What type of Battery does my Jeep need?",
+    answer: "At 800BatteryPro, we have certified Jeep technicians who only recommends the AGM (Absorbent Glass Mat) car batteries. Because of its durability, high-density, and peak performance support features. You can book your next battery replacement by contacting us at 800BatteryPro right now!"
   },
   {
-    question: "كم يستغرق استبدال البطارية؟",
-    answer:
-      "يمكن لفنيينا المحترفين استبدال بطارية سيارتك عادةً خلال 15 إلى 30 دقيقة في موقعك. نحن ندرك أن وقتك مهم، لذلك نحرص على تقديم خدمة سريعة وفعالة."
+    question: "How long does a Jeep battery last?",
+    answer: "A genuine Jeep Battery may last from 2-5 years, which directly depends upon the mileage of your car, the climate conditions in which you drive the car, and how you drive. Which needs a routine check-up after a specific time, most commonly yearly or after 10,000 KM. You can book a free battery check-up at 800BatteryPro right now!"
   },
   {
-    question: "هل توفرون المساعدة على الطريق على مدار الساعة؟",
-    answer:
-      "نعم، نقدم خدمة المساعدة على الطريق على مدار 24 ساعة في دبي وأبوظبي. سواء كان ذلك في النهار أو الليل أو في عطلة نهاية الأسبوع أو العطلات الرسمية، فريقنا مستعد دائمًا لمساعدتك في أي حالة طارئة تتعلق بالبطارية."
+    question: "How much does it cost to replace a Jeep battery?",
+    answer: "Jeep battery replacement cost depends on the type and model of your car, while it also depends on the type of Battery too. When it comes to 800BatteryPro, the average prices for a car battery range from AED 500 to AED 1,500 in Dubai and Abu Dhabi, which also includes free installations and system check-ups."
   },
   {
-    question: "ما هي المناطق التي تغطونها؟",
-    answer:
-      "نغطي جميع المناطق الرئيسية في دبي وأبوظبي، بما في ذلك وسط مدينة دبي، دبي مارينا، أبراج بحيرات الجميرا (JLT)، الخليج التجاري، جزيرة الريم، وجزيرة ياس."
+    question: "Do I need to reset my Jeep system after battery replacement?",
+    answer: "Yes, our Jeep specialists ensure that during battery replacement, all systems are reset and recalibrated for proper functionality of the electronic system. The Battery Management System (BMS) is taken care of to avoid further technical issues in your car. As the recalibration of the start-stop systems, infotainment, and other advance system features."
   },
   {
-    question: "هل تقدمون ضمانًا على البطاريات؟",
-    answer:
-      "نعم، جميع بطارياتنا تأتي مع ضمان شامل. تختلف مدة الضمان حسب نوع وعلامة البطارية. يرجى التواصل معنا للحصول على تفاصيل الضمان الخاصة بكل نوع من البطاريات."
-  }
+    question: "Do you offer on-site Jeep battery replacement in Dubai?",
+    answer: "Yes, 800BatteryPro offers on-site Jeep battery replacement in Dubai. You can call us for 24/7 roadside assistance or any other car battery solutions anywhere in Dubai and Abu Dhabi."
+  },
+  {
+    question: "Any American Car Experts in Dubai?",
+    answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of American car experts in Dubai. We have a well-equipped service center with the latest technology used for every German car repair job. We treat every car brand, including Jeep, GMC, Chevrolet, and Tesla, etc. Call us now for any American car battery replacement services at +971528475675."
+  },
+  {
+    question: "Do we provide American Car Battery Replacement in Abu Dhabi?",
+    answer: "Yes, 800BatteryPro has well-equipped service centers in Dubai and Abu Dhabi. We treat every American car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services."
+  },
 ]
 
+const arabicFaqs = [
+  {
+    question: "ما نوع البطارية التي تحتاجها سيارة جيب الخاصة بي؟",
+    answer: "في 800BatteryPro، لدينا فنيو جيب معتمدون يوصون فقط ببطاريات AGM (مات الزجاج الماص) للسيارات. بسبب متانتها وكثافتها العالية وميزات دعم الأداء الأمثل. يمكنك حجز استبدال البطارية القادم عن طريق الاتصال بنا في 800BatteryPro الآن!"
+  },
+  {
+    question: "كم تدوم بطارية جيب؟",
+    answer: "قد تدوم بطارية جيب الأصلية من 2-5 سنوات، والتي تعتمد بشكل مباشر على عدد الكيلومترات التي تقطعها سيارتك، وظروف المناخ التي تقود فيها السيارة، وكيفية قيادتك. مما يحتاج إلى فحص روتيني بعد وقت محدد، الأكثر شيوعًا سنويًا أو بعد 10000 كيلومتر. يمكنك حجز فحص بطارية مجاني في 800BatteryPro الآن!"
+  },
+  {
+    question: "كم تكلفة استبدال بطارية جيب؟",
+    answer: "تعتمد تكلفة استبدال بطارية جيب على نوع وموديل سيارتك، كما تعتمد أيضًا على نوع البطارية. عندما يتعلق الأمر بـ 800BatteryPro، يتراوح متوسط أسعار بطارية السيارة من 500 إلى 1500 درهم إماراتي في دبي وأبوظبي، والذي يشمل أيضًا التركيب المجاني وفحوصات النظام."
+  },
+  {
+    question: "هل أحتاج إلى إعادة ضبط نظام جيب بعد استبدال البطارية؟",
+    answer: "نعم، يضمن فنيو جيب لدينا أنه أثناء استبدال البطارية، يتم إعادة ضبط جميع الأنظمة وإعادة معايرتها من أجل الأداء السليم للنظام الإلكتروني. يتم الاهتمام بنظام إدارة البطارية (BMS) لتجنب المزيد من المشكلات الفنية في سيارتك، مثل إعادة معايرة أنظمة التشغيل والإيقاف ونظام المعلومات والترفيه وميزات النظام المتقدمة الأخرى."
+  },
+  {
+    question: "هل تقدمون خدمة استبدال بطارية جيب في الموقع في دبي؟",
+    answer: "نعم، يقدم 800BatteryPro خدمة استبدال بطارية جيب في الموقع في دبي. يمكنك الاتصال بنا للحصول على مساعدة على الطريق 24/7 أو أي حلول أخرى لبطارية السيارة في أي مكان في دبي وأبوظبي."
+  },
+  {
+    question: "هل يوجد خبراء سيارات أمريكية في دبي؟",
+    answer: "نعم، 800BatteryPro هو واحد من المراكز الموثوقة ولديه فريق معتمد من خبراء السيارات الأمريكية في دبي. لدينا مركز خدمة مجهز جيدًا بأحدث التقنيات المستخدمة في كل مهمة إصلاح للسيارات الأمريكية. نتعامل مع كل ماركات السيارات بما في ذلك جيب وجي إم سي وشيفروليه وتسلا وغيرها. اتصل بنا الآن لأي خدمة استبدال بطارية سيارة أمريكية على +971528475675."
+  },
+  {
+    question: "هل تقدمون خدمة استبدال بطارية السيارات الأمريكية في أبوظبي؟",
+    answer: "نعم، لدى 800BatteryPro مراكز خدمة مجهزة تجهيزًا جيدًا في دبي وأبوظبي. نتعامل مع كل استبدال بطارية سيارة أمريكية باستبدال بطارية أصلية وفاخرة. قاعدة عملائنا راضية بنسبة 100٪ عن خدمات إصلاح السيارات والبطاريات لدينا. إذا كانت بطارية سيارتك فارغة، اتصل بنا الآن على +971528475675 للحصول على خدمات المساعدة الطارئة."
+  },
+]
 
+const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
+const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
+const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
+const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
+const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
+const faqs = locale === "ar" ? arabicFaqs : englishFaqs
 
-
-      const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
-      const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
-      const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
-      const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
-      const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
-       const faqs = locale === "ar" ? arabicFaqs : englishFaqs
-
-       const text = locale === "ar"
-        ? {
-            desc: "ماركات السيارات التي نخدمها",
-            title1: "متوافق مع جميع",
-            title2: "ماركات السيارات الرئيسية",
-        }
-        : {
-            desc: "Ferrari Car Models We Serve",
-            title1: "Includes All",
-            title2: "Major Models & Variants",
-        }
+const text = locale === "ar"
+  ? {
+      desc: "ماركات السيارات التي نخدمها",
+      title1: "متوافق مع جميع",
+      title2: "ماركات السيارات الرئيسية",
+    }
+  : {
+      desc: "Jeep Car Models We Serve",
+      title1: "Includes All",
+      title2: "Major Models & Variants",
+    }
 
         const batteryText =
   locale === "ar"

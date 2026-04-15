@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import { routing } from "@/i18n/routing";
 import { FaWhatsapp } from 'react-icons/fa';
 import { MdCall } from 'react-icons/md';
+import { Providers } from "./providers";
 
 export default async function RootLayout({ children, params }) {
     const { locale } = await params;
@@ -20,8 +21,10 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale} dir={direction}>
       <body className={direction === 'rtl' ? 'rtl' : 'ltr'}>
+        <Providers>
         <NextIntlClientProvider locale={locale}>
           <Header />
+              
           {children}
           
           {/* Desktop View - Floating WhatsApp & Call Buttons */}
@@ -70,6 +73,7 @@ export default async function RootLayout({ children, params }) {
             </a>
           </div>
         </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

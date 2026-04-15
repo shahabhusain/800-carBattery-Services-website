@@ -1,4 +1,5 @@
 'use client'
+import { useLocale } from 'next-intl'
 import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
@@ -8,16 +9,28 @@ const Faq = ({faqs}) => {
     const toggleFAQ = (index) => {
         setOpenIndex(openIndex === index ? null : index)
     }
+    const locale = useLocale()
 
     return (
         <div className='w-[85%] mx-auto py-20'>
-            <p className='uppercase text-center text-[16px] font-semibold text-gray-600'>
-                Got Questions?
-            </p>
-            <h1 className='ld:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center mb-12'>
-                <span className='font-normal'>We’ve got</span>{' '}
-                <span className='text-red-700'>quick</span> answers
-            </h1>
+       <p className='uppercase text-center text-[16px] font-semibold text-gray-600'>
+    {locale === "ar" ? "لديك أسئلة؟" : "Got Questions?"}
+</p>
+<h1 className='lg:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center mb-12'>
+    {locale === "ar" ? (
+        <>
+            <span className='text-red-700'>لدينا</span>
+            <span className='font-normal'> إجابات </span>
+            <span className='text-red-700'>سريعة</span>
+        </>
+    ) : (
+        <>
+            <span className='font-normal'>We've got</span>
+            <span className='text-red-700'> quick </span>
+            <span className='text-red-700'>answers</span>
+        </>
+    )}
+</h1>
 
             <div className=''>
                 {faqs.map((faq, index) => (

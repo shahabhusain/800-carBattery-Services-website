@@ -5,6 +5,7 @@ import { FaInstagram, FaLocationArrow, FaMailBulk, FaPhone, FaTwitter, FaYoutube
 import logo from '@/public/logo.svg'
 import { GoArrowRight } from 'react-icons/go'
 import { useLocale } from 'next-intl'
+import Link from 'next/link'
 
 const Footer = () => {
   const locale = useLocale()
@@ -12,7 +13,7 @@ const Footer = () => {
 
   // English content
   const englishContent = {
-    locations: ['Dubai', 'Abu Dhabi'],
+    locations: [{name:"Dubai", link:"dubai"}, {name:"Abu Dhabi", link:"abudhabi"}],
     headline: 'Your Roadside Lifeline - Faster Than You Expect!',
     quickLinks: {
       title: 'Quick Links',
@@ -34,27 +35,27 @@ const Footer = () => {
   }
 
   // Arabic content
-  const arabicContent = {
-    locations: ['دبي', 'أبو ظبي'],
+const arabicContent = {
+    locations: [{name:"دبي", link:"dubai"}, {name:"أبو ظبي", link:"abudhabe"}],
     headline: 'شريان حياتك على الطريق - أسرع مما تتوقع!',
     quickLinks: {
-      title: 'روابط سريعة',
-      links: ['ماركات السيارات', 'خدماتنا', 'من نحن', 'اتصل بنا', 'احجز موعد']
+        title: 'روابط سريعة',
+        links: ['ماركات السيارات', 'الخدمات', 'من نحن', 'اتصل بنا', 'احجز موعداً']
     },
     reachUs: {
-      title: 'تواصل معنا',
-      email: 'info@yourwebsite.com',
-      phone: '+971-XXX-XXXX',
-      address: 'المنطقة الصناعية القوز ٤، دبي، الإمارات'
+        title: 'تواصل معنا',
+        email: 'info@800batterypro.com',
+        phone: '+971528475675',
+        address: 'دبي وأبو ظبي، الإمارات العربية المتحدة'
     },
     newsletter: {
-      title: 'ابق على اطلاع دائم',
-      description: 'ابق على تواصل معنا للحصول على التحديثات والعروض ودعم الخدمة.',
-      placeholder: 'أدخل بريدك الإلكتروني',
-      privacy: 'لن نشارك بريدك الإلكتروني أبدًا. يمكنك إلغاء الاشتراك في أي وقت.'
+        title: 'ابقَ في المقدمة',
+        description: 'ابقَ على تواصل معنا للحصول على التحديثات والعروض والدعم الفني.',
+        placeholder: 'أدخل بريدك الإلكتروني',
+        privacy: 'لن نشارك بريدك الإلكتروني أبداً. يمكنك إلغاء الاشتراك في أي وقت.'
     },
-    copyright: '© جميع الحقوق محفوظة لصالح ٨٠٠ بطارية برو'
-  }
+    copyright: '© جميع الحقوق محفوظة لـ 800BATTERYPRO'
+};
 
   const content = locale === 'en' ? englishContent : arabicContent
 
@@ -64,12 +65,13 @@ const Footer = () => {
       {/* Location Tabs */}
       <div className={`flex flex-col sm:flex-row ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
         {content.locations.map((location, index) => (
-          <span 
+          <Link
+            href={location.link} 
             key={index}
             className='border-[1px] border-[#0000001b] py-3 text-center w-full sm:w-1/2 text-sm sm:text-base cursor-pointer hover:bg-red-600 hover:text-white transition-colors'
           >
-            {location}
-          </span>
+            {location.name}
+          </Link>
         ))}
       </div>
 

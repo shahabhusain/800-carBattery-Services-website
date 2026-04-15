@@ -1,13 +1,34 @@
 
+import { useLocale } from 'next-intl'
 import React from 'react'
 const WhyChooseUs = ({data}) => {
-   
+   const locale = useLocale()
   return (
     <div className=' bg-[#FDF8F8] py-20 md:mt-20 '>
             <div className=' w-[85%] mx-auto flex flex-col gap-y-4 items-center justify-center'>
-      <p className=' text-[16px] font-bold text-center'>Why Choose Us</p>
-      <h1 className=' lg:text-[40px] md:text-[35px] sm:text-[30px] text-[26px] font-semibold text-center max-w-[855px]'>Reliable Car <span className=' text-red-800'>Battery Service </span> 
- You Can Trust</h1>
+ <p className='text-[16px] font-bold text-center'>
+  {locale === "en"
+    ? "Why Choose Us"
+    : locale === "ar"
+    ? "لماذا تختارنا"
+    : "Why Choose Us"}
+</p>
+
+<h1 className='lg:text-[40px] md:text-[35px] sm:text-[30px] text-[26px] font-semibold text-center max-w-[855px]'>
+  {locale === "en"
+    ? "Reliable Car"
+    : locale === "ar"
+    ? "خدمة موثوقة لبطارية السيارة"
+    : "Reliable Car"}{" "}
+  <span className='text-red-800'>
+    {locale === "en"
+      ? "Battery Service"
+      : locale === "ar"
+      ? "بطارية السيارة"
+      : "Battery Service"}
+  </span>
+</h1>
+
          <div className=' flex flex-col md:flex-row items-center gap-2 justify-between mt-8'>
            {
             data.map((item, index) => (

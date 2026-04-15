@@ -5,26 +5,26 @@ import { GoArrowRight } from 'react-icons/go'
 import { useLocale } from 'next-intl'
 import Form from '../Services/Form'
 const heroEnglishContent = {
-  desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
-  title:{
-    span1:"24/7 Emergency & Battery  ",
-    span2:"Services For Premium Cars"
+  desc: "Top Car Brands – 24/7 Emergency Support & Anywhere!",
+  title: {
+    span1: "24/7 Emergency & Battery",
+    span2: " Services For Premium Cars"
   },
-  desc1:"Car Battery Boosting - Battery Replacement - Roadside Assistance - Premium Car Repairs",
-  btn:"Call Now",
-  btn1:"Book Service Now"
+  desc1: "Car Battery Boosting - Battery Replacement - Roadside Assistance - Premium Car Repairs",
+  btn: "Call Now",
+  btn1: "Book Service Now"
 }
 
 const heroArabicContent = {
-  desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
+  desc: "أفضل ماركات السيارات – دعم طوارئ 24/7 في أي مكان!",
   title: {
-    span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-    span2: "وأبوظبي!"
+    span1: "خدمات الطوارئ والبطارية 24/7",
+    span2: "للسيارات الفاخرة"
   },
-  desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-  btn: "تحدث مع خبير",
-   btn1:"Book Service Now"
-};
+  desc1: "تشغيل بطارية السيارة - استبدال البطارية - مساعدة على الطريق - إصلاحات سيارات متميزة",
+  btn: "اتصل الآن",
+  btn1: "احجز الخدمة الآن"
+}
 
 const Hero = () => {
   const locale = useLocale()
@@ -42,7 +42,7 @@ const Hero = () => {
               <button className=' text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white md:flex hidden items-center gap-x-2'>{hero.btn}<span className=' rotate-320'><GoArrowRight size={30} /></span></button>
                     <button className=' text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex md:hidden items-center gap-x-2'>{hero.btn1}<span className=' rotate-320'><GoArrowRight size={30} /></span></button>
        </div>
-         <div className=' w-[45%] md:block hidden'>
+         <div className={` w-[45%] md:block hidden ${locale === "ar" ? "ml-10" : ""} `}>
           <Form />
          </div>
        </div>

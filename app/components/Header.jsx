@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useLocale } from "next-intl";
 import TopBar from "./TopBar";
 import LanguageSwitcher from "./LaguageSwitcher";
+import AppointmentModal from "./AppointmentModal";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const scrollTimeout = useRef(null);
   const headerRef = useRef(null);
 
@@ -123,7 +125,7 @@ const Header = () => {
     },
     { path: "/about", name: "Our Company" },
     { path: "/offer", name: "Offers" },
-    { path: "/shop", name: "Shop" },
+    // { path: "/shop", name: "Shop" },
   ];
 
   const arabicLinks = [
@@ -185,6 +187,16 @@ const Header = () => {
 
   const locale = useLocale();
   const links = locale === "en" ? englishLinks : locale === "ar" ? arabicLinks : null;
+
+  // Handle opening the modal
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Handle closing the modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   // Smooth dropdown handlers for desktop only
   let hoverTimeout;
@@ -335,7 +347,14 @@ const Header = () => {
             ))}
           </ul>
           
-          <button className="w-full mt-8 bg-red-600 text-[14px] font-[400] py-3 px-5 rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-all duration-300 hover:scale-105 active:scale-95 group">
+          {/* Mobile book button - now opens modal */}
+          <button 
+            onClick={() => {
+              setMobileMenuOpen(false);
+              handleOpenModal();
+            }}
+            className="w-full mt-8 bg-red-600 text-[14px] font-[400] py-3 px-5 rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-all duration-300 hover:scale-105 active:scale-95 group"
+          >
             {locale === "en" ? "Book An Appointment" : locale === "ar" ? "حجز موعد" : null}
             <span className="group-hover:translate-x-2 transition-transform duration-300">
               <GoArrowRight size={20} />
@@ -347,83 +366,94 @@ const Header = () => {
   );
 
   return (
+    <>
       <div className="fixed z-[100] w-full transition-all duration-300 ease-out">
-          {scrolled ? null :  <TopBar />}
-          <header
-      ref={headerRef}
-      className={`absolute w-full transition-all duration-300 ease-out
-        ${visible ? 'top-0' : '-top-24'} 
-        ${scrolled ? '-top-24' : ' md:top-20'}`}
-    >
-      <div
-        className={`py-3 px-4 mx-auto w-full transition-all duration-300 ease-out
-          ${scrolled 
-            ? 'bg-white/95 backdrop-blur-md text-black w-full shadow-lg' 
-            : 'bg-[#ffffff15] backdrop-blur-md text-white lg:w-[90%] xl:w-[80%] rounded-none lg:rounded-full border border-white/20'
-          }`}
-        style={{
-          transform: 'translateZ(0)',
-          willChange: 'transform, background-color, box-shadow',
-        }}
-      >
-        <div className={`flex items-center justify-between transition-all duration-300 ${
-          scrolled ? 'lg:w-[90%] mx-auto' : ''
-        }`}>
-          {/* Logo with smooth transition */}
-          <Link href="/" className="relative block group">
-            <div className="relative w-[120px] md:w-auto h-[40px] md:h-[50px] transition-all duration-300">
-              <Image 
-                src={scrolled ? logo1 : logo}
-                alt="logo"
-                width={140}
-                height={140}
-                className="object-contain transition-all duration-300 group-hover:scale-105"
-                priority
-              />
-            </div>
-          </Link>
-
-          {/* Desktop Menu */}
-          {renderDesktopMenu()}
-
-          {/* Desktop Book Button */}
-           <div className=" flex items-center gap-4">
-              {
-            scrolled ?  <div className="md:block hidden"><LanguageSwitcher scrolled={scrolled} /></div> : null
-          }
-          <button className={`hidden lg:flex text-[12px] xl:text-[14px] font-[400] py-2 xl:py-3 px-3 xl:px-5 rounded-full items-center gap-x-2 whitespace-nowrap transition-all duration-300 hover:scale-105 active:scale-95 group ${
-            scrolled 
-              ? 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl' 
-              : 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl'
-          }`}>
-            {locale === "en" ? "Book An Appointment" : locale === "ar" ? "حجز موعد" : null}
-            <span className="group-hover:translate-x-2 transition-transform duration-300 hidden xl:inline">
-              <GoArrowRight size={20} />
-            </span>
-          </button>
-           </div>
-
-          {/* Mobile Menu Button with smooth animation */}
-             <div className=" md:hidden "> <LanguageSwitcher scrolled={scrolled} /></div>
-          <button 
-            className="lg:hidden p-2 hover:bg-white/20 rounded-full transition-all duration-300 hover:rotate-90"
-            onClick={() => setMobileMenuOpen(true)}
-            aria-label="Open menu"
+        {scrolled ? null : <TopBar />}
+        <header
+          ref={headerRef}
+          className={`absolute w-full transition-all duration-300 ease-out
+            ${visible ? 'top-0' : '-top-24'} 
+            ${scrolled ? '-top-24' : ' md:top-20'}`}
+        >
+          <div
+            className={`py-3 px-4 mx-auto w-full transition-all duration-300 ease-out
+              ${scrolled 
+                ? 'bg-white/95 backdrop-blur-md text-black w-full shadow-lg' 
+                : 'bg-[#ffffff15] backdrop-blur-md text-white lg:w-[90%] xl:w-[80%] rounded-none lg:rounded-full border border-white/20'
+              }`}
+            style={{
+              transform: 'translateZ(0)',
+              willChange: 'transform, background-color, box-shadow',
+            }}
           >
-            <HiOutlineMenu 
-              size={24} 
-              className={`transition-colors duration-300 ${
-                scrolled ? 'text-black' : 'text-white'
-              }`} 
-            />
-          </button>
-        </div>
+            <div className={`flex items-center justify-between transition-all duration-300 ${
+              scrolled ? 'lg:w-[90%] mx-auto' : ''
+            }`}>
+              {/* Logo with smooth transition */}
+              <Link href="/" className="relative block group">
+                <div className="relative w-[120px] md:w-auto h-[40px] md:h-[50px] transition-all duration-300">
+                  <Image 
+                    src={scrolled ? logo1 : logo}
+                    alt="logo"
+                    width={140}
+                    height={140}
+                    className="object-contain transition-all duration-300 group-hover:scale-105"
+                    priority
+                  />
+                </div>
+              </Link>
+
+              {/* Desktop Menu */}
+              {renderDesktopMenu()}
+
+              {/* Desktop Book Button */}
+              <div className="flex items-center gap-4">
+                {scrolled ? <div className="md:block hidden"><LanguageSwitcher scrolled={scrolled} /></div> : null}
+                <button 
+                  onClick={handleOpenModal}
+                  className={`hidden lg:flex text-[12px] xl:text-[14px] font-[400] py-2 xl:py-3 px-3 xl:px-5 rounded-full items-center gap-x-2 whitespace-nowrap transition-all duration-300 hover:scale-105 active:scale-95 group ${
+                    scrolled 
+                      ? 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl' 
+                      : 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl'
+                  }`}
+                >
+                  {locale === "en" ? "Book An Appointment" : locale === "ar" ? "حجز موعد" : null}
+                  <span className="group-hover:translate-x-2 transition-transform duration-300 hidden xl:inline">
+                    <GoArrowRight size={20} />
+                  </span>
+                </button>
+              </div>
+
+              {/* Mobile Menu Button with smooth animation */}
+              <div className="md:hidden">
+                <LanguageSwitcher scrolled={scrolled} />
+              </div>
+              <button 
+                className="lg:hidden p-2 hover:bg-white/20 rounded-full transition-all duration-300 hover:rotate-90"
+                onClick={() => setMobileMenuOpen(true)}
+                aria-label="Open menu"
+              >
+                <HiOutlineMenu 
+                  size={24} 
+                  className={`transition-colors duration-300 ${
+                    scrolled ? 'text-black' : 'text-white'
+                  }`} 
+                />
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          {renderMobileMenu()}
+        </header>
       </div>
 
-      {/* Mobile Menu */}
-      {renderMobileMenu()}
-    </header>
-      </div>
+      {/* Appointment Modal */}
+      <AppointmentModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+      />
+    </>
   );
 };
 

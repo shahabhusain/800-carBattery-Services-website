@@ -1,94 +1,137 @@
 import Image from 'next/image'
 import React from 'react'
-import about from '@/public/about.png'
+import about from '@/public/Home/about.png'
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { GoArrowRight } from 'react-icons/go';
 import { useLocale } from 'next-intl';
-import { IoAtCircleOutline } from "react-icons/io5";
-import { FaEye } from "react-icons/fa";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { FaEye } from 'react-icons/fa';
+
 const englishContent = {
   title: "About Us",
-  heading: "800 battery pro",
-  description: "800BATTERYPRO delivers fast, reliable car battery replacement wherever you are. Whether at home, work, or roadside, our expert team provides high-quality batteries with quick on-site installation to get you back on the road without delay.",
+  heading: "battery pro",
+  description: "Welcome to 800BatteryPro—your go-to choice for rapid, reliable car battery services in Dubai and Abu Dhabi. Need the best car battery prices or 24/7 roadside assistance in Dubai? Don’t waste time searching for a battery shop near me—our mobile team and fully stocked store make battery emergencies simple and stress-free. Choose 800BatteryPro for superior speed and customer-first solutions.",
   features: [
-    "Fast on-site battery replacement",
-    "Premium, long-lasting batteries",
-    "Professional and hassle-free installation"
+    "Premium Car Brand Battery Services",
+    "Get Serviced With 24/7 Roadside Assistance",
+    "Trusted By Car Owners in Dubai & Abu Dhabi"
   ],
   cta: "Learn More"
 };
 
 const arabicContent = {
   title: "من نحن",
-  heading: "800 بطارية برو",
-  description: "تقدم 800 بطارية برو خدمة استبدال بطاريات السيارات السريعة والموثوقة أينما كنت. سواء في المنزل أو العمل أو على الطريق، يوفر فريقنا الخبير بطاريات عالية الجودة مع تركيب سريع في الموقع لإعادتك إلى الطريق دون تأخير.",
+  heading: "بطارية برو",
+  description: "مرحباً بكم في 800BatteryPro—اختياركم الأمثل لخدمات بطاريات السيارات السريعة والموثوقة في دبي وأبو ظبي. هل تحتاج إلى أفضل أسعار بطاريات السيارات أو مساعدة على الطريق تعمل 24/7 في دبي؟ لا تضيع وقتك في البحث عن 'محل بطاريات قريب مني'—فريقنا المتنقل ومتجرنا المتكامل يجعلان طوارئ البطارية بسيطة وخالية من التوتر. اختر 800BatteryPro للتمتع بالسرعة الفائقة والحلول التي تضع العميل في المقام الأول.",
   features: [
-    "استبدال بطارية سريع في الموقع",
-    "بطاريات ممتازة وطويلة الأمد",
-    "تركيب احترافي وخالي من المتاعب"
+    "خدمات بطاريات سيارات من علامات تجارية ممتازة",
+    "احصل على الخدمة مع مساعدة على الطريق تعمل 24/7",
+    "موثوق من قبل مالكي السيارات في دبي وأبو ظبي"
   ],
-  cta: "اقرأ المزيد"
+  cta: "اعرف المزيد"
 };
+
+const englishCards = [
+  {
+    icon:<FaEye />,
+    title:"5+ ",
+    desc:"years of experience"
+  },
+  {
+    icon:<FaEye />,
+    title:"5000+",
+    desc:"Loyal Customer Serve"
+  },
+  {
+    icon:<FaEye />,
+    title:"15+",
+    desc:"Services Offered"
+  },
+  {
+    icon:<FaEye />,
+    title:"50+",
+    desc:"Certified Technicians"
+  },
+]
+
+const arabicCards = [
+  {
+    icon: <FaEye />,
+    title: "5+ ",
+    desc: "سنوات من الخبرة"
+  },
+  {
+    icon: <FaEye />,
+    title: "5000+",
+    desc: "عميل مخلص تمت خدمته"
+  },
+  {
+    icon: <FaEye />,
+    title: "15+",
+    desc: "خدمة مقدمة"
+  },
+  {
+    icon: <FaEye />,
+    title: "50+",
+    desc: "فني معتمد"
+  },
+]
+
+
 
 const AboutContent = () => {
   const locale = useLocale()
   const content = locale === "en" ? englishContent : locale === "ar" ? arabicContent : englishContent
-  
+  const cards = locale === "en" ? englishCards : locale === "ar" ? arabicCards : englishCards
   const isRTL = locale === 'ar'
-   const data = {
-       mission:[
-        "Exceptional Customer","Exceptional Customer","Exceptional Customer","Exceptional Customer"
-       ],
-        vision:[
-        "Exceptional Customer","Exceptional Customer","Exceptional Customer","Exceptional Customer"
-       ],
-   }
+
   return (
-    <div className='bg-[#fff] rounded-t-4xl py-20' dir={isRTL ? 'rtl' : 'ltr'}>
-      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12 w-[90%] mx-auto'>
+    <div className='bg-gradient-to-r from-black to-red-900 rounded-t-4xl md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
+       <div className='w-[90%] mx-auto'>
+           <div className=' grid md:grid-cols-4 gap-3 grid-cols-2'>
+              {
+                cards.map((item,index) => (
+                   <div key={index} className=' flex flex-col items-start gap-y-3 bg-[#FFFFFF0D] backdrop-blur-lg md:p-6 p-2 rounded-md text-white'>
+                <span className=' md:text-xl text-lg'>{item.icon}</span>
+                <h2 className=' lg:text-4xl md:text-3xl text-2xl text font-bold'>{item.title}</h2>
+                <p>{item.desc}</p>
+              </div>
+                ))
+              }
+         </div>
+      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-20 '>
         <Image className='md:w-1/2' src={about} alt='about' />
-        <div className='md:w-1/2 flex flex-col gap-y-6'>
-          <p className='uppercase md:text-[16px] text-[12px] font-bold'>
+        <div className='md:w-1/2 flex flex-col md:gap-y-6 gap-y-3'>
+          <p className='uppercase md:text-[16px] text-white text-[12px] font-bold'>
             {content.title}
           </p>
-          <h1 className='uppercase lg:text-[40px] md:text-[36px] text-[25px] font-semibold'>
+          <h1 className='uppercase text-white lg:text-[40px] md:text-[36px] text-[25px] font-semibold'>
             <span className='text-red-500'>800</span> {content.heading}
           </h1>
-          <p className='md:text-[16px] text-[12px] font-normal text-[#00000099]'>
+          <p className='md:text-[16px] text-[12px] font-normal text-gray-200'>
             {content.description}
           </p>
           <div className='flex flex-col gap-y-3'>
             {content.features.map((feature, index) => (
               <button 
                 key={index} 
-                className='bg-[#f8f8f8] p-4 md:text-[16px] text-[12px] rounded-br-full text-[#4E4E4E] rounded-tr-full flex items-center gap-3'
+                className='bg-[#FFFFFF1A] text-white backdrop-blur-lg p-4 md:text-[16px] text-[12px] rounded-br-full text-[#4E4E4E] rounded-tr-full flex items-center gap-3'
               >
-                <span className='bg-[#ffffff] p-3 rounded-tr-full rounded-br-full'>
+                <span className='bg-[#FFFFFF1A] p-3 rounded-tr-full rounded-br-full'>
                   <RiArrowRightDoubleLine className={isRTL ? 'rotate-180' : ''} />
                 </span>
                 {feature}
               </button>
             ))}
           </div>
+          <button className='w-fit bg-red-600 py-3 px-5 uppercase rounded-full text-white flex items-center gap-x-2'>
+            {content.cta}
+            <span className={isRTL ? 'rotate-180' : ''}>
+              <GoArrowRight size={30} />
+            </span>
+          </button>
         </div>
       </div>
-      <div className=' flex flex-col md:flex-row items-center gap-12 justify-between w-[90%] mx-auto mt-12'>
-       <div className=' md:w-1/2 flex flex-col gap-y-3 bg-[#F8F8F8] md:p-8 p-4 rounded-2xl'>
-         <h1 className=' md:text-[32px] text-[20px] font-bold flex items-center justify-between'>Our Mission <span className=' p-4 rounded-full bg-white'><IoAtCircleOutline /></span></h1>
-         <p className=' md:text-[14px] text-[12px] font-normal text-[#4E4E4E]'>Our mission is to deliver reliable, efficient, and professional automotive services that keep vehicles safe, road-ready, and customers confident at every stage.</p>
-          <div className=' grid grid-cols-2 gap-2 mt-3'>
-             {data.mission.map(item => <p className=' md:text-[16px] text-[12px] bg-white md:p-4 p-2 flex items-center gap-2'><MdOutlineKeyboardDoubleArrowRight size={20} />{item}</p>)}
-          </div>
        </div>
-        <div className=' md:w-1/2 flex flex-col gap-y-3 bg-[#F8F8F8] md:p-8 p-4 rounded-2xl'>
-           <h1 className=' md:text-[32px] text-[20px] font-bold flex items-center justify-between'>Our Vision <span className=' p-4 rounded-full bg-white'><FaEye /></span></h1>
-         <p className=' md:text-[14px] text-[12px] font-normal text-[#4E4E4E]'>Our mission is to deliver reliable, efficient, and professional automotive services that keep vehicles safe, road-ready, and customers confident at every stage.</p>
-         <div className=' grid grid-cols-2 gap-2 mt-3'>
-                 {data.vision.map(item => <p className=' md:text-[16px] text-[12px] bg-white md:p-4 p-2 flex items-center gap-2'><MdOutlineKeyboardDoubleArrowRight size={20} />{item}</p>)}
-         </div>
-        </div>
-      </div>
     </div>
   )
 }

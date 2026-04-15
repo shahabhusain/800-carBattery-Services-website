@@ -19,11 +19,11 @@ const heroArabicContent = {
   desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
   title: {
     span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-    span2: "وأبوظبي!"
+    span2: "وأبو ظبي!"
   },
-  desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
+  desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - برمجة متقدمة للسيارات",
   btn: "تحدث مع خبير",
-   mobileBtn:"Book Service Now"
+  mobileBtn: "احجز الخدمة الآن"
 };
 
 const Hero = () => {
@@ -42,7 +42,7 @@ const Hero = () => {
               <button className=' text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white md:flex hidden items-center gap-x-2'>{hero.btn}<span className=' rotate-320'><GoArrowRight size={30} /></span></button>
                 <button className=' text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex md:hidden items-center gap-x-2'>{hero.mobileBtn}<span className=' rotate-320'><GoArrowRight size={30} /></span></button>
        </div>
-         <div className=' md:w-[45%] md:block hidden'>
+         <div className={`md:w-[45%] md:block hidden ${locale === "ar" ? " ml-10" : ""}`}>
           <Form />
          </div>
        </div>

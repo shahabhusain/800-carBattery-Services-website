@@ -20,54 +20,79 @@ const englishContent = {
 
 const arabicContent = {
   title: "من نحن",
-  heading: "800 بطارية برو",
-  description: "تقدم 800 بطارية برو خدمة استبدال بطاريات السيارات السريعة والموثوقة أينما كنت. سواء في المنزل أو العمل أو على الطريق، يوفر فريقنا الخبير بطاريات عالية الجودة مع تركيب سريع في الموقع لإعادتك إلى الطريق دون تأخير.",
+  heading: "بطارية برو",
+  description: "مرحباً بكم في 800BatteryPro—اختياركم الأمثل لخدمات بطاريات السيارات السريعة والموثوقة في دبي وأبو ظبي. هل تحتاج إلى أفضل أسعار بطاريات السيارات أو مساعدة على الطريق تعمل 24/7 في دبي؟ لا تضيع وقتك في البحث عن 'محل بطاريات قريب مني'—فريقنا المتنقل ومتجرنا المتكامل يجعلان طوارئ البطارية بسيطة وخالية من التوتر. اختر 800BatteryPro للتمتع بالسرعة الفائقة والحلول التي تضع العميل في المقام الأول.",
   features: [
-    "استبدال بطارية سريع في الموقع",
-    "بطاريات ممتازة وطويلة الأمد",
-    "تركيب احترافي وخالي من المتاعب"
+    "خدمات بطاريات سيارات من علامات تجارية ممتازة",
+    "احصل على الخدمة مع مساعدة على الطريق تعمل 24/7",
+    "موثوق من قبل مالكي السيارات في دبي وأبو ظبي"
   ],
-  cta: "اقرأ المزيد"
+  cta: "اعرف المزيد"
 };
 
-const cards = [
+const englishCards = [
   {
     icon:<FaEye />,
-    title:"100k",
+    title:"5+ ",
     desc:"years of experience"
   },
   {
     icon:<FaEye />,
-    title:"100k",
-    desc:"years of experience"
+    title:"5000+",
+    desc:"Loyal Customer Serve"
   },
   {
     icon:<FaEye />,
-    title:"100k",
-    desc:"years of experience"
+    title:"15+",
+    desc:"Services Offered"
   },
   {
     icon:<FaEye />,
-    title:"100k",
-    desc:"years of experience"
+    title:"50+",
+    desc:"Certified Technicians"
   },
 ]
+
+const arabicCards = [
+  {
+    icon: <FaEye />,
+    title: "5+ ",
+    desc: "سنوات من الخبرة"
+  },
+  {
+    icon: <FaEye />,
+    title: "5000+",
+    desc: "عميل مخلص تمت خدمته"
+  },
+  {
+    icon: <FaEye />,
+    title: "15+",
+    desc: "خدمة مقدمة"
+  },
+  {
+    icon: <FaEye />,
+    title: "50+",
+    desc: "فني معتمد"
+  },
+]
+
+
 
 const About = () => {
   const locale = useLocale()
   const content = locale === "en" ? englishContent : locale === "ar" ? arabicContent : englishContent
-  
+  const cards = locale === "en" ? englishCards : locale === "ar" ? arabicCards : englishCards
   const isRTL = locale === 'ar'
 
   return (
     <div className='bg-gradient-to-r from-black to-red-900 rounded-t-4xl md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
        <div className='w-[90%] mx-auto'>
-           <div className=' grid md:grid-cols-4 gap-x-3 grid-cols-1'>
+           <div className=' grid md:grid-cols-4 gap-3 grid-cols-2'>
               {
                 cards.map((item,index) => (
-                   <div key={index} className=' flex flex-col items-start gap-y-3 bg-[#FFFFFF0D] backdrop-blur-lg p-6 rounded-md text-white'>
-                <span className=' text-xl'>{item.icon}</span>
-                <h2 className=' text-4xl font-bold'>{item.title}</h2>
+                   <div key={index} className=' flex flex-col items-start gap-y-3 bg-[#FFFFFF0D] backdrop-blur-lg md:p-6 p-2 rounded-md text-white'>
+                <span className=' md:text-xl text-lg'>{item.icon}</span>
+                <h2 className=' lg:text-4xl md:text-3xl text-2xl text font-bold'>{item.title}</h2>
                 <p>{item.desc}</p>
               </div>
                 ))

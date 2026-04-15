@@ -1,218 +1,135 @@
 "use client"
 
-import Image from 'next/image'
 import React, { useState } from 'react'
-import { GoArrowRight } from 'react-icons/go'
-import { FaPlay } from 'react-icons/fa'
-import { IoClose } from 'react-icons/io5'
-import review from '@/public/review.jpg'
 import { useLocale } from 'next-intl'
-import story from '@/public/story.png'
 
 const RealExperience = () => {
     const locale = useLocale()
-    const [selectedVideo, setSelectedVideo] = useState(null)
+    const [activeVideo, setActiveVideo] = useState(null)
     
     const englishExperience = [
         { 
            id: 1,
-           bgImg: review,
-           userImg: story,
-           name: "800 battery pro",
-           desc: "We immerse ourselves in your issues and we put our knowledge and",
-           videoId: "dQw4w9WgXcQ" // YouTube video ID
+           videoId: "twztYM_nYrE",
+           title: "800 battery pro"
         },
         {
            id: 2,
-           bgImg: review,
-           userImg: story,
-           name: "800 battery pro",
-           desc: "We immerse ourselves in your issues and we put our knowledge and",
-           videoId: "dQw4w9WgXcQ"
+           videoId: "DvnzM3hu8fA",
+           title: "800 battery pro"
         },
         {
            id: 3,
-           bgImg: review,
-           userImg: story,
-           name: "800 battery pro",
-           desc: "We immerse ourselves in your issues and we put our knowledge and",
-           videoId: "dQw4w9WgXcQ"
-        },
-        {
-           id: 4,
-           bgImg: review,
-           userImg: story,
-           name: "800 battery pro",
-           desc: "We immerse ourselves in your issues and we put our knowledge and",
-           videoId: "dQw4w9WgXcQ"
+           videoId: "cgdli2a_Dt0",
+           title: "800 battery pro"
         },
     ]
     
     const arabicExperience = [
         { 
            id: 1,
-           bgImg: review,
-           userImg: story,
-           name: "800 بطارية برو",
-           desc: "ننغمس في مشاكلك ونضع معرفتنا وخبرتنا",
-           videoId: "dQw4w9WgXcQ"
+           videoId: "twztYM_nYrE",
+           title: "800 بطارية برو"
         },
         {
            id: 2,
-           bgImg: review,
-           userImg: story,
-           name: "800 بطارية برو",
-           desc: "ننغمس في مشاكلك ونضع معرفتنا وخبرتنا",
-           videoId: "dQw4w9WgXcQ"
+           videoId: "DvnzM3hu8fA",
+           title: "800 بطارية برو"
         },
         {
            id: 3,
-           bgImg: review,
-           userImg: story,
-           name: "800 بطارية برو",
-           desc: "ننغمس في مشاكلك ونضع معرفتنا وخبرتنا",
-           videoId: "dQw4w9WgXcQ"
-        },
-        {
-           id: 4,
-           bgImg: review,
-           userImg: story,
-           name: "800 بطارية برو",
-           desc: "ننغمس في مشاكلك ونضع معرفتنا وخبرتنا",
-           videoId: "dQw4w9WgXcQ"
+           videoId: "cgdli2a_Dt0",
+           title: "800 بطارية برو"
         },
     ]
     
     const experience = locale === "en" ? englishExperience : arabicExperience
 
-    const text = locale === "ar"
-        ? {
-            desc: "قصص العملاء",
-            title1: "تجارب حقيقية.",
-            title2: "نتائج حقيقية.",
-            viewAll: "عرض الكل",
-          }
-        : {
-            desc: "Customer Stories",
-            title1: "Real Experiences.",
-            title2: "Real Results.",
-            viewAll: "View All",
-          };
-
-    // Close modal function
-    const closeModal = () => {
-        setSelectedVideo(null)
-    }
-
-    // Open modal function
-    const openVideo = (videoId) => {
-        setSelectedVideo(videoId)
+    // Get YouTube thumbnail URL
+    const getThumbnail = (videoId) => {
+        return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
     }
 
     return (
-        <>
-            <div className='text-white py-20 w-full backdrop-blur-2xl'>
-                <div className='md:w-[80%] w-[95%] mx-auto'>
-                    <div className='text-left' dir={locale === "ar" ? "rtl" : "ltr"}>
-                        <h1 className='text-[14px] md:text-[16px] font-bold text-gray-100 uppercase tracking-wider'>
-                            {text.desc}
-                        </h1>
-                        
-                        <div className='flex flex-col md:flex-row items-center justify-between mt-4 md:mt-6 gap-6 md:gap-0'>
-                            <h1 className='text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-semibold max-w-full md:max-w-[544px] leading-tight'>
-                                <span>{text.title1}</span>{' '}
-                                <span className='text-[#C1121F]'>{text.title2}</span>{' '}
-                            </h1>
-                            
-                            <button className='w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base group'>
-                                {text.viewAll}
-                                <span className={`transition-transform duration-300 group-hover:translate-x-2 ${locale === "ar" ? "rotate-180" : ""}`}>
-                                    <GoArrowRight size={24} className='sm:w-[30px] sm:h-[30px]' />
-                                </span>
-                            </button>
-                        </div>
-                    </div>
+        <div className='py-20 w-full  backdrop-blur-sm '>
+            <div className='md:w-[85%] w-[95%] mx-auto'>
+                {/* Header Section */}
+                <div className='text-center mb-12' dir={locale === "ar" ? "rtl" : "ltr"}>
+                    <h1 className='text-4xl md:text-5xl font-bold text-white'>
+                        {locale === "ar" ? "قصصنا" : "Our Stories"}
+                    </h1>
+                    <div className='w-20 h-1 bg-red-600 mx-auto mt-4 rounded-full'></div>
+                </div>
 
-                    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 mt-12'>
-                        {experience.map((item) => (
-                            <div 
-                                key={item.id} 
-                                className='group relative cursor-pointer overflow-hidden rounded-2xl'
-                                onClick={() => openVideo(item.videoId)}
-                            >
-                                {/* Background Image */}
-                                <Image 
-                                    className='h-[528px] md:w-[299px] w-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-110' 
-                                    src={item.bgImg}  
-                                    alt='review'
-                                    width={299}
-                                    height={528}
-                                />
-                                
-                                {/* Dark Overlay - Hidden on hover */}
-                                <div className='bg-black/50 absolute inset-0 rounded-2xl group-hover:bg-black/30 transition-all duration-500'></div>
-                                
-                                {/* Content - Hidden on hover */}
-                                <div className='absolute flex flex-col gap-y-4 top-12 left-5 right-5 group-hover:opacity-0 transition-opacity duration-500'>
-                                    <div className='flex items-center gap-4'>
-                                        <div className='relative w-10 h-10 rounded-full overflow-hidden'>
-                                            <Image 
-                                                src={item.userImg} 
-                                                alt='user'
-                                                fill
-                                                className='object-cover'
-                                            />
+                {/* Reel Grid */}
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-items-center'>
+                    {experience.map((item) => (
+                        <div 
+                            key={item.id} 
+                            className='group relative rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm border border-white/10 hover:border-red-500/50 transition-all duration-500'
+                            style={{ maxWidth: '360px', width: '100%' }}
+                        >
+                            {activeVideo === item.id ? (
+                                // Video Playing State
+                                <div className='relative' style={{ aspectRatio: '9/16' }}>
+                                    <button 
+                                        onClick={() => setActiveVideo(null)}
+                                        className='absolute top-2 right-2 z-10 bg-black/70 hover:bg-red-600 rounded-full p-1.5 transition-all'
+                                    >
+                                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&rel=0&modestbranding=1`}
+                                        title={item.title}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className='w-full h-full'
+                                        style={{ aspectRatio: '9/16' }}
+                                    ></iframe>
+                                </div>
+                            ) : (
+                                // Thumbnail State
+                                <div 
+                                    className='relative cursor-pointer overflow-hidden'
+                                    style={{ aspectRatio: '9/16' }}
+                                    onClick={() => setActiveVideo(item.id)}
+                                >
+                                    {/* YouTube Thumbnail */}
+                                    <img 
+                                        className='w-full h-full object-cover' 
+                                        src={getThumbnail(item.videoId)}
+                                        alt={item.title}
+                                    />
+                                    
+                                    {/* Gradient Overlay */}
+                                    <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent'></div>
+                                    
+                                    {/* Title - Bottom */}
+                                    <div className='absolute bottom-4 left-4 right-4 z-10'>
+                                        <p className='text-white font-semibold text-sm truncate'>{item.title}</p>
+                                    </div>
+                                    
+                                    {/* Play Button - Always Visible */}
+                                    <div className='absolute inset-0 flex items-center justify-center'>
+                                        <div className='bg-red-600 rounded-full p-4 shadow-2xl'>
+                                            {/* Play Icon */}
+                                            <svg className="w-12 h-12 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
                                         </div>
-                                        <p className='font-semibold'>{item.name}</p>
-                                    </div>
-                                    <p className='text-sm text-gray-200'>{item.desc}</p>
-                                </div>
-                                
-                                {/* Play Button - Appears on hover */}
-                                <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-100'>
-                                    <div className='bg-red-600 rounded-full p-5 shadow-lg hover:bg-red-700 transition-colors transform hover:scale-110'>
-                                        <FaPlay size={30} className='text-white ml-1' />
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
             </div>
-
-            {/* Video Modal */}
-            {selectedVideo && (
-                <div 
-                    className='fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm'
-                    onClick={closeModal}
-                >
-                    <div 
-                        className='relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden'
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        {/* Close Button */}
-                        <button 
-                            onClick={closeModal}
-                            className='absolute -top-12 right-0 text-white hover:text-red-600 transition-colors z-10'
-                        >
-                            <IoClose size={36} />
-                        </button>
-                        
-                        {/* YouTube Iframe */}
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className='w-full h-full'
-                        ></iframe>
-                    </div>
-                </div>
-            )}
-        </>
+        </div>
     )
 }
 

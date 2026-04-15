@@ -11,8 +11,8 @@ import bracar from '@/public/brands/bracar.webp'
 
 import fr from '@/public/brands/fr.png'
 import frcar from '@/public/brands/frcar.png'
-import be from '@/public/brands/be.png'
-import becar from '@/public/brands/becar.png'
+import be from '@/public/brands/be.webp'
+import becar from '@/public/brands/becar.webp'
 import ma from '@/public/brands/ma.png'
 import macar from '@/public/brands/macar.png'
 import gmclogo from '@/public/brands/gmclogo.webp'
@@ -108,19 +108,19 @@ const CarBrands = () => {
 
     const locale = useLocale()
 
-    const text = locale === "ar"
-        ? {
-            desc: "ماركات السيارات التي نخدمها",
-            title1: "متوافق مع جميع",
-            title2: "ماركات السيارات الرئيسية",
-            viewAll: "عرض الكل",
-        }
-        : {
-            desc: "Car Brands We Serve",
-            title1: "Includes All",
-            title2: "Major Vehicle Brands",
-            viewAll: "View All",
-        }
+   const text = locale === "ar"
+  ? {
+      desc: "ماركات السيارات التي نخدمها",
+      title1: "يشمل جميع", 
+      title2: "ماركات السيارات الرئيسية",
+      viewAll: "عرض الكل",
+    }
+  : {
+      desc: "Car Brands We Serve",
+      title1: "Includes All",
+      title2: "Major Vehicle Brands",
+      viewAll: "View All",
+    };
 
     // Function to handle view all click
     const handleViewAll = () => {

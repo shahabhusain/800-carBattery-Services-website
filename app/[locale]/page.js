@@ -28,7 +28,7 @@ const Page = () => {
         <Banners />
         <CarBrands />
         <BatteryBrands />
-        <TrendingProducts />
+        {/* <TrendingProducts /> */}
       </div>
 
       <RealExperience />

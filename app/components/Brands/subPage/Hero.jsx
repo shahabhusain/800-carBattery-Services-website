@@ -21,7 +21,7 @@ const Hero = ({hero, herobg}) => {
               <a href='tel:9234878979' className=' text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white md:flex hidden items-center gap-x-2'>{hero.btn}<span className=' rotate-320'><GoArrowRight size={30} /></span></a>
                     <button className=' text-[12px] md:text-[16px] w-fit bg-red-600 md:py-3 md:px-5 py-2 px-4 uppercase rounded-full text-white flex md:hidden items-center gap-x-2'>{hero.btn1}<span className=' rotate-320'><GoArrowRight size={30} /></span></button>
        </div>
-         <div className=' w-[45%] md:block hidden'>
+         <div className={`w-[45%] md:block hidden ${locale === "ar" ? " ml-10" : ""} `}>
           <Form />
          </div>
        </div>

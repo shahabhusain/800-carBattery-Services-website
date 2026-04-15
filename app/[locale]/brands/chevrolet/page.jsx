@@ -43,121 +43,101 @@ import bg from '@/public/brands/che/bg.webp'
 
 const Chevrolet = () => {
   const locale = useLocale()
-  const heroEnglishContent = {
-    desc:"Top Car Brands – 24/7 Emergency Support & Anywhere!",
-    title:{
-      span1:"Chevrolet Car Battery ",
-      span2:"Replacement"
+const heroEnglishContent = {
+  desc: "Top Car Brands – 24/7 Emergency Support & Anywhere!",
+  title: {
+    span1: "Chevrolet Car Battery ",
+    span2: "Replacement"
+  },
+  desc1: "No Need to Panic if your Chevrolet Car Battery is Not Working! At 800BatteryPro, we provide quick on-site battery replacement, battery boosting, 24/7 roadside assistance and advance repair services anywhere in Dubai.",
+  btn: "Call Now",
+  btn1: "Book Service Now"
+}
+
+const heroArabicContent = {
+  desc: "أفضل ماركات السيارات – دعم طارئ 24/7 أينما كنت!",
+  title: {
+    span1: "استبدال بطارية ",
+    span2: "شيفروليه"
+  },
+  desc1: "لا داعي للذعر إذا كانت بطارية سيارتك شيفروليه لا تعمل! في 800BatteryPro، نقدم استبدال بطارية سريع في الموقع، وتعزيز البطارية، ومساعدة على الطريق 24/7، وخدمات إصلاح متقدمة في أي مكان في دبي.",
+  btn: "اتصل الآن",
+  btn1: "احجز الخدمة الآن"
+};
+
+const serviceEnglishContent = {
+  subtitle: "SERVICES",
+  title: "Chevrolet Battery Replacement & Advanced Repair Services",
+  services: [
+    {
+      id: 1,
+      description: "Chevrolet is one of the best American Car brands with its wide bodies and peak performance powertrains, considered as highly maintenance-demanding vehicles. In the harsh climate of the UAE, Chevrolet faces stressful situations with their car batteries. At 800BatteryPro, we have certified Chevrolet specialists who can do a quick Car Battery Replacement for you under 15 minutes, that too at no cost! Our team of technicians has the best equipment and battery testing technology to work on every car job, delivering 100 percent satisfaction. If you are facing trouble starting your car, flickering lights in the dashboard, or dim headlights, then you should immediately contact our expert at +971528475675. A non-functional battery is the main reason behind a malfunctioning electrical system, which needs to be replaced as soon as possible. Our customer support will assign a Chevrolet specialist to you, helping you get back on the road instantly."
     },
-    desc1:"No Need to Panic if your Chevrolet Car Battery is Not Working! At 800BatteryPro, we provide quick on-site battery replacement, battery boosting, 24/7 roadside assistance and advance repair services anywhere in Dubai.",
-    btn:"Call Now",
-    btn1:"Book Service Now"
-  }
-  
-  const heroArabicContent = {
-    desc: "خدمة بطارية السيارة في دبي – مساعدة على الطريق 24/7",
-    title: {
-      span1: "800BatteryPro - خدمات بطاريات السيارات في دبي",
-      span2: "وأبوظبي!"
+    {
+      id: 2,
+      description: "To make sure you don't face any car battery-related issues, you should do a routine battery check-up after each 10,000 Km's or once a year. Our technicians only use OEM-approved spare parts and genuine car batteries for every car job. If you are stranded somewhere on the road, you should get our 24/7 roadside assistance instantly with free Car battery boosting services. We are just a call away at +971528475675."
     },
-    desc1: "تشغيل البطارية واستبدالها - مساعدة على الطريق - إصلاح سيارات متميز",
-    btn: "تحدث مع خبير",
-     btn1:"Book Service Now"
-  };
+    {
+      id: 3,
+      description: "800BatteryPro offers the following are the different types of Chevrolet Battery: For Chevrolet at 800BatteryPro, we recommend and provide different types of Car Batteries depending upon your car model. Starting with the Maintenance-free MF, Enhanced Flooded Battery EFB, traditional Lead Acid Battery, and also Absorbent Glass Mat AGM Chevrolet Batteries."
+    },
+    {
+      id: 4,
+      description: "Types of Chevrolet Car Batteries We Provide: MF BATTERY CHEVROLET: For standard Chevrolet Models we recommend Maintenance-Free Batteries for high power output and low maintenance. EFB BATTERY CHEVROLET: There are several Chevrolet Models with a start-stop technology system for which the Enhanced Flooded Battery (EFB) is the best solution used for their next-gen technology and capabilities of providing extended battery life. LEAD ACID BATTERY CHEVROLET: For customers who prefer a traditional lead acid battery for Chevrolet. For some of our customers who need a quick car battery solution within a tight budget, we recommend a Lead Acid Battery for Chevrolet. Our certified technicians recommend using the traditional lead-acid batteries, which are both trustworthy and inexpensive. CHEVROLET AGM BATTERY: For premium Chevrolet Models our technicians use and recommend the Absorbent Glass Mat (AGM) batteries, which are featured with highly capable, highly durable, and excellent performance. 800BatteryPro provides 24/7 roadside assistance with under 15 minutes of on-site Chevrolet car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months. For premium Chevrolet Battery replacement and advanced repairs, contact us now at +971528475675 or book a free car inspection appointment right now!"
+    },
+  ]
+}
 
-    const serviceEnglishContent = {
-    subtitle: "SERVICES",
-    title: "Chevrolet Battery Replacement & Advanced Repair Services",
-    services: [
-      {
-        id: 1,
-        description:
-          "Chevrolet is one of the best American Car brands with its wide bodies and peak performance powertrains, considered as highly maintenance-demanding vehicles. In the harsh climate of the UAE, Chevrolet faces stressful situations with their car batteries. At 800BatteryPro, we have certified Chevrolet specialists who can do a quick Car Battery Replacement for you under 15 minutes, that too at no cost! Our team of technicians has the best equipment and battery testing technology to work on every car job, delivering 100 percent satisfaction. If you are facing trouble starting your car, flickering lights in the dashboard, or dim headlights, then you should immediately contact our expert at +971528475675. A non-functional battery is the main reason behind a malfunctioning electrical system, which needs to be replaced as soon as possible. Our customer support will assign a Chevrolet specialist to you, helping you get back on the road instantly."
-      },
+const serviceArabicContent = {
+  subtitle: "الخدمات",
+  title: "استبدال بطارية شيفروليه وخدمات الإصلاح المتقدمة",
+  services: [
+    {
+      id: 1,
+      description: "شيفروليه هي واحدة من أفضل ماركات السيارات الأمريكية بهياكلها العريضة ومجموعات نقل الحركة عالية الأداء، وتعتبر من المركبات التي تتطلب صيانة عالية. في مناخ الإمارات القاسي، تواجه شيفروليه مواقف مرهقة مع بطاريات سياراتها. في 800BatteryPro، لدينا فنيو شيفروليه معتمدون يمكنهم القيام باستبدال سريع لبطارية السيارة لك خلال أقل من 15 دقيقة، وبدون تكلفة! لدى فريق فنيينا أفضل المعدات وتقنيات اختبار البطارية للعمل على كل مهمة سيارة، وتقديم رضا بنسبة 100٪. إذا كنت تواجه مشكلة في تشغيل سيارتك، أو أضواء خافتة على لوحة العدادات، أو أضواء أمامية خافتة، فيجب عليك الاتصال فورًا بخبيرنا على +971528475675. البطارية غير العاملة هي السبب الرئيسي وراء خلل النظام الكهربائي، والذي يحتاج إلى الاستبدال في أسرع وقت ممكن. سيقوم دعم العملاء لدينا بتعيين أخصائي شيفروليه لك، لمساعدتك على العودة إلى الطريق فورًا."
+    },
+    {
+      id: 2,
+      description: "للتأكد من أنك لا تواجه أي مشاكل متعلقة ببطارية السيارة، يجب عليك إجراء فحص دوري للبطارية بعد كل 10000 كيلومتر أو مرة واحدة في السنة. يستخدم فنيونا فقط قطع الغيار المعتمدة من OEM وبطاريات السيارات الأصلية لكل مهمة سيارة. إذا كنت عالقًا في مكان ما على الطريق، فيجب عليك الحصول على مساعدتنا على الطريق 24/7 فورًا مع خدمات تعزيز بطارية السيارة المجانية. نحن على بعد مكالمة هاتفية على +971528475675."
+    },
+    {
+      id: 3,
+      description: "يقدم 800BatteryPro الأنواع التالية من بطاريات شيفروليه: بالنسبة لشيفروليه في 800BatteryPro، نوصي ونقدم أنواعًا مختلفة من بطاريات السيارات اعتمادًا على موديل سيارتك. بدءًا من البطاريات الخالية من الصيانة MF، والبطارية المحسنة المغمورة EFB، وبطارية الرصاص الحمضية التقليدية، وأيضًا بطاريات شيفروليه AGM (مات الزجاج الماص)."
+    },
+    {
+      id: 4,
+      description: "أنواع بطاريات شيفروليه التي نقدمها: بطارية MF شيفروليه: للموديلات القياسية من شيفروليه، نوصي ببطاريات خالية من الصيانة لإخراج طاقة عالية وصيانة منخفضة. بطارية EFB شيفروليه: هناك العديد من موديلات شيفروليه المزودة بنظام تقنية التشغيل والإيقاف والتي تعتبر البطارية المحسنة المغمورة (EFB) الحل الأفضل لها بسبب تقنياتها من الجيل التالي وقدراتها على توفير عمر بطارية ممتد. بطارية الرصاص الحمضية شيفروليه: للعملاء الذين يفضلون بطارية الرصاص الحمضية التقليدية لشيفروليه. بالنسبة لبعض عملائنا الذين يحتاجون إلى حل سريع لبطارية السيارة بميزانية محدودة، نوصي ببطارية الرصاص الحمضية لشيفروليه. يوصي فنيونا المعتمدون باستخدام بطاريات الرصاص الحمضية التقليدية، والتي تتميز بأنها موثوقة وغير مكلفة. بطارية شيفروليه AGM: للموديلات الفاخرة من شيفروليه، يستخدم فنيونا ويوصون ببطاريات AGM (مات الزجاج الماص)، والتي تتميز بقدرات عالية ومتانة عالية وأداء ممتاز. يوفر 800BatteryPro مساعدة على الطريق 24/7 مع توصيل بطارية شيفروليه في الموقع خلال أقل من 15 دقيقة في أي مكان في دبي. اختبار البطارية والتوصيل مجاني، بينما يصل ضمان البطارية إلى 18 شهرًا. للحصول على استبدال بطارية شيفروليه فاخر وإصلاحات متقدمة، اتصل بنا الآن على +971528475675 أو احجز موعدًا لفحص سيارتك المجاني الآن!"
+    },
+  ]
+}
 
-           {
-        id: 2,
-        description:
-          "To make sure you don’t face any car battery-related issues, you should do a routine battery check-up after each 10,000 Km’s or once a year. Our technicians only use OEM-approved spare parts and genuine car batteries for every car job. If you are stranded somewhere on the road, you should get our 24/7 roadside assistance instantly with free Car battery boosting services. We are just a call away at +971528475675. "
-      },
+const serviceEnglishContent1 = {
+  subtitle: "SERVICES",
+  title: "Chevrolet Service Center in Dubai – Premium American Car Battery Replacement",
+  services: [
+    {
+      id: 1,
+      description: "800BatteryPro has years of experience delivering 100 percent satisfactory Chevrolet Car Battery Replacement services and advance repair services in the UAE. We have a team of certified Chevrolet experts and a well-equipped service center in Dubai for serving every car job with complete customer satisfaction. Our 24/7 roadside assistance and free car inspections are available for all Chevrolet Standard, hybrid, all-electric, or Premium Models, which generally happen after every 10,000 KMs or once a year. Don't hesitate to book your next car appointment with us, as our technicians only use OEM-approved spare parts and genuine car batteries, ensuring peak performance for your Chevrolet. You can reserve your slot for your next Battery Check-up with the best Chevrolet car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
+    },
+  ]
+}
 
+const serviceArabicContent1 = {
+  subtitle: "الخدمات",
+  title: "مركز خدمة شيفروليه في دبي – استبدال بطارية سيارة أمريكية فاخرة",
+  services: [
+    {
+      id: 1,
+      description: "يمتلك 800BatteryPro سنوات من الخبرة في تقديم خدمات استبدال بطارية شيفروليه بنسبة رضا 100٪ وخدمات الإصلاح المتقدمة في الإمارات. لدينا فريق من خبراء شيفروليه المعتمدين ومركز خدمة مجهز تجهيزًا جيدًا في دبي لخدمة كل مهمة سيارة برضا عملاء كامل. مساعدتنا على الطريق 24/7 وفحوصات السيارات المجانية متاحة لجميع موديلات شيفروليه القياسية والهجينة والكهربائية بالكامل أو الفاخرة، والتي تتم عادة بعد كل 10000 كيلومتر أو مرة واحدة في السنة. لا تتردد في حجز موعد سيارتك القادم معنا، لأن فنيونا يستخدمون فقط قطع الغيار المعتمدة من OEM وبطاريات السيارات الأصلية، مما يضمن الأداء الأمثل لسيارتك شيفروليه. يمكنك حجز موعدك لفحص البطارية القادم مع أفضل خبراء سيارات شيفروليه في دبي. اتصل بنا على +971528475675 للحصول على مساعدة طارئة على الطريق 24/7."
+    },
+  ]
+}
 
-           {
-        id: 3,
-        description:
-          "800BatteryPro offers the following are the different types of Chevrolet Battery: For Chevrolet at 800BatteryPro, we recommend and provide different types of Car Batteries depending upon your car model. Starting with the Maintenance-free MF, Enhanced Flooded Battery EFB, traditional Lead Acid Battery, and also Absorbent Glass Mat AGM Chevrolet Batteries."
-      },
-
-         {
-        id: 4,
-        description:
-          "Types of Chevrolet Car Batteries We Provide: MF BATTERY FORD: For standard Chevrolet Models we recommend Maintenance-Free Batteries for high power output and low maintenance. EFB BATTERY FORD: There are several Chevrolet Models with a start-stop technology system for which the Enhanced Flooded Battery (EFB) is the best solution used for their next-gen technology and capabilities of providing extended battery life. LEAD ACID BATTERY Chevrolet: For customers who prefer a traditional lead acid battery for Chevrolet. For some of our customers who need a quick car battery solution within a tight budget, we recommend a Lead Acid Battery for Chevrolet. Our certified technicians recommend using the traditional lead-acid batteries, which are both trustworthy and inexpensive. FORD AGM BATTERY: For premium Chevrolet Models our technicians use and recommend the Absorbent Glass Mat (AGM) batteries, which are featured with highly capable, highly durable, and excellent performance. 800BatteryPro provides 24/7 roadside assistance with under 15 minutes of on-site Chevrolet car battery delivery anywhere in Dubai. Our battery testing and delivery are free of cost, while our battery warranty lasts up to 18 months.  For premium Chevrolet Battery replacement and advanced repairs, contact us now at +971528475675 or book a free car inspection appointment right now!"
-      },
-
-      
-      
-    ]
-  }
-
-  const serviceArabicContent = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-      {
-        id: 2,
-        description:
-          "فحص وتشخيص البطارية للتأكد من أنها تعمل بكفاءة."
-      },
-      {
-        id: 3,
-        description:
-          "خدمة المساعدة على الطريق على مدار الساعة للبطاريات الفارغة."
-      },
-      {
-        id: 4,
-        description:
-          "بطاريات عالية الجودة مع ضمان وأداء طويل الأمد."
-      },
-
-    ]
-  }
-
-      const serviceEnglishContent1 = {
-    subtitle: "SERVICES",
-    title: "Chevrolet Service Center in Dubai – Premium American Car Battery Replacement",
-    services: [
-      {
-        id: 1,
-        description:
-          "800BatteryPro has years of experience delivering 100 percent satisfactory Chevrolet Car Battery Replacement services and advance repair services in the UAE. We have a team of certified Chevrolet experts and a well-equipped service center in Dubai for serving every car job with complete customer satisfaction. Our 24/7 roadside assistance and free car inspections are available for all Chevrolet Standard, hybrid, all-electric, or Premium Models, which generally happen after every 10,000 KMs or once a year. Don’t hesitate to book your next car appointment with us, as our technicians only use OEM-approved spare parts and genuine car batteries, ensuring peak performance for your Chevrolet.You can reserve your slot for your next Battery Check-up with the best Chevrolet car experts in Dubai. Contact us at +971 528475675 for 24/7 emergency roadside assistance."
-      },
-     
-    ]
-  }
-
-  const serviceArabicContent1 = {
-    subtitle: "الخدمات",
-    title: "خدمات بطاريات السيارات الموثوقة",
-    services: [
-      {
-        id: 1,
-        description:
-          "خدمة استبدال بطارية السيارة في موقعك مع تركيب سريع."
-      },
-
-    ]
-  }
-
-  const englishServices = [
+const englishServices = [
   {
     img: serviceImg1,
     title: "Premium 24/7 Customer",
-    desc: "800BatteryPro has a dedicated customer support team active 24/7 for all GMC car battery replacement and advanced repair services  in Dubai and Abu Dhabi."
+    desc: "800BatteryPro has a dedicated customer support team active 24/7 for all GMC car battery replacement and advanced repair services in Dubai and Abu Dhabi."
   },
   {
     img: serviceImg2,
@@ -179,165 +159,160 @@ const Chevrolet = () => {
 const arabicServices = [
   {
     img: serviceImg1,
-    title: "استبدال بطارية السيارة",
-    desc: "استبدال سريع وموثوق لبطارية السيارة يصل إلى موقعك خلال 30 دقيقة."
+    title: "دعم عملاء مميز 24/7",
+    desc: "لدى 800BatteryPro فريق دعم عملاء مخصص يعمل 24/7 لجميع خدمات استبدال بطارية شيفروليه والإصلاح المتقدم في دبي وأبوظبي."
   },
   {
     img: serviceImg2,
-    title: "تشغيل بطارية السيارة",
-    desc: "خدمة تشغيل البطارية بسرعة وسهولة أينما كنت."
+    title: "فنيو شيفروليه معتمدون",
+    desc: "يتمتع فنيونا بخبرة تزيد عن 5 سنوات في العمل على جميع ماركات السيارات الأمريكية بما في ذلك شيفروليه."
   },
   {
     img: serviceImg3,
-    title: "المساعدة على الطريق",
-    desc: "دعم فوري على الطريق في جميع أنحاء الإمارات في أي وقت."
+    title: "قطع غيار شيفروليه أصلية",
+    desc: "يستخدم فنيو شيفروليه المعتمدون لدينا فقط البطاريات الأصلية وقطع الغيار المعتمدة من OEM لكل مهمة سيارة."
   },
   {
     img: serviceImg4,
-    title: "فحص السيارة",
-    desc: "تشخيص متقدم لتحديد مشاكل السيارة وحلها بدقة."
+    title: "بطارية السيارة خلال 15 دقيقة",
+    desc: "مساعدتنا على الطريق 24/7 لضمان سلامتك على الطريق. نقدم فحص بطارية مجاني وتوصيل بطارية سيارة مجاني بدون رسوم خفية."
   }
 ]
 
-   const englishContent = [
+const englishContent = [
   {
     icons: <FaSitemap />,
     title: "Premium Customer Support",
-    desc: "800BatteryPro provides you with 24/7 customer support for your Maserati car battery and advanced repair services in Dubai and Abu Dhabi. "
+    desc: "800BatteryPro provides you with 24/7 customer support for your Maserati car battery and advanced repair services in Dubai and Abu Dhabi."
   },
   {
     icons: <FaSitemap />,
     title: "Certified Maserati specialists",
-    desc: " We have 30+ certified Maserati specialists, who are capable of handling every car programming, car battery replacement, and advance repair jobs delivering every car job with 100 percent customer satisfaction."
+    desc: "We have 30+ certified Maserati specialists, who are capable of handling every car programming, car battery replacement, and advance repair jobs delivering every car job with 100 percent customer satisfaction."
   },
   {
     icons: <FaSitemap />,
     title: "Using Genuine Maserati Parts",
-    desc: "Our technicians only use OEM-approved spare parts and genuine car batteries, making sure you stay safe on the road.  "
+    desc: "Our technicians only use OEM-approved spare parts and genuine car batteries, making sure you stay safe on the road."
   },
   {
     icons: <FaSitemap />,
     title: "Free Car Battery Delivery & Under 30 Minutes Service",
-    desc: "Upon receiving your emergency call our team of technicians provides you with onsite battery replacement and free battery testing services around the clock. "
+    desc: "Upon receiving your emergency call our team of technicians provides you with onsite battery replacement and free battery testing services around the clock."
   }
 ]
 
 const arabicContent = [
   {
     icons: <FaSitemap />,
-    title: "استجابة سريعة",
-    desc: "خدمة سريعة لإعادة تشغيل سيارتك والعودة إلى الطريق دون انتظار طويل."
+    title: "دعم عملاء مميز",
+    desc: "يوفر لك 800BatteryPro دعم عملاء 24/7 لبطارية سيارتك شيفروليه وخدمات الإصلاح المتقدمة في دبي وأبوظبي."
   },
   {
     icons: <FaSitemap />,
-    title: "بطاريات عالية الجودة",
-    desc: "نوفر بطاريات عالية الأداء وطويلة العمر تناسب مجموعة واسعة من السيارات."
+    title: "فنيو شيفروليه معتمدون",
+    desc: "لدينا أكثر من 30 فني شيفروليه معتمد، قادرين على التعامل مع كل برمجة السيارات واستبدال بطارية السيارة ومهام الإصلاح المتقدمة، وتقديم كل مهمة سيارة بنسبة رضا عملاء 100%."
   },
   {
     icons: <FaSitemap />,
-    title: "فنيون متخصصون",
-    desc: "يضمن خبراؤنا المدربون تركيب البطارية بأمان وكفاءة دون أي متاعب."
+    title: "استخدام قطع غيار شيفروليه الأصلية",
+    desc: "يستخدم فنيونا فقط قطع الغيار المعتمدة من OEM وبطاريات السيارات الأصلية، مما يضمن لك السلامة على الطريق."
   },
   {
     icons: <FaSitemap />,
-    title: "رضا العملاء",
-    desc: "نركز على تقديم خدمة موثوقة وتجربة سلسة لكل عميل."
+    title: "توصيل بطارية سيارة مجاني وخدمة خلال أقل من 30 دقيقة",
+    desc: "عند استلام مكالمة الطوارئ الخاصة بك، يقدم لك فريق فنيينا خدمة استبدال البطارية في الموقع وخدمات فحص البطارية المجانية على مدار الساعة."
   }
 ]
 
-    const englishFaqs = [
-        {
-            question: " What type of Battery does my Chevrolet need?",
-            answer: "At 800BatteryPro, we have certified Chevrolet technicians who are great at working on all American car brands using only OEM-approved and genuine Car batteries. We recommend using AGM (Absorbent Glass Mat) or EFB (Enhanced Flooded Batteries) for cars with start-stop systems. While for the hybrid or all-electric models, the lithium-ion batteries. For more details related to certified Chevrolet technicians, call us at +971 528475675."
-        },
-        {
-            question: "How long does a Chevrolet battery last?",
-            answer: " A genuine Chevrolet Battery may last from 2-5 years, which directly depends upon the mileage of your car, the climate conditions in which you drive the car, and how you drive. Which needs a routine check-up after a specific time, most commonly yearly or after 10,000 KM. You can book a free battery check-up at 800BatteryPro right now!"
-        },
-        {
-            question: "How much does it cost to replace a Chevrolet battery?",
-            answer: "Chevrolet battery replacement cost depends on the type and model of your car, while it also depends on the type of Battery too. When it comes to 800BatteryPro, the average prices for a car battery range from AED 500 to AED 1,500 in Dubai and Abu Dhabi, which also includes free installations and system check-ups."
-        },
-        {
-            question: "Do I need to reset my Chevrolet system after battery replacement?",
-            answer: "Yes, our Chevrolet specialists ensure that during battery replacement, all systems are reset and recalibrated for proper functionality of the electronic system. The Battery Management System (BMS) is taken care of to avoid further technical issues in your car. As the recalibration of the start-stop systems, infotainment, and other advance system features."
-        },
-
-
-            {
-            question: "Can I upgrade to a lithium battery for my Chevrolet?",
-            answer: " Yes, it’s possible to upgrade to a premium lithium battery for Chevrolet, with advance features, lighter weight, longevity, and faster charging capabilities. At the same time, our Chevrolet Car Battery specialist ensures the use of OEM-Approved Battery for all car jobs. "
-        },
-
-
-            {
-            question: "Do you offer on-site Chevrolet battery replacement in Dubai?",
-            answer: "Yes, 800BatteryPro offers on-site Chevrolet battery replacement in Dubai. You can call us for 24/7 roadside assistance or any other car battery solutions anywhere in Dubai and Abu Dhabi."
-        },
-
-
-            {
-            question: "Any American Car Experts in Dubai?",
-            answer: " Yes, 800BatteryPro is one of the trusted and has a certified team of American car experts in Dubai. We have a well-equipped service center with the latest technology used for every German car repair job. We treat every car brand, including Jeep, GMC, Chevrolet, and Tesla, etc. Call us now for any American car battery replacement services at +971528475675."
-        },
-
-
-            {
-            question: "Do we provide American Car Battery Replacement in Abu Dhabi?",
-            answer: "Yes, 800BatteryPro has well-equipped service centers in Dubai and Abu Dhabi. We treat every American car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services. "
-        },
-    
-           ]
-
- const arabicFaqs = [
+const englishFaqs = [
   {
-    question: "ما هي الخدمات التي تقدمونها؟",
-    answer:
-      "نقدم خدمات شاملة لبطاريات السيارات تشمل فحص البطارية، تشغيل السيارة عند توقفها، استبدال البطارية، والمساعدة على الطريق. كما نقدم خدمات إصلاح السيارات المميزة ودعم الطوارئ على مدار الساعة في دبي وأبوظبي."
+    question: "What type of Battery does my Chevrolet need?",
+    answer: "At 800BatteryPro, we have certified Chevrolet technicians who are great at working on all American car brands using only OEM-approved and genuine Car batteries. We recommend using AGM (Absorbent Glass Mat) or EFB (Enhanced Flooded Batteries) for cars with start-stop systems. While for the hybrid or all-electric models, the lithium-ion batteries. For more details related to certified Chevrolet technicians, call us at +971 528475675."
   },
   {
-    question: "كم يستغرق استبدال البطارية؟",
-    answer:
-      "يمكن لفنيينا المحترفين استبدال بطارية سيارتك عادةً خلال 15 إلى 30 دقيقة في موقعك. نحن ندرك أن وقتك مهم، لذلك نحرص على تقديم خدمة سريعة وفعالة."
+    question: "How long does a Chevrolet battery last?",
+    answer: "A genuine Chevrolet Battery may last from 2-5 years, which directly depends upon the mileage of your car, the climate conditions in which you drive the car, and how you drive. Which needs a routine check-up after a specific time, most commonly yearly or after 10,000 KM. You can book a free battery check-up at 800BatteryPro right now!"
   },
   {
-    question: "هل توفرون المساعدة على الطريق على مدار الساعة؟",
-    answer:
-      "نعم، نقدم خدمة المساعدة على الطريق على مدار 24 ساعة في دبي وأبوظبي. سواء كان ذلك في النهار أو الليل أو في عطلة نهاية الأسبوع أو العطلات الرسمية، فريقنا مستعد دائمًا لمساعدتك في أي حالة طارئة تتعلق بالبطارية."
+    question: "How much does it cost to replace a Chevrolet battery?",
+    answer: "Chevrolet battery replacement cost depends on the type and model of your car, while it also depends on the type of Battery too. When it comes to 800BatteryPro, the average prices for a car battery range from AED 500 to AED 1,500 in Dubai and Abu Dhabi, which also includes free installations and system check-ups."
   },
   {
-    question: "ما هي المناطق التي تغطونها؟",
-    answer:
-      "نغطي جميع المناطق الرئيسية في دبي وأبوظبي، بما في ذلك وسط مدينة دبي، دبي مارينا، أبراج بحيرات الجميرا (JLT)، الخليج التجاري، جزيرة الريم، وجزيرة ياس."
+    question: "Do I need to reset my Chevrolet system after battery replacement?",
+    answer: "Yes, our Chevrolet specialists ensure that during battery replacement, all systems are reset and recalibrated for proper functionality of the electronic system. The Battery Management System (BMS) is taken care of to avoid further technical issues in your car. As the recalibration of the start-stop systems, infotainment, and other advance system features."
   },
   {
-    question: "هل تقدمون ضمانًا على البطاريات؟",
-    answer:
-      "نعم، جميع بطارياتنا تأتي مع ضمان شامل. تختلف مدة الضمان حسب نوع وعلامة البطارية. يرجى التواصل معنا للحصول على تفاصيل الضمان الخاصة بكل نوع من البطاريات."
-  }
+    question: "Can I upgrade to a lithium battery for my Chevrolet?",
+    answer: "Yes, it's possible to upgrade to a premium lithium battery for Chevrolet, with advance features, lighter weight, longevity, and faster charging capabilities. At the same time, our Chevrolet Car Battery specialist ensures the use of OEM-Approved Battery for all car jobs."
+  },
+  {
+    question: "Do you offer on-site Chevrolet battery replacement in Dubai?",
+    answer: "Yes, 800BatteryPro offers on-site Chevrolet battery replacement in Dubai. You can call us for 24/7 roadside assistance or any other car battery solutions anywhere in Dubai and Abu Dhabi."
+  },
+  {
+    question: "Any American Car Experts in Dubai?",
+    answer: "Yes, 800BatteryPro is one of the trusted and has a certified team of American car experts in Dubai. We have a well-equipped service center with the latest technology used for every American car repair job. We treat every car brand, including Jeep, GMC, Chevrolet, and Tesla, etc. Call us now for any American car battery replacement services at +971528475675."
+  },
+  {
+    question: "Do we provide American Car Battery Replacement in Abu Dhabi?",
+    answer: "Yes, 800BatteryPro has well-equipped service centers in Dubai and Abu Dhabi. We treat every American car battery replacement with genuine and premium car battery replacements. Our customer base is 100 percent satisfied with our auto repair and battery services. If your car battery is dead, call us now at +971528475675 for emergency assistance services."
+  },
 ]
 
+const arabicFaqs = [
+  {
+    question: "ما نوع البطارية التي تحتاجها سيارة شيفروليه الخاصة بي؟",
+    answer: "في 800BatteryPro، لدينا فنيو شيفروليه معتمدون وهم ماهرون في العمل على جميع ماركات السيارات الأمريكية باستخدام فقط بطاريات السيارات الأصلية والمعتمدة من OEM. نوصي باستخدام AGM (مات الزجاج الماص) أو EFB (البطاريات المحسنة المغمورة) للسيارات المزودة بأنظمة التشغيل والإيقاف. بينما بالنسبة للموديلات الهجينة أو الكهربائية بالكامل، نوصي ببطاريات الليثيوم أيون. لمزيد من التفاصيل المتعلقة بفنيي شيفروليه المعتمدين، اتصل بنا على +971528475675."
+  },
+  {
+    question: "كم تدوم بطارية شيفروليه؟",
+    answer: "قد تدوم بطارية شيفروليه الأصلية من 2-5 سنوات، والتي تعتمد بشكل مباشر على عدد الكيلومترات التي تقطعها سيارتك، وظروف المناخ التي تقود فيها السيارة، وكيفية قيادتك. مما يحتاج إلى فحص روتيني بعد وقت محدد، الأكثر شيوعًا سنويًا أو بعد 10000 كيلومتر. يمكنك حجز فحص بطارية مجاني في 800BatteryPro الآن!"
+  },
+  {
+    question: "كم تكلفة استبدال بطارية شيفروليه؟",
+    answer: "تعتمد تكلفة استبدال بطارية شيفروليه على نوع وموديل سيارتك، كما تعتمد أيضًا على نوع البطارية. عندما يتعلق الأمر بـ 800BatteryPro، يتراوح متوسط أسعار بطارية السيارة من 500 إلى 1500 درهم إماراتي في دبي وأبوظبي، والذي يشمل أيضًا التركيب المجاني وفحوصات النظام."
+  },
+  {
+    question: "هل أحتاج إلى إعادة ضبط نظام شيفروليه بعد استبدال البطارية؟",
+    answer: "نعم، يضمن فنيو شيفروليه لدينا أنه أثناء استبدال البطارية، يتم إعادة ضبط جميع الأنظمة وإعادة معايرتها من أجل الأداء السليم للنظام الإلكتروني. يتم الاهتمام بنظام إدارة البطارية (BMS) لتجنب المزيد من المشكلات الفنية في سيارتك، مثل إعادة معايرة أنظمة التشغيل والإيقاف ونظام المعلومات والترفيه وميزات النظام المتقدمة الأخرى."
+  },
+  {
+    question: "هل يمكنني الترقية إلى بطارية ليثيوم لسيارة شيفروليه الخاصة بي؟",
+    answer: "نعم، من الممكن الترقية إلى بطارية ليثيوم فاخرة لسيارة شيفروليه، بميزات متقدمة ووزن أخف وطول عمر وقدرات شحن أسرع. وفي الوقت نفسه، يضمن أخصائي بطارية شيفروليه لدينا استخدام بطارية معتمدة من OEM لجميع مهام السيارات."
+  },
+  {
+    question: "هل تقدمون خدمة استبدال بطارية شيفروليه في الموقع في دبي؟",
+    answer: "نعم، يقدم 800BatteryPro خدمة استبدال بطارية شيفروليه في الموقع في دبي. يمكنك الاتصال بنا للحصول على مساعدة على الطريق 24/7 أو أي حلول أخرى لبطارية السيارة في أي مكان في دبي وأبوظبي."
+  },
+  {
+    question: "هل يوجد خبراء سيارات أمريكية في دبي؟",
+    answer: "نعم، 800BatteryPro هو واحد من المراكز الموثوقة ولديه فريق معتمد من خبراء السيارات الأمريكية في دبي. لدينا مركز خدمة مجهز جيدًا بأحدث التقنيات المستخدمة في كل مهمة إصلاح للسيارات الأمريكية. نتعامل مع كل ماركات السيارات بما في ذلك جيب وجي إم سي وشيفروليه وتسلا وغيرها. اتصل بنا الآن لأي خدمة استبدال بطارية سيارة أمريكية على +971528475675."
+  },
+  {
+    question: "هل تقدمون خدمة استبدال بطارية السيارات الأمريكية في أبوظبي؟",
+    answer: "نعم، لدى 800BatteryPro مراكز خدمة مجهزة تجهيزًا جيدًا في دبي وأبوظبي. نتعامل مع كل استبدال بطارية سيارة أمريكية باستبدال بطارية أصلية وفاخرة. قاعدة عملائنا راضية بنسبة 100٪ عن خدمات إصلاح السيارات والبطاريات لدينا. إذا كانت بطارية سيارتك فارغة، اتصل بنا الآن على +971528475675 للحصول على خدمات المساعدة الطارئة."
+  },
+]
 
+const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
+const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
+const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
+const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
+const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
+const faqs = locale === "ar" ? arabicFaqs : englishFaqs
 
-
-      const hero = locale === "en" ? heroEnglishContent : locale === "ar" ? heroArabicContent : null
-      const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
-      const serviceContent = locale === "ar" ? serviceArabicContent : serviceEnglishContent
-      const serviceContent1 = locale === "ar" ? serviceArabicContent1 : serviceEnglishContent1
-      const data = locale === "en" ? englishContent : locale === "ar" ? arabicContent : null
-       const faqs = locale === "ar" ? arabicFaqs : englishFaqs
-
-       const text = locale === "ar"
-        ? {
-            desc: "ماركات السيارات التي نخدمها",
-            title1: "متوافق مع جميع",
-            title2: "ماركات السيارات الرئيسية",
-        }
-        : {
-            desc: "Chevrolet Car Models We Serve",
-            title1: "Includes All",
-            title2: "Major Models & Variants",
-        }
+const text = locale === "ar"
+  ? {
+      desc: "ماركات السيارات التي نخدمها",
+      title1: "متوافق مع جميع",
+      title2: "ماركات السيارات الرئيسية",
+    }
+  : {
+      desc: "Chevrolet Car Models We Serve",
+      title1: "Includes All",
+      title2: "Major Models & Variants",
+    }
 
         const batteryText =
   locale === "ar"
