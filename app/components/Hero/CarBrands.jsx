@@ -124,7 +124,7 @@ const CarBrands = () => {
 
     // Function to handle view all click
     const handleViewAll = () => {
-        window.location.href = `/${locale}/brands`
+        window.location.href = `/${locale}/car-brands`
     }
 
     return (
@@ -171,7 +171,7 @@ const CarBrands = () => {
                             
                             return (
                                 <Link 
-                                    href={`/${locale}/brands/${item.slug}`}
+                                    href={`/${locale}/car-brands/${item.slug}`}
                                     key={index} 
                                     className={`
                                         group relative border-r border-b border-gray-100 p-4 sm:p-5 md:p-6

@@ -72,7 +72,7 @@ const Header = () => {
   }, [handleScroll, mobileMenuOpen]);
 
   const englishLinks = [
-    { path: "/brands", name: "Brands" },
+    { path: "/car-brands", name: "Brands" },
     { 
       path: "/services", 
       name: "Services",
@@ -123,8 +123,8 @@ const Header = () => {
         },
       ] 
     },
-    { path: "/about", name: "Our Company" },
-    { path: "/offer", name: "Offers" },
+    { path: "/about-us", name: "Our Company" },
+    { path: "/offers", name: "Offers" },
     // { path: "/shop", name: "Shop" },
   ];
 

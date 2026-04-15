@@ -16,6 +16,17 @@ import Services from '@/app/components/locations/Services'
 import { FaSitemap } from 'react-icons/fa'
 import Faq from '@/app/components/Brands/subPage/Faq'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
+
+export const metadata = {
+  title: "Car Battery Replacement & Mobile Repair in Abu Dhabi | 800BatteryPro",
+  description:
+    "Expert mobile battery, 24/7 RSA, & car repair across Abu Dhabi city, Khalifa City, Al Ain & surrounds. Doorstep service — book now.",
+      keywords: "mobile mechanic Abu Dhabi, car repair at home Abu Dhabi, roadside assistance Abu Dhabi,  car battery replacement near me Abu Dhabi, car battery change Abu Dhabi, dead car battery Abu Dhabi, car battery price Abu Dhabi,  Free Car Battery, Expert Car Battery, mobile battery replacement UAE, replace car battery Abu Dhabi, best car battery replacement UAE, battery change at home service Abu Dhabi",
+      alternates: {
+    canonical: "https://800batterypro.com/best-car-battery-replacement-abu-dhabi",
+  },
+};
+
 const AbuDhabi = () => {
     const locale = useLocale()
 // Hero Section

@@ -12,6 +12,16 @@ import Footer from '../components/Footer'
 import Review from '../components/Hero/Review'
 import HowItWorks from '../components/Hero/HowItWorks'
 
+export const metadata = {
+  title: "800 Battery Pro | Car Battery & 24/7 RSA in Dubai",
+  description:
+    "800BatteryPro—Fast, Reliable Car Battery and 24/7 Roadside Assistance Services Delivered Anywhere in Dubai and Abu Dhabi. Get help in minutes!",
+      keywords: "car Battery replacement in Dubai, Car battery replacement in Abu Dhabi, Audi car repair Dubai, mobile car repair Dubai, 24/7 roadside assistance Dubai, 24/7 roadside assistance in Abu Dhabi,best mobile mechanic UAE",
+      alternates: {
+    canonical: "https://800batterypro.com",
+  },
+};
+
 const Page = () => {
   return (
     <div>

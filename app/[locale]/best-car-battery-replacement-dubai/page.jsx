@@ -16,6 +16,17 @@ import Services from '@/app/components/locations/Services'
 import { FaSitemap } from 'react-icons/fa'
 import Faq from '@/app/components/Brands/subPage/Faq'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
+
+export const metadata = {
+  title: "Car Battery Replacement & Mobile Repair in Dubai | 800BatteryPro",
+  description:
+    "Expert mobile car battery replacement, 24/7 roadside assistance & car repair across all areas of Dubai. We come to you — book 800BatteryPro now.",
+      keywords: "car battery replacement near me Dubai, car battery change Dubai, dead car battery Dubai, Free Car Battery, Expert Car Battery, car battery price Dubai, mobile battery replacement UAE, replace car battery Dubai, best car battery replacement UAE, battery change at home service Dubai",
+      alternates: {
+    canonical: "https://800batterypro.com/best-car-battery-replacement-dubai",
+  },
+};
+
 const Dubai = () => {
     const locale = useLocale()
   // Hero Section

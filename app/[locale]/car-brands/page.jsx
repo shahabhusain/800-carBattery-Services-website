@@ -8,6 +8,16 @@ import Faqs from '@/app/components/Services/Faqs'
 import React from 'react'
 
 
+export const metadata = {
+  title: "Car Brands We Serve | 800BatteryPro",
+  description:
+    "800BatteryPro a Trusted Car Repair Service for Luxury American & European Car Brands. Fast, Trusted & Affordable with 100% Satisfaction Guarantee. Call Us Now",
+      keywords: "car brands in Dubai, American Car Specialist in Dubai, German Car Experts in Dubai, Italian Car Experts, British Car Experts, 24/7 RSA in Dubai, Premium Car repair",
+      alternates: {
+    canonical: "https://800batterypro.com/car-brands",
+  },
+};
+
 const Brands = () => {
   return (
     <div>
