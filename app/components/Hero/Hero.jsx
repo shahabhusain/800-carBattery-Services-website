@@ -51,17 +51,18 @@ const Hero = () => {
 
 
   return (
-    <div className='text-white'>
+<div className='z-50'>
+    <div className='text-white '>
       
       <div className='relative'>
 
         <Image
-          className='w-full md:h-[800px] h-[600px] object-cover'
+          className='w-full md:h-[800px] h-[500px] object-cover'
           src={herobg}
           alt='image'
         />
 
-        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-[600px]' />
+        <div className='bg-[#000000BD] absolute top-0 w-full md:h-screen h-[500px]' />
 
         <div
           className={`absolute md:top-60 top-32 ${
@@ -97,16 +98,14 @@ const Hero = () => {
             </span>
           </button>
         </div>
-
       </div>
-
+    </div>
          {/* Appointment Modal */}
       <AppointmentModal 
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
       />
-
-    </div>
+</div>
   )
 }
 

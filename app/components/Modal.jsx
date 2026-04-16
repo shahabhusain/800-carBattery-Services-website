@@ -1,9 +1,17 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { HiOutlineX } from 'react-icons/hi';
 
 const Modal = ({ isOpen, onClose, children, title }) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -15,20 +23,21 @@ const Modal = ({ isOpen, onClose, children, title }) => {
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!mounted || !isOpen) return null;
 
-  return (
+  // Use portal to render modal at the root level
+  return createPortal(
     <>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 backdrop-blur-2xl bg-black/70 backdrop-blur-sm z-[3000] transition-all duration-300"
+        className="fixed inset-0 backdrop-blur-2xl bg-black/70 z-[9999] transition-all duration-300"
         onClick={onClose}
       />
       
       {/* Modal */}
-      <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4">
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
         <div 
-          className="relative w-full max-w-md bg-transparent rounded-2xl shadow-2xl transition-all duration-300 animate-in fade-in zoom-in"
+          className="relative w-full max-w-md bg-transparent rounded-2xl shadow-2xl transition-all duration-300"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
@@ -46,7 +55,8 @@ const Modal = ({ isOpen, onClose, children, title }) => {
           </div>
         </div>
       </div>
-    </>
+    </>,
+    document.body // This renders modal directly in body, bypassing all parent z-index contexts
   );
 };
 

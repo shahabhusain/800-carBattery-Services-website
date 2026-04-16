@@ -312,6 +312,7 @@ const arabicFaqs = [
       <div className='bg-white pb-12 rounded-t-4xl relative z-10'>
         <About />
         <Services /> 
+         <Banners />
         <HowItWorks />
       </div>
 

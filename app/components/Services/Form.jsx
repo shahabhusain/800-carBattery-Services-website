@@ -192,7 +192,7 @@ const Form = ({ onSuccess }) => {
           <button 
             type="submit"
             disabled={loading}
-            className='py-2 px-5 rounded-full mt-4 bg-red-500 text-white uppercase hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+            className='py-2 px-5 rounded-full mt-4 md:text-[16px] text-[12px] bg-red-500 text-white uppercase hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
           >
             {loading ? text.booking : text.button}
           </button>

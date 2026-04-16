@@ -53,7 +53,7 @@ const HowItWorks = () => {
     const cards = locale === "en" ? englishCards : locale === "ar" ? arabicCards : englishCards
     
     return (
-        <div className='w-full py-28 px-4 flex flex-col items-center justify-center gap-y-6 bg-gray-50' dir={locale === "ar" ? "rtl" : "ltr"}>
+        <div className='w-full md:py-28 py-12 px-4 flex flex-col items-center justify-center gap-y-6 bg-gray-50' dir={locale === "ar" ? "rtl" : "ltr"}>
             <span className='py-2 px-6 rounded-full bg-red-100 text-red-700 font-semibold text-sm tracking-wide shadow-sm'>
                 {locale === "en" ? "How it Works?" : locale === "ar" ? "كيف يعمل؟" : "How it Works?"}
             </span>

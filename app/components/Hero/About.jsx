@@ -33,12 +33,12 @@ const arabicContent = {
 const englishCards = [
   {
     icon:<FaEye />,
-    title:"5+ ",
+    title:"10+ ",
     desc:"years of experience"
   },
   {
     icon:<FaEye />,
-    title:"5000+",
+    title:"10000+",
     desc:"Loyal Customer Serve"
   },
   {
@@ -85,7 +85,7 @@ const About = () => {
   const isRTL = locale === 'ar'
 
   return (
-    <div className='bg-gradient-to-r from-black to-red-900 rounded-t-4xl md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className='bg-gradient-to-r from-black to-red-900 md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
        <div className='w-[90%] mx-auto'>
            <div className=' grid md:grid-cols-4 gap-3 grid-cols-2'>
               {

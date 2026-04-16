@@ -21,7 +21,7 @@ const Hero = () => {
     <div className='text-white'>
       <div className='relative'>
         <Image 
-          className='w-full md:h-[450px] h-[350px] object-cover' 
+          className='w-full md:h-[450px] h-[400px] object-cover' 
           src={herobg} 
           alt='image'
         />
