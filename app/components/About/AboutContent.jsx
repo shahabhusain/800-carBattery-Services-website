@@ -123,12 +123,7 @@ const AboutContent = () => {
               </button>
             ))}
           </div>
-          <button className='w-fit bg-red-600 py-3 px-5 uppercase rounded-full text-white flex items-center gap-x-2'>
-            {content.cta}
-            <span className={isRTL ? 'rotate-180' : ''}>
-              <GoArrowRight size={30} />
-            </span>
-          </button>
+  
         </div>
       </div>
        </div>
