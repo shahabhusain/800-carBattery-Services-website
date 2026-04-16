@@ -11,6 +11,7 @@ import Trusted from '../components/Hero/Trusted'
 import Footer from '../components/Footer'
 import Review from '../components/Hero/Review'
 import HowItWorks from '../components/Hero/HowItWorks'
+import Cards from '../components/Hero/Cards'
 
 export const metadata = {
   title: "800 Battery Pro | Car Battery & 24/7 RSA in Dubai",
@@ -33,6 +34,7 @@ const Page = () => {
       <Review /> {/* move it here */}
 
       <div className='bg-white pb-12 rounded-t-4xl relative z-10'>
+        <Cards />
         <About />
         <Services />
         <Banners />

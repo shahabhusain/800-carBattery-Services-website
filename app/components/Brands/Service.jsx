@@ -5,6 +5,7 @@ import serviceImg2 from '@/public/services/2.webp'
 import serviceImg3 from '@/public/services/3.webp'
 import serviceImg4 from '@/public/services/4.webp'
 import { useLocale } from 'next-intl'
+import Link from 'next/link'
 const Service = () => {
 const englishServices = [
   {
@@ -56,7 +57,7 @@ const arabicServices = [
     const services = locale === "en" ? englishServices : locale === "ar" ? arabicServices : null
 
   return (
-    <div className=' w-[85%] mx-auto flex flex-col gap-y-3 py-20'>
+    <div className=' w-[85%] mx-auto flex flex-col items-center justify-center gap-y-3 py-20'>
       <p className=' uppercase text-center text-[16px] font-semibold'>sERVICES</p>
       <h1 className=' ld:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center'><span className=' font-normal'>Reliable</span> <span className=' text-red-700'>Car Battery</span> Services</h1>
       <div className=' grid md:grid-cols-4 grid-cols-1 gap-3 mt-5'>
@@ -72,6 +73,7 @@ const arabicServices = [
             ))
            }
       </div>
+       <Link href="/services" className=' py-3 px-6 rounded-full bg-red-600 text-white mt-5'>View All Services</Link>
     </div>
   )
 }

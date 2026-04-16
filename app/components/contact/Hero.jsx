@@ -33,9 +33,9 @@ const Hero = () => {
             <h1 className='lg:text-[45px] md:text-[43px] sm:text-[33px] text-[25px] font-bold text-white md:leading-[4rem]'>
               {hero.title}
             </h1>
-            <button className='text-[12px] md:text-[13px] w-fit bg-[#ffffff12] backdrop-blur-lg md:py-3 md:px-5 py-2 px-4  rounded-full text-white'>
+            {/* <button className='text-[12px] md:text-[13px] w-fit bg-[#ffffff12] backdrop-blur-lg md:py-3 md:px-5 py-2 px-4  rounded-full text-white'>
               {hero.btn}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

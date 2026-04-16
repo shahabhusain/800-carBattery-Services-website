@@ -11,6 +11,7 @@ import ban2 from '@/public/Home/ban2.webp'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 const Banners = ({ autoplayDelay = 3000 }) => {
   // Generate array for slides
@@ -57,14 +58,14 @@ const Banners = ({ autoplayDelay = 3000 }) => {
         {bannerSlides.map((slide) => (
           <SwiperSlide key={slide}>
             <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
-              <Image
+                 <Image
                 src={slide}
                 alt="banners"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, 1200px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[#0000002a]" />
+              <Link href="/offers" className="absolute inset-0 bg-[#0000002a]" />
             </div>
           </SwiperSlide>
         ))}

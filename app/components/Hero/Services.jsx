@@ -6,27 +6,32 @@ import service1 from '@/public/Home/b1.webp'
 import service2 from '@/public/Home/b2.webp'
 import service3 from '@/public/Home/b3.webp'
 import service4 from '@/public/Home/b4.webp'
+import Link from 'next/link'
 
 const Services = () => {
   
   // Service data array for cleaner code
   const englishServices = [
     {
+      link:"/services/battery-replacement",
       title: "Battery Replacement",
       description: "Need a quick and reliable car battery replacement? Our certified technicians provide premium-quality batteries and expert service, delivered straight to your doorstep in as little as 30 minutes.",
       image: service1
     },
     {
+      link:"/services/battery-boosting",
       title: "Battery Boosting",
       description: "Stop searching for 'battery boosting near me'! Our mobile team and fully equipped service vehicles are ready to handle your battery emergencies with ease. We make the process simple, stress-free, and fast.",
       image: service2
     },
     {
+      link:"/services/roadside-assistance",
       title: "Roadside Assistance",
       description: "Stranded on the road? Our roadside assistance experts are just a call away. Equipped with the latest tools and technology, we ensure immediate support within 30 minutes, anywhere in the UAE.",
       image: service3
     },
     {
+      link:"/services/car-scanning",
       title: "Other Services",
       description: "At 800BatteryPro we have a certified team of italian and German car experts in Dubai. As we offer advance car programming and car scanning services using the latest Technology.",
       image: service4
@@ -35,21 +40,25 @@ const Services = () => {
 
 const arabicServices = [
   {
+    link:"/",
     title: "استبدال البطارية",
     description: "هل تحتاج إلى استبدال بطارية سيارة سريع وموثوق؟ يقدم فنيونا المعتمدون بطاريات عالية الجودة وخدمة احترافية، يتم توصيلها مباشرة إلى عتبة داركم في غضون 30 دقيقة فقط.",
     image: service1
   },
   {
+    link:"/",
     title: "شحن البطارية",
     description: "توقف عن البحث عن 'شحن بطارية بالقرب مني'! فريقنا المتنقل وسيارات الخدمة المجهزة بالكامل على استعداد للتعامل مع طوارئ البطارية بسهولة. نجعل العملية بسيطة وخالية من التوتر وسريعة.",
     image: service2
   },
   {
+    link:"/",
     title: "المساعدة على الطريق",
     description: "تعطلت سيارتك على الطريق؟ خبراء المساعدة على الطريق لدينا على بعد مكالمة واحدة. مزودون بأحدث الأدوات والتقنيات، نضمن لك الدعم الفوري خلال 30 دقيقة، في أي مكان في الإمارات.",
     image: service3
   },
   {
+    link:"/",
     title: "خدمات أخرى",
     description: "في 800BatteryPro لدينا فريق معتمد من خبراء السيارات الإيطالية والألمانية في دبي. كما نقدم خدمات متقدمة لبرمجة وفحص السيارات باستخدام أحدث التقنيات.",
     image: service4
@@ -85,19 +94,20 @@ const arabicServices = [
             )}
           </h1>
           
-          <button className='w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base'>
+          <Link href="/services" className='w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base'>
             {locale === 'en' ? 'view all' : 'عرض الكل'}
             <span className={isRTL ? 'rotate-180' : 'rotate-320'}>
               <GoArrowRight size={24} className='sm:w-[30px] sm:h-[30px]' />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
       
       {/* Service Items */}
       <div className='flex flex-col gap-y-4 sm:gap-y-6 mt-8 sm:mt-10 lg:mt-12'>
         {services.map((serviceItem, index) => (
-          <div 
+          <Link
+            href={serviceItem.link}
             key={index}
             className='group transition-all duration-300 hover:px-6 ease-in-out flex flex-col lg:flex-row hover:bg-gradient-to-r from-red-500 to-red-400 px-3 items-start lg:items-center gap-4 lg:gap-8 xl:gap-12 relative cursor-pointer border border-gray-100 hover:border-transparent'
           >
@@ -132,7 +142,7 @@ const arabicServices = [
             <button className={`absolute ${isRTL ? 'left-4 sm:left-6' : 'right-4 sm:right-6'} lg:relative text-xl sm:text-2xl  transition-colors ${isRTL ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'} transform duration-500 group-hover:bg-[#fff] p-5 rounded-full group-hover:text-black`}>
               <GoArrowRight className={isRTL ? 'rotate-180' : 'rotate-320'} />
             </button>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

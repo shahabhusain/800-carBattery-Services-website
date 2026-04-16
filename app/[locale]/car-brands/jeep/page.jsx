@@ -30,6 +30,9 @@ import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
 import serviceImg from "@/public/brands/jeep/service.webp"
 import serviceImg5 from "@/public/brands/jeep/service1.webp"
 import bg from '@/public/brands/jeep/bg.webp'
+import Services from '@/app/components/locations/Services'
+import Cards from '@/app/components/Hero/Cards'
+import HowItWorks from '@/app/components/Hero/HowItWorks'
 
 const Jeep = () => {
   const locale = useLocale()
@@ -362,8 +365,10 @@ const text = locale === "ar"
         <Hero hero={hero} herobg={bg} />
       </div>
         <div className=' bg-white  rounded-t-4xl relative z-10'>
+             <Cards />
+            <Services />
+            <HowItWorks />
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
-           {/* <Services services={services}  /> */}
            <CarBrands text={text} brands={brands} />
            <Battery brands={batteryBrands} batteryText={batteryText} />
             <Service serviceContent={serviceContent1} serviceImg={serviceImg5} />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocale } from 'next-intl'
-import { FaSitemap } from 'react-icons/fa'
+import { LuCircleDotDashed } from "react-icons/lu";
 
 const WhyChooseUs = () => {
     const locale = useLocale()
@@ -8,44 +8,44 @@ const WhyChooseUs = () => {
     const data = locale === "en" 
         ? [
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "Fast Response",
                 desc: "Quick service to get your vehicle powered and back on the road without long waiting times."
             },
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "Quality Batteries",
                 desc: "We provide high-performance, long-lasting batteries suitable for a wide range of vehicles."
             },
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "Expert Technicians",
                 desc: "Our trained professionals ensure safe, efficient, and hassle-free battery installation."
             },
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "Customer Satisfaction",
                 desc: "We focus on reliable service and a smooth experience for every customer."
             },
         ]
         : [
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "استجابة سريعة",
                 desc: "خدمة سريعة لتشغيل سيارتك وإعادتها إلى الطريق دون أوقات انتظار طويلة."
             },
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "بطاريات عالية الجودة",
                 desc: "نوفر بطاريات عالية الأداء وطويلة العمر تناسب مجموعة واسعة من السيارات."
             },
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "فنيون خبراء",
                 desc: "يضمن محترفونا المدربون تركيب بطارية آمن وفعال وخالي من المتاعب."
             },
             {
-                icons: <FaSitemap />,
+                icons: <LuCircleDotDashed />,
                 title: "رضا العملاء",
                 desc: "نركز على تقديم خدمة موثوقة وتجربة سلسة لكل عميل."
             },

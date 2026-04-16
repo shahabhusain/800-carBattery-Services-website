@@ -4,7 +4,7 @@ import about from '@/public/Home/about.png'
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { GoArrowRight } from 'react-icons/go';
 import { useLocale } from 'next-intl';
-import { FaEye } from 'react-icons/fa';
+import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 
 const englishContent = {
   title: "About Us",
@@ -32,22 +32,22 @@ const arabicContent = {
 
 const englishCards = [
   {
-    icon:<FaEye />,
+    icon:<HiOutlineDotsHorizontal />,
     title:"10+ ",
     desc:"years of experience"
   },
   {
-    icon:<FaEye />,
+    icon:<HiOutlineDotsHorizontal />,
     title:"10000+",
     desc:"Loyal Customer Serve"
   },
   {
-    icon:<FaEye />,
+    icon:<HiOutlineDotsHorizontal />,
     title:"15+",
     desc:"Services Offered"
   },
   {
-    icon:<FaEye />,
+    icon:<HiOutlineDotsHorizontal />,
     title:"50+",
     desc:"Certified Technicians"
   },
@@ -55,22 +55,22 @@ const englishCards = [
 
 const arabicCards = [
   {
-    icon: <FaEye />,
-    title: "5+ ",
+    icon: <HiOutlineDotsHorizontal />,
+    title: "10+ ",
     desc: "سنوات من الخبرة"
   },
   {
-    icon: <FaEye />,
-    title: "5000+",
+    icon: <HiOutlineDotsHorizontal />,
+    title: "10000+",
     desc: "عميل مخلص تمت خدمته"
   },
   {
-    icon: <FaEye />,
+    icon: <HiOutlineDotsHorizontal />,
     title: "15+",
     desc: "خدمة مقدمة"
   },
   {
-    icon: <FaEye />,
+    icon: <HiOutlineDotsHorizontal />,
     title: "50+",
     desc: "فني معتمد"
   },

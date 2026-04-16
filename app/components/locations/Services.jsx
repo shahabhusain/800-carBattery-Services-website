@@ -7,6 +7,7 @@ import service2 from '@/public/locations/service2.webp'
 import service3 from '@/public/locations/service3.webp'
 import Image from 'next/image';
 import { FaArrowDown } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Services = () => {
   const englishService = [
@@ -74,7 +75,7 @@ const arabicService = [
 
   return (
     <div className=' bg-gradient-to-br from-black via-red-900 to-black  p-8 shadow-2xl'>
-           <div className=' w-[90%] mx-auto py-20'>
+           <div className=' w-[90%] mx-auto md:pb-20 pb-10'>
               {/* Header Section */}
          <div className='text-left animate-fade-in-up'>
             <div className='inline-block'>
@@ -91,13 +92,13 @@ const arabicService = [
                     <span className='text-red-500'>{text.title2}</span>
                 </h1>
                 
-                <button className='group relative w-full sm:w-fit bg-gradient-to-r from-red-600 to-red-800 py-3 sm:py-3.5 px-6 sm:px-8 uppercase rounded-full text-white flex items-center justify-center gap-x-2 transition-all duration-300 text-sm sm:text-base overflow-hidden shadow-lg hover:shadow-red-500/50'>
+                <Link href="/services" className='group relative w-full sm:w-fit bg-gradient-to-r from-red-600 to-red-800 py-3 sm:py-3.5 px-6 sm:px-8 uppercase rounded-full text-white flex items-center justify-center gap-x-2 transition-all duration-300 text-sm sm:text-base overflow-hidden shadow-lg hover:shadow-red-500/50'>
                     <span className='relative z-10'>{text.viewAll}</span>
                     <span className='relative z-10 rotate-320 group-hover:translate-x-1 transition-transform duration-300'>
                         <GoArrowRight size={24} className='sm:w-[30px] sm:h-[30px]' />
                     </span>
                     <div className='absolute inset-0 bg-gradient-to-r from-red-700 to-red-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                </button>
+                </Link>
             </div>
          </div>
 

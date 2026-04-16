@@ -158,36 +158,73 @@ const BatteryServices = () => {
         }
 
     return (
-        <div className='w-[85%] mx-auto flex flex-col gap-y-3 py-20' dir={locale === "ar" ? "rtl" : "ltr"}>
-            <p className='uppercase text-center text-[16px] font-semibold'>
-                {text.badge}
-            </p>
-            <h1 className='lg:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center'>
-                {locale === "ar" ? (
-                    <>
-                        <span className='text-red-700'>{text.title1}</span>
-                        <span className='font-normal'> {text.title2} </span>
-                        <span className='text-red-700'>{text.title3}</span>
-                    </>
-                ) : (
-                    <>
-                        <span className='font-normal'>{text.title1}</span>
-                        <span className='text-red-700'> {text.title2} </span>
-                        <span className='text-red-700'>{text.title3}</span>
-                    </>
-                )}
-            </h1>
-            <div className='grid md:grid-cols-4 grid-cols-1 gap-3 mt-5'>
+        <div className='w-[90%] max-w-7xl mx-auto flex flex-col gap-y-12 py-24' dir={locale === "ar" ? "rtl" : "ltr"}>
+            {/* Header Section */}
+            <div className='text-center space-y-4'>
+               <p className=' uppercase text-center text-[16px] font-semibold'>sERVICES</p>
+      <h1 className=' ld:text-[40px] md:text-[35px] sm:text-[30px] text-[25px] font-semibold text-center'><span className=' font-normal'>Reliable</span> <span className=' text-red-700'>Car Battery</span> Services</h1>
+            </div>
+            
+            {/* Services Grid */}
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-7'>
                 {services.map((item, index) => (
-                    <div key={index} className='relative'>
-                        <Image width={380} height={190} src={item.img} alt='service' />
-                        <div className='flex flex-col gap-y-3 p-4 bg-[#f8f8f8]'>
-                            <h2 className='text-[24px] font-bold'>{item.title}</h2>
-                            <p className='text-[#4E4E4E] text-[16px] font-normal'>{item.desc}</p>
+                    <div 
+                        key={index} 
+                        className='group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 cursor-pointer'
+                    >
+                        {/* Image Container */}
+                        <div className='relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200'>
+                            <Image 
+                                width={380} 
+                                height={260} 
+                                src={item.img} 
+                                alt='service'
+                                className='w-full h-60 object-cover group-hover:scale-110 transition-transform duration-700 ease-out'
+                            />
+                            
+                            {/* Overlay Gradient */}
+                            <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+                            
+                            {/* Icon Badge */}
+                            <div className='absolute top-4 right-4 w-10 h-10 bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75'>
+                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
                         </div>
+                        
+                        {/* Content */}
+                        <div className='p-6 space-y-3'>
+                            {/* Title with hover effect */}
+                            <h2 className='text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-300 line-clamp-2'>
+                                {item.title}
+                            </h2>
+                            
+                            {/* Decorative line */}
+                            <div className='w-12 h-0.5 bg-red-600 group-hover:w-16 transition-all duration-300'></div>
+                            
+                            {/* Description */}
+                            <p className='text-gray-600 text-sm leading-relaxed line-clamp-3'>
+                                {item.desc}
+                            </p>
+                            
+                            {/* Learn more link */}
+                            <div className='pt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0 -translate-x-2'>
+                                <span className='text-red-600 text-sm font-semibold inline-flex items-center gap-1 cursor-pointer'>
+                                    {locale === "en" ? "Learn More" : "اعرف أكثر"}
+                                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        {/* Bottom border gradient */}
+                        <div className='absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left'></div>
                     </div>
                 ))}
             </div>
+            
         </div>
     )
 }

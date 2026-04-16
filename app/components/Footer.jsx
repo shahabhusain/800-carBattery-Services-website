@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import footer from '@/public/footer.jpg'
-import { FaInstagram, FaLocationArrow, FaMailBulk, FaPhone, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLocationArrow, FaMailBulk, FaPhone, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 import logo from '@/public/logo.svg'
 import { GoArrowRight } from 'react-icons/go'
 import { useLocale } from 'next-intl'
@@ -17,11 +17,11 @@ const Footer = () => {
     headline: 'Your Roadside Lifeline - Faster Than You Expect!',
     quickLinks: {
       title: 'Quick Links',
-      links: ['Car Brand', 'Services', 'About Us', 'Contact Us', 'Book an Appointment']
+      links: [{name:"Car Brand", link:"car-brands"}, {name:"Services", link:"/services"}, {name:"About Us", link:"/about-us"}, {name:"Contact Us", link:"/contact-us" },]
     },
     reachUs: {
       title: 'Reach Us',
-      email: 'info@800batterypro.com',
+      email: 'service@800batterypro.com',
       phone: '+971528475675',
       address: 'Dubai and Abu Dhabi, UAE'
     },
@@ -40,7 +40,12 @@ const arabicContent = {
     headline: 'شريان حياتك على الطريق - أسرع مما تتوقع!',
     quickLinks: {
         title: 'روابط سريعة',
-        links: ['ماركات السيارات', 'الخدمات', 'من نحن', 'اتصل بنا', 'احجز موعداً']
+        links: [
+  { name: "ماركات السيارات", link: "car-brands" },
+  { name: "الخدمات", link: "/services" },
+  { name: "من نحن", link: "/about-us" },
+  { name: "اتصل بنا", link: "/contact-us" },
+]
     },
     reachUs: {
         title: 'تواصل معنا',
@@ -101,9 +106,9 @@ const arabicContent = {
             
             {/* Social Icons */}
             <div className={`flex items-center gap-4 md:gap-5 ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
-              <FaYoutube size={20} className='md:w-6 md:h-6 hover:text-red-400 transition-colors cursor-pointer' />
-              <FaInstagram size={20} className='md:w-6 md:h-6 hover:text-red-400 transition-colors cursor-pointer' />
-              <FaTwitter size={20} className='md:w-6 md:h-6 hover:text-red-400 transition-colors cursor-pointer' />
+              <a href=" https://www.youtube.com/@800batteryPro" target='_blank'> <FaYoutube size={20} className='md:w-6 md:h-6 hover:text-red-400 transition-colors cursor-pointer' /></a>
+               <a href="https://www.pinterest.com/800batterypro/" target='_blank'> <FaPinterest size={20} className='md:w-6 md:h-6 hover:text-red-400 transition-colors cursor-pointer' /></a>
+                <a href="https://www.facebook.com/profile.php?id=61582172574167" target='_blank'> <FaFacebook size={20} className='md:w-6 md:h-6 hover:text-red-400 transition-colors cursor-pointer' /></a>
             </div>
           </div>
 
@@ -119,12 +124,13 @@ const arabicContent = {
               <ul className={`flex flex-col ${isRTL ? 'items-end' : 'items-start'} gap-y-2 md:gap-y-3 mt-4`}>
                 <h1 className='text-[18px] md:text-[20px] font-medium'>{content.quickLinks.title}</h1>
                 {content.quickLinks.links.map((link, index) => (
-                  <li 
+                  <Link
+                    href={link.link} 
                     key={index}
                     className='text-[14px] md:text-[16px] font-normal hover:text-red-400 transition-colors cursor-pointer'
                   >
-                    {link}
-                  </li>
+                    {link.name}
+                  </Link>
                 ))}
               </ul>
             </div>

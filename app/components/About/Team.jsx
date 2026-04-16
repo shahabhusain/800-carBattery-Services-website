@@ -1,6 +1,13 @@
 "use client"
 import React, { useState } from 'react'
-import teamImage from '@/public/team.png'
+import team1 from '@/public/about/1.webp'
+import team2 from '@/public/about/2.webp'
+import team3 from '@/public/about/3.webp'
+import team4 from '@/public/about/4.webp'
+import team5 from '@/public/about/5.webp'
+import team6 from '@/public/about/6.webp'
+import team7 from '@/public/about/7.webp'
+import team8 from '@/public/about/8.webp'
 import Image from 'next/image'
 import { useLocale } from 'next-intl'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
@@ -11,42 +18,42 @@ const Team = () => {
 
   const team = [
     {
-      img: teamImage,
+      img: team1,
       name: locale === "en" ? "John Smith" : "جون سميث",
       role: locale === "en" ? "Senior Mechanic" : "ميكانيكي أول"
     },
     {
-      img: teamImage,
-      name: locale === "en" ? "Sarah Johnson" : "سارة جونسون",
+      img: team2,
+      name: locale === "en" ? " Johnson" : "سارة جونسون",
       role: locale === "en" ? "Diagnostic Specialist" : "أخصائية تشخيص"
     },
     {
-      img: teamImage,
+      img: team3,
       name: locale === "en" ? "Michael Brown" : "مايكل براون",
       role: locale === "en" ? "Electrical Engineer" : "مهندس كهرباء"
     },
     {
-      img: teamImage,
+      img: team4,
       name: locale === "en" ? "David Wilson" : "ديفيد ويلسون",
       role: locale === "en" ? "Service Manager" : "مدير الخدمة"
     },
     {
-      img: teamImage,
+      img: team5,
       name: locale === "en" ? "Emily Davis" : "إيميلي ديفيس",
       role: locale === "en" ? "Customer Relations" : "علاقات العملاء"
     },
     {
-      img: teamImage,
+      img: team6,
       name: locale === "en" ? "Robert Martinez" : "روبرت مارتينيز",
       role: locale === "en" ? "Brake Specialist" : "أخصائي فرامل"
     },
     {
-      img: teamImage,
-      name: locale === "en" ? "Lisa Anderson" : "ليزا أندرسون",
+      img: team7,
+      name: locale === "en" ? " Anderson" : "ليزا أندرسون",
       role: locale === "en" ? "Quality Control" : "مراقبة الجودة"
     },
     {
-      img: teamImage,
+      img: team8,
       name: locale === "en" ? "James Taylor" : "جيمس تايلور",
       role: locale === "en" ? "Transmission Expert" : "خبير ناقل حركة"
     },

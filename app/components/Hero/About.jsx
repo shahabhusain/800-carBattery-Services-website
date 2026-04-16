@@ -4,7 +4,7 @@ import about from '@/public/Home/about.png'
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { GoArrowRight } from 'react-icons/go';
 import { useLocale } from 'next-intl';
-import { FaEye } from 'react-icons/fa';
+import Link from 'next/link';
 
 const englishContent = {
   title: "About Us",
@@ -30,75 +30,19 @@ const arabicContent = {
   cta: "اعرف المزيد"
 };
 
-const englishCards = [
-  {
-    icon:<FaEye />,
-    title:"10+ ",
-    desc:"years of experience"
-  },
-  {
-    icon:<FaEye />,
-    title:"10000+",
-    desc:"Loyal Customer Serve"
-  },
-  {
-    icon:<FaEye />,
-    title:"15+",
-    desc:"Services Offered"
-  },
-  {
-    icon:<FaEye />,
-    title:"50+",
-    desc:"Certified Technicians"
-  },
-]
 
-const arabicCards = [
-  {
-    icon: <FaEye />,
-    title: "5+ ",
-    desc: "سنوات من الخبرة"
-  },
-  {
-    icon: <FaEye />,
-    title: "5000+",
-    desc: "عميل مخلص تمت خدمته"
-  },
-  {
-    icon: <FaEye />,
-    title: "15+",
-    desc: "خدمة مقدمة"
-  },
-  {
-    icon: <FaEye />,
-    title: "50+",
-    desc: "فني معتمد"
-  },
-]
 
 
 
 const About = () => {
   const locale = useLocale()
   const content = locale === "en" ? englishContent : locale === "ar" ? arabicContent : englishContent
-  const cards = locale === "en" ? englishCards : locale === "ar" ? arabicCards : englishCards
   const isRTL = locale === 'ar'
 
   return (
-    <div className='bg-gradient-to-r from-black to-red-900 md:py-20 pb-20 pt-8' dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className='bg-gradient-to-r from-black to-red-900 pb-10 ' dir={isRTL ? 'rtl' : 'ltr'}>
        <div className='w-[90%] mx-auto'>
-           <div className=' grid md:grid-cols-4 gap-3 grid-cols-2'>
-              {
-                cards.map((item,index) => (
-                   <div key={index} className=' flex flex-col items-start gap-y-3 bg-[#FFFFFF0D] backdrop-blur-lg md:p-6 p-2 rounded-md text-white'>
-                <span className=' md:text-xl text-lg'>{item.icon}</span>
-                <h2 className=' lg:text-4xl md:text-3xl text-2xl text font-bold'>{item.title}</h2>
-                <p>{item.desc}</p>
-              </div>
-                ))
-              }
-         </div>
-      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-20 '>
+      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-12  '>
         <Image className='md:w-1/2' src={about} alt='about' />
         <div className='md:w-1/2 flex flex-col md:gap-y-6 gap-y-3'>
           <p className='uppercase md:text-[16px] text-white text-[12px] font-bold'>
@@ -123,12 +67,12 @@ const About = () => {
               </button>
             ))}
           </div>
-          <button className='w-fit bg-red-600 py-3 px-5 uppercase rounded-full text-white flex items-center gap-x-2'>
+          <Link href="about-us" className='w-fit bg-red-600 py-3 px-5 uppercase rounded-full text-white flex items-center gap-x-2'>
             {content.cta}
             <span className={isRTL ? 'rotate-180' : ''}>
               <GoArrowRight size={30} />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
        </div>

@@ -7,17 +7,17 @@ const Forms = () => {
         {
             title:"Contact",
             icon:<FaPhone />,
-            desc:"+971-XXX-XXXX "
+            desc:"+971528475675"
         },
         {
             title:"Email Address",
             icon:<FaMailBulk />,
-            desc:"info@yourwebsite.com"
+            desc:"service@800batterypro.com"
         },
         {
             title:"Location",
             icon:<FaLocationArrow />,
-            desc:"Al Quoz Industrial Area 4, Dubai, UAE"
+            desc:"Dubai and Abu Dhabi, UAE"
         },
     ]
   return (
@@ -46,8 +46,20 @@ const Forms = () => {
            <button className=' bg-red-500 py-2 px-6 rounded-full text-white'>Submit</button>
           </form>
         </div>
-         <div className=' w-1/2'>
-             <Image className=' rounded-2xl' src={map} alt='map'/>
+         <div className=' w-1/2 border-[1px] border-[#00000047] p-6 rounded-2xl'>
+                        <iframe
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462561.6574537445!2d55.22748795!3d25.076022449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1776336745190!5m2!1sen!2s"
+                            width="100%"
+                            height="450"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="800MotorGuru Location"
+                            className="w-full h-[450px] dark:opacity-90"
+                        ></iframe>
+               
+    
          </div>
     </div>
      </div>

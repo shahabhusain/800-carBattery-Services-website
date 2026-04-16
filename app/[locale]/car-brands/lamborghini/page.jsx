@@ -1,7 +1,6 @@
 import Service from '@/app/components/Brands/subPage/Service'
 import Hero from '@/app/components/Brands/subPage/Hero'
 import { FaSitemap } from 'react-icons/fa'
-import Services from '@/app/components/Brands/subPage/Services'
 import Faq from '@/app/components/Brands/subPage/Faq'
 import Footer from '@/app/components/Footer'
 import Trusted from '@/app/components/Hero/Trusted'
@@ -37,6 +36,9 @@ import volcan from "@/public/batteryBrands/volcan.png";
 import Battery from '@/app/components/Brands/subPage/Battery'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
 import herobg from '@/public/brands/lamburgani/bg.webp'
+import Cards from '@/app/components/Hero/Cards'
+import Services from '@/app/components/locations/Services'
+import HowItWorks from '@/app/components/Hero/HowItWorks'
 
 
 const Lamborghini = () => {
@@ -394,8 +396,10 @@ const text = locale === "ar"
         <Hero hero={hero} herobg={herobg} />
       </div>
         <div className='bg-white rounded-t-4xl relative z-10'>
+             <Cards />
+            <Services />
+            <HowItWorks />
            <Service serviceContent={serviceContent} serviceImg={serviceImg} />
-           {/* <Services services={services} /> */}
            <CarBrands text={text} brands={brands} />
            <Battery brands={batteryBrands} batteryText={batteryText} />
             <Service serviceContent={serviceContent1} serviceImg={serviceImg5} />

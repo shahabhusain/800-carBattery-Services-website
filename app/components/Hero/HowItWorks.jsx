@@ -14,7 +14,7 @@ const HowItWorks = () => {
         {
             icon: <FaPhone />,
             title: "02",
-            desc: "Call our toll free at 800 24 7 365",
+            desc: "Call our toll free at 971528475675",
             bg: "bg-white border-2 border-gray-100 shadow-lg text-gray-800"
         },
         {
@@ -36,7 +36,7 @@ const HowItWorks = () => {
         {
             icon: <FaPhone />,
             title: "٠٢",
-            desc: "اتصل على رقمنا المجاني 800 24 7 365",
+            desc: "اتصل على رقمنا المجاني 971528475675",
             bg: "bg-white border-2 border-gray-100 shadow-lg text-gray-800"
         },
         {

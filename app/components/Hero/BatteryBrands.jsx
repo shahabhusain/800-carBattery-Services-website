@@ -51,12 +51,12 @@ const batteryText =
                   <span className='text-[#C1121F]'>{batteryText.title2} </span>{' '}
                   <span>{batteryText.title3}</span>
                 </h1>
-                <button className='w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base'>
+                {/* <button className='w-full sm:w-fit bg-red-600 py-2.5 sm:py-3 px-4 sm:px-5 uppercase rounded-full text-white flex items-center justify-center gap-x-2 hover:bg-red-700 transition-colors text-sm sm:text-base'>
                    {batteryText.viewAll}
                   <span className='rotate-320'>
                     <GoArrowRight size={30} />
                   </span>
-                </button>
+                </button> */}
               </div>
       <section className="md:w-[80%] mt-12 bg-white p-6 rounded-md mx-auto">
 
