@@ -123,7 +123,7 @@ const Header = () => {
         },
       ] 
     },
-    { path: "/about-us", name: "AboutUs" },
+    { path: "/about-us", name: "About Us" },
     { path: "/offers", name: "Offers" },
     // { path: "/shop", name: "Shop" },
   ];
