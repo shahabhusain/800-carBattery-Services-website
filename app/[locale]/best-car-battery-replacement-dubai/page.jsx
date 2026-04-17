@@ -16,6 +16,7 @@ import Services from '@/app/components/locations/Services'
 import { FaSitemap } from 'react-icons/fa'
 import Faq from '@/app/components/Brands/subPage/Faq'
 import WhyChooseUs from '@/app/components/Brands/subPage/WhyChooseUs'
+import AboutContent from '@/app/components/About/AboutContent'
 
 export const metadata = {
   title: "Car Battery Replacement & Mobile Repair in Dubai | 800BatteryPro",
@@ -310,7 +311,7 @@ const arabicFaqs = [
       <Review /> {/* move it here */}
 
       <div className='bg-white pb-12 rounded-t-4xl relative z-10'>
-        <About />
+          <AboutContent />
         <Services /> 
          <Banners />
         <HowItWorks />
